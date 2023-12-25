@@ -1,7 +1,7 @@
 <?php
 
 namespace router;
-class Route
+class Router
 {
     private string $controller = 'App\Controller\HomeController';
     private string $method = 'index';
@@ -52,3 +52,4 @@ class Route
         call_user_func_array([$objetController, $this->method], $this->params);
     }
 }
+new Router();
