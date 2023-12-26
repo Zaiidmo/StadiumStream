@@ -2,7 +2,6 @@
     "name": "zaiid/stadium-stream",
     "autoload": {
         "psr-4": {
-            "Zaiid\\StadiumStream\\": "src/",
             "App\\" : "app/",
             "router\\" : "router/",
             "config\\" : "database/"

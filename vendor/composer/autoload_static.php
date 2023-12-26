@@ -21,10 +21,6 @@ class ComposerStaticInit802cb1be45bee5a869958895654e4ddf
         array (
             'config\\' => 7,
         ),
-        'Z' => 
-        array (
-            'Zaiid\\StadiumStream\\' => 20,
-        ),
         'S' => 
         array (
             'Symfony\\Polyfill\\Php80\\' => 23,
@@ -58,10 +54,6 @@ class ComposerStaticInit802cb1be45bee5a869958895654e4ddf
         'config\\' => 
         array (
             0 => __DIR__ . '/../..' . '/database',
-        ),
-        'Zaiid\\StadiumStream\\' => 
-        array (
-            0 => __DIR__ . '/../..' . '/src',
         ),
         'Symfony\\Polyfill\\Php80\\' => 
         array (
