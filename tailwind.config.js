@@ -4,6 +4,7 @@ module.exports = {
   content: [
     "./public/*.php",
     "./app/View/*.php",
+    "./app/View/dashboard/*.php",
     "./app/View/includes/*.php",
     "./lang/*.php",
     "./lang/*.html",
