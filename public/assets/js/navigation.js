@@ -5,6 +5,9 @@ document.getElementById('sidebar-toggle-button').addEventListener('click', funct
 document.getElementById('profile-menu-toggler').addEventListener('click',function(){
     document.getElementById('profile-menu').classList.toggle('hidden');
 })
+document.getElementById('notification-button').addEventListener('click', function(){
+    document.getElementById('notifications').classList.toggle('hidden');
+})
 
 // document.body.addEventListener('click', function(){
 //     document.getElementById('profile-menu').classList.add('hidden');
