@@ -166,10 +166,12 @@
                 </tbody>
             </table>
         </div>
-
     </main>
 
 </body>
+<script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
+<script src="../../../public/assets/js/init-alpine.js"></script>
 <script src="../../../public/assets/js/navigation.js"></script>
 <script src="../../../public/assets/js/theme.js"></script>
+
 </html>
