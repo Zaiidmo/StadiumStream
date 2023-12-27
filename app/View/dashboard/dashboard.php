@@ -8,6 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard</title>
     <link rel="stylesheet" href="../../../public/assets/dist/output.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 
 <body class="bg-gray-300 dark:bg-gray-900">
@@ -105,7 +106,7 @@
                 <div class="w-full overflow-hidden rounded-lg shadow-xs">
                     <div class="w-full overflow-x-auto">
                         <h2 class="my-6 text-2xl font-semibold font-poppins tracking-widest text-gray-700 dark:text-gray-200">
-                        Up comming Games
+                            Up comming Games
                         </h2>
 
                         <table class="w-full whitespace-no-wrap">
@@ -151,14 +152,14 @@
 
                 <!-- Charts -->
                 <h2 class="my-6 text-2xl font-semibold text-gray-700 dark:text-gray-200">
-                    Charts
+                    Statistics Charts
                 </h2>
                 <div class="grid gap-6 mb-8 md:grid-cols-2">
                     <div class="min-w-0 p-4 bg-white rounded-lg shadow-xs dark:bg-gray-800">
                         <h4 class="mb-4 font-semibold text-gray-800 dark:text-gray-300">
-                            Revenue
+                            Sold Tickets
                         </h4>
-                        <canvas id="pie"></canvas>
+                        <canvas id="tickets"></canvas>
                         <div class="flex justify-center mt-4 space-x-3 text-sm text-gray-600 dark:text-gray-400">
                             <!-- Chart legend -->
                             <div class="flex items-center">
@@ -177,9 +178,9 @@
                     </div>
                     <div class="min-w-0 p-4 bg-white rounded-lg shadow-xs dark:bg-gray-800">
                         <h4 class="mb-4 font-semibold text-gray-800 dark:text-gray-300">
-                            Traffic
+                            Top Ranked Nations
                         </h4>
-                        <canvas id="line"></canvas>
+                        <canvas id="teams"></canvas>
                         <div class="flex justify-center mt-4 space-x-3 text-sm text-gray-600 dark:text-gray-400">
                             <!-- Chart legend -->
                             <div class="flex items-center">
@@ -198,6 +199,7 @@
     </main>
 
 </body>
+<script src="../../../public/assets/js/charts.js"></script>
 <script src="../../../public/assets/js/navigation.js"></script>
 <script src="../../../public/assets/js/theme.js"></script>
 
