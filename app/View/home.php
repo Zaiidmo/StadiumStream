@@ -161,7 +161,7 @@
                         </p>
                     </div>
                     <div class="p-3 flex justify-end">
-                        <a href="" class="text-orange border border-orange py-2 px-3 rounded inline-flex  items-center">
+                        <a href="buyTicket" class="text-orange border border-orange py-2 px-3 rounded inline-flex  items-center">
                             Buy Ticket
                             <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" class="w-6 h-6 ml-2">
                                 <path d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
@@ -322,16 +322,16 @@
                                 Look no further! Our SBS The Show tickets are the simplest way for you to experience a live Kpop recording. </p>
                             <div class="flex">
                                 <a class="px-2" href="#!">
-                                    <img class="rounded-t-lg" src="public/assets/images/cmp1.svg" alt="Hollywood Sign on The Hill" />
+                                    <img class="rounded-t-lg" src="public/assets/images/cmp1.svg" alt="stadium can 2024 " />
                                 </a>
                                 <a class="px-2" href="#!">
-                                    <img class="rounded-t-lg" src="public/assets/images/cmp5.png" alt="Hollywood Sign on The Hill" />
+                                    <img class="rounded-t-lg" src="public/assets/images/cmp5.png" alt="stadium can 2024 " />
                                 </a>
                                 <a class="px-2" href="#!">
-                                    <img class="rounded-t-lg" src="public/assets/images/cmp3.svg" alt="Hollywood Sign on The Hill" />
+                                    <img class="rounded-t-lg" src="public/assets/images/cmp3.svg" alt="stadium can 2024 " />
                                 </a>
                                 <a class="px-2" href="#!">
-                                    <img class="rounded-t-lg" src="public/assets/images/cmp2.svg" alt="Hollywood Sign on The Hill" />
+                                    <img class="rounded-t-lg" src="public/assets/images/cmp2.svg" alt="stadium can 2024 " />
                                 </a>
                             </div>
 
