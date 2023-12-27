@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard</title>
     <link rel="stylesheet" href="../../../public/assets/dist/output.css">
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
 </head>
 
 <body class="bg-gray-300 dark:bg-gray-900">
@@ -159,9 +159,9 @@
                         <h4 class="mb-4 font-semibold text-gray-800 dark:text-gray-300">
                             Sold Tickets
                         </h4>
-                        <canvas id="tickets"></canvas>
-                        <div class="flex justify-center mt-4 space-x-3 text-sm text-gray-600 dark:text-gray-400">
-                            <!-- Chart legend -->
+                        <canvas id="myChart"></canvas>
+                        <!-- <div class="flex justify-center mt-4 space-x-3 text-sm text-gray-600 dark:text-gray-400">
+                            Chart legend
                             <div class="flex items-center">
                                 <span class="inline-block w-3 h-3 mr-1 bg-blue-500 rounded-full"></span>
                                 <span>Shirts</span>
@@ -174,7 +174,7 @@
                                 <span class="inline-block w-3 h-3 mr-1 bg-purple-600 rounded-full"></span>
                                 <span>Bags</span>
                             </div>
-                        </div>
+                        </div> -->
                     </div>
                     <div class="min-w-0 p-4 bg-white rounded-lg shadow-xs dark:bg-gray-800">
                         <h4 class="mb-4 font-semibold text-gray-800 dark:text-gray-300">
