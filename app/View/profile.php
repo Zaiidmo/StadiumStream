@@ -41,7 +41,7 @@
                             </svg> </div>
                     </div>
                     <div class="space-x-8 flex justify-between mt-32 md:mt-0 md:justify-center">
-                        <button class="text-white py-2 px-4 uppercase rounded bg-primary-100 hover:bg-primary-200 shadow hover:shadow-lg font-poppins font-bold transition transform hover:-translate-y-0.5"> Edit Profile</button>
+                        <a href="editprofile" target="_blank" rel="noopener noreferrer"><button class="text-white py-2 px-4 uppercase rounded bg-primary-100 hover:bg-primary-200 shadow hover:shadow-lg font-poppins font-bold transition transform hover:-translate-y-0.5"> Edit Profile</button></a>
                         <!-- <button class="text-white py-2 px-4 uppercase rounded bg-gray-700 hover:bg-gray-800 shadow hover:shadow-lg font-medium transition transform hover:-translate-y-0.5"> </button> -->
                     </div>
                 </div>
