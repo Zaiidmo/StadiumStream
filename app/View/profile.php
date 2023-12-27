@@ -60,64 +60,16 @@
             <div class="p-8 bg-white rounded-lg  dark:bg-gray-900 shadow ">
                 <h1 class="font-monospace tracking-widest text-gray-800 mb-10 dark:text-white">My Purchases History</h1>
                 <div class="grid grid-cols-1 md:grid-cols-5 ">
-                    <div id="ticket" class="w-full md:w-80 rounded-xl mb-5 bg-white shadow border border-transparent">
-                        <div class="h-48 w-full rounded-xl bg-gray-200 flex flex-col justify-between p-4 bg-cover bg-center" style="background-image: url('https://images.pexels.com/photos/1592384/pexels-photo-1592384.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940')">
+                    <div id="ticket" class="w-full md:w-80 rounded-xl mb-5 bg-white dark:bg-gray-800 shadow-2xl ">
+                        <div class="h-48 w-full rounded-t-xl flex flex-col justify-between p-4 bg-cover  bg-center" style="background-image: url('https://images.pexels.com/photos/1592384/pexels-photo-1592384.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940')">
                         </div>
-                        <div class="p-4">
+                        <div class="p-4 rounded-b-xl ">
                             <div class="flex items-center justify-between">
-                                <h1 class="text-gray-600 font-medium">titan.jpg</h1> <button class="text-gray-500 hover:text-gray-900"> <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <h1 class="text-black dark:text-white font-medium">titan.jpg</h1> <button class="text-black dark:text-white"> <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 5v.01M12 12v.01M12 19v.01M12 6a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z" />
                                     </svg> </button>
                             </div>
-                            <p class="text-gray-400 text-sm my-1">Jack cooper</p> <span class="uppercase text-xs bg-green-50 p-0.5 border-green-500 border rounded text-green-700 font-medium">Approved</span>
-                        </div>
-                    </div>
-                    <div id="ticket" class="w-full md:w-80 rounded-xl mb-5 bg-white shadow border border-transparent">
-                        <div class="h-48 w-full rounded-xl bg-gray-200 flex flex-col justify-between p-4 bg-cover bg-center" style="background-image: url('https://images.pexels.com/photos/1592384/pexels-photo-1592384.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940')">
-                        </div>
-                        <div class="p-4">
-                            <div class="flex items-center justify-between">
-                                <h1 class="text-gray-600 font-medium">titan.jpg</h1> <button class="text-gray-500 hover:text-gray-900"> <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 5v.01M12 12v.01M12 19v.01M12 6a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z" />
-                                    </svg> </button>
-                            </div>
-                            <p class="text-gray-400 text-sm my-1">Jack cooper</p> <span class="uppercase text-xs bg-green-50 p-0.5 border-green-500 border rounded text-green-700 font-medium">Approved</span>
-                        </div>
-                    </div>
-                    <div id="ticket" class="w-full md:w-80 rounded-xl mb-5 bg-white shadow border border-transparent">
-                        <div class="h-48 w-full rounded-xl bg-gray-200 flex flex-col justify-between p-4 bg-cover bg-center" style="background-image: url('https://images.pexels.com/photos/1592384/pexels-photo-1592384.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940')">
-                        </div>
-                        <div class="p-4">
-                            <div class="flex items-center justify-between">
-                                <h1 class="text-gray-600 font-medium">titan.jpg</h1> <button class="text-gray-500 hover:text-gray-900"> <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 5v.01M12 12v.01M12 19v.01M12 6a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z" />
-                                    </svg> </button>
-                            </div>
-                            <p class="text-gray-400 text-sm my-1">Jack cooper</p> <span class="uppercase text-xs bg-green-50 p-0.5 border-green-500 border rounded text-green-700 font-medium">Approved</span>
-                        </div>
-                    </div>
-                    <div id="ticket" class="w-full md:w-80 rounded-xl mb-5 bg-white shadow border border-transparent">
-                        <div class="h-48 w-full rounded-xl bg-gray-200 flex flex-col justify-between p-4 bg-cover bg-center" style="background-image: url('https://images.pexels.com/photos/1592384/pexels-photo-1592384.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940')">
-                        </div>
-                        <div class="p-4">
-                            <div class="flex items-center justify-between">
-                                <h1 class="text-gray-600 font-medium">titan.jpg</h1> <button class="text-gray-500 hover:text-gray-900"> <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 5v.01M12 12v.01M12 19v.01M12 6a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z" />
-                                    </svg> </button>
-                            </div>
-                            <p class="text-gray-400 text-sm my-1">Jack cooper</p> <span class="uppercase text-xs bg-green-50 p-0.5 border-green-500 border rounded text-green-700 font-medium">Approved</span>
-                        </div>
-                    </div>
-                    <div id="ticket" class="w-full md:w-80 rounded-xl mb-5 bg-white shadow border border-transparent">
-                        <div class="h-48 w-full rounded-xl bg-gray-200 flex flex-col justify-between p-4 bg-cover bg-center" style="background-image: url('https://images.pexels.com/photos/1592384/pexels-photo-1592384.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940')">
-                        </div>
-                        <div class="p-4">
-                            <div class="flex items-center justify-between">
-                                <h1 class="text-gray-600 font-medium">titan.jpg</h1> <button class="text-gray-500 hover:text-gray-900"> <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 5v.01M12 12v.01M12 19v.01M12 6a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z" />
-                                    </svg> </button>
-                            </div>
-                            <p class="text-gray-400 text-sm my-1">Jack cooper</p> <span class="uppercase text-xs bg-green-50 p-0.5 border-green-500 border rounded text-green-700 font-medium">Approved</span>
+                            <p class="text-black dark:text-white text-sm my-1">Jack cooper</p> <span class="uppercase text-xs bg-green-50 p-0.5 border-green-500 border rounded text-green-700 font-medium">Approved</span>
                         </div>
                     </div>
                 </div>
