@@ -1,15 +1,15 @@
-var xValues = ["Morocco", "Tanzania", "Algeria", "South Africa", "Mauritania"];
-var yValues = [55, 49, 44, 24, 15];
-var barColors = ["red", "green","blue","orange","brown"];
+const xValues = [50,60,70,80,90,100,110,120,130,140,150];
+const yValues = [7,8,8,9,9,9,10,11,14,14,15];
 
 new Chart("myChart", {
-  type: "bar",
+  type: "line",
   data: {
     labels: xValues,
     datasets: [{
-      backgroundColor: barColors,
+      backgroundColor:"rgba(0,75,50,1.0)",
+      borderColor: "rgba(255,110,0,0.5)",
       data: yValues
     }]
   },
-  // options: {...}
+  // options:{...}
 });

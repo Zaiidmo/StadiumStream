@@ -159,7 +159,7 @@
                         <h4 class="mb-4 font-semibold text-gray-800 dark:text-gray-300">
                             Sold Tickets
                         </h4>
-                        <canvas id="myChart"></canvas>
+                        <canvas id="myChart">Tickets</canvas>
                         <!-- <div class="flex justify-center mt-4 space-x-3 text-sm text-gray-600 dark:text-gray-400">
                             Chart legend
                             <div class="flex items-center">
