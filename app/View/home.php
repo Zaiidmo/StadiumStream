@@ -14,6 +14,7 @@
     <?php
     include '../app/View/includes/navbar.php';
     ?>
+    <!-- Hero section -->
 
     <section class="relative">
         <div class="relative">
@@ -50,9 +51,12 @@
             </div>
         </div>
     </section>
+
+    <!--  end Hero section -->
+    <!-- filter section -->
+
     <section class="bg-gray-50 w-full dark:bg-gray-900 ">
         <div class=" container max-w-7xl my-5 flex justify-center mx-auto">
-            <!-- Start coding here -->
             <div class="w-full bg-primary-100  py-8 shadow-md dark:bg-gray-800 sm:rounded-lg">
                 <div class="flex flex-col items-center justify-between p-4 space-y-3 md:flex-row md:space-y-0 md:space-x-4">
                     <div class="w-full md:w-1/2 py-2">
@@ -132,6 +136,9 @@
             </div>
         </div>
     </section>
+    <!-- end filter section -->
+    <!-- Matches section -->
+
     <section class="py-4">
         <div>
             <h2 class=" text-2xl font-bold text-center sm:text-4xl text-orange">Upcoming Matchs</h2>
@@ -228,6 +235,9 @@
             </button>
         </div>
     </section>
+    <!-- End Matches section -->
+    <!-- stadium section -->
+
     <section class="py-4">
         <div>
             <h2 class=" text-2xl font-bold text-center sm:text-4xl text-orange">Stadiums</h2>
@@ -292,7 +302,49 @@
             </button>
         </div>
     </section>
+    <!-- End Stadium section -->
+    <!-- companys  section -->
 
+    <section class="relative">
+        <div class="relative ">
+            <div class=" relative customgradient">
+                <div class=" w-full mx-auto h-fit sm:max-w-xl md:max-w-full lg:max-w-screen-xl">
+                    <div class="flex flex-col items-center justify-between xl:flex-row">
+                        <div class="w-full max-w-3xl mb-10 xl:mb-0  xl:w-12/16">
+                            <h2 class="max-w-3/5 mb-10 font-sans text-5xl font-bold tracking-tight text-white">
+                                Empowering Can Cote Devoir: Partner with Us for a
+                                <br class="hidden md:block" />
+                                <span class=" text-orange text-6xl font-bold ">Brighter Future!</span>
+                            </h2>
+
+
+                            <p class="max-w-xl mb-4 text-base text-gray-200 md:text-lg">
+                                Look no further! Our SBS The Show tickets are the simplest way for you to experience a live Kpop recording. </p>
+                            <div class="flex">
+                                <a class="px-2" href="#!">
+                                    <img class="rounded-t-lg" src="public/assets/images/cmp1.svg" alt="Hollywood Sign on The Hill" />
+                                </a>
+                                <a class="px-2" href="#!">
+                                    <img class="rounded-t-lg" src="public/assets/images/cmp5.png" alt="Hollywood Sign on The Hill" />
+                                </a>
+                                <a class="px-2" href="#!">
+                                    <img class="rounded-t-lg" src="public/assets/images/cmp3.svg" alt="Hollywood Sign on The Hill" />
+                                </a>
+                                <a class="px-2" href="#!">
+                                    <img class="rounded-t-lg" src="public/assets/images/cmp2.svg" alt="Hollywood Sign on The Hill" />
+                                </a>
+                            </div>
+
+
+                        </div>
+                        <div class="w-full max-w-xl xl:px-4 xl:w-5/12 relative">
+                            <img src="public/assets/images/SadioMane.svg" class=" rounded-lg h-auto" alt="" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <?php
     include '../app/View/includes/footer.php';
