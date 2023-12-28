@@ -25,41 +25,48 @@
                         class="text-2xl md:text-3xl lg:text-4xl text-center font-extrabold drop-shadow-md leading-tight tracking-tight text-gray-100 dark:text-white">
                         Get in <span class="text-orange-600 drop-shadow-md">Touch</span>
                     </h1>
-                    <form action="#">
+                    <form action="#" id="form">
                         <div class="grid gap-4 sm:grid-cols-2 sm:gap-6">
-                            <div class="w-full">
+                            <div class="w-full formGroup">
                                 <label for="first_name"
                                     class="block mb-2 text-sm font-medium text-gray-100 dark:text-white">First
                                     name</label>
                                 <input type="text" name="first_name" id="first_name"
-                                    class="bg-gray-200 border border-gray-300 text-gray-100 text-sm rounded-lg focus:ring-orange-600 focus:border-orange-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-orange-500 dark:focus:border-orange-500"
-                                    placeholder="first name" required="">
+                                    class="bg-gray-200 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-orange-600 focus:border-orange-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-orange-500 dark:focus:border-orange-500"
+                                    placeholder="first name" required minlength="5" costommaxlength="12" >
+                                <p class="error mt-2 text-sm text-red-600 dark:text-red-500 drop-shadow-md hidden"></p>
+
                             </div>
-                            <div class="w-full">
+                            <div class="w-full formGroup">
                                 <label for="last_name"
                                     class="block mb-2 text-sm font-medium text-gray-100 dark:text-white">Last
                                     name</label>
                                 <input type="text" name="last_name" id="last_name"
-                                    class="bg-gray-200 border border-gray-300 text-gray-100 text-sm rounded-lg focus:ring-orange-600 focus:border-orange-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-orange-500 dark:focus:border-orange-500"
-                                    placeholder="last name" required="">
+                                    class="bg-gray-200 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-orange-600 focus:border-orange-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-orange-500 dark:focus:border-orange-500"
+                                    placeholder="last name" required minlength="5" costommaxlength="12">
+                                <p class="error mt-2 text-sm text-red-600 dark:text-red-500 drop-shadow-md hidden"></p>
+
                             </div>
-                            <div class="sm:col-span-2">
-                                <label for="email"
-                                    class="block mb-2 text-sm font-medium text-gray-100 dark:text-white">Your
-                                    email</label>
+                            <div class="sm:col-span-2 formGroup">
+                                <label for="email" class="block mb-2 text-sm font-medium text-gray-100 dark:text-white">
+                                    Email adress</label>
                                 <input type="email" name="email" id="email"
-                                    class="bg-gray-200 border border-gray-300 text-gray-100 sm:text-sm rounded-lg focus:ring-orange-600 focus:border-orange-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                                    placeholder="name@company.com" required="">
+                                    class="bg-gray-200 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-orange-600 focus:border-orange-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                                    placeholder="name@example.com" pattern="^(.+)@(.+)$" required>
+                                <p class="error mt-2 text-sm text-red-600 dark:text-red-500 drop-shadow-md hidden"></p>
+
                             </div>
-                            <div class="sm:col-span-2">
+                            <div class="sm:col-span-2 formGroup">
                                 <label for="description"
                                     class="block mb-2 text-sm font-medium text-gray-100 dark:text-white">Your
                                     message</label>
                                 <textarea id="description" rows="8"
-                                    class="block p-2.5 w-full text-sm text-gray-100 bg-gray-200 rounded-lg border border-gray-300 focus:ring-orange-500 focus:border-orange-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-orange-500 dark:focus:border-orange-500"
-                                    placeholder="Write us your message here..."></textarea>
+                                    class="block p-2.5 w-full text-sm text-gray-900 bg-gray-200 rounded-lg border border-gray-300 focus:ring-orange-500 focus:border-orange-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-orange-500 dark:focus:border-orange-500"
+                                    placeholder="Write us your message here..." minlength="10" costommaxlength='50' required></textarea>
+                                <p class="error mt-2 text-sm text-red-600 dark:text-red-500 drop-shadow-md hidden"></p>
+
                             </div>
-                            <div class="sm:col-span-2">
+                            <div class="sm:col-span-2 formGroup">
                                 <button type="submit"
                                     class="w-full text-white bg-orange-600 hover:bg-orange-700 focus:ring-4 focus:outline-none focus:ring-orange-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-orange-600 dark:hover:bg-orange-700 dark:focus:ring-orange-800">Send</button>
                             </div>
@@ -97,6 +104,7 @@
         <img src="/assets/images/ellipse.svg" class="ellipse invisible md:visible" alt="ellipse">
         <img src="/assets/images/yellowShape.svg" class="yellow-shape invisible md:visible" alt="yellow-shape">
     </section>
+    <script src="/assets/js/validation.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/flowbite.min.js"></script>
 </body>
 
