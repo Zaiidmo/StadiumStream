@@ -1,7 +1,7 @@
 
 
 <footer
-  class=" text-center text-white bg-primary-100 dark:text-neutral-200 lg:text-left">
+  class=" text-center text-white bg-primary-100 dark:bg-gray-800 dark:text-neutral-200 lg:text-left">
   <div
     class="flex items-center justify-center border-b-2 border-neutral-200 p-6 dark:border-neutral-500 lg:justify-between">
     <div class="mr-12 hidden lg:block">
@@ -207,12 +207,12 @@
 
   <!--Copyright section-->
   <div
-    class="w-full bg-orange p-4 text-center text-white dark:bg-neutral-700 dark:text-neutral-200">
-    © 2023 Copyright:
+    class="w-full bg-black p-4 py-1 text-center text-white dark:text-neutral-200">
+    © 2024 StadiumStream, All Rights Reserved 
     <a
       class="text-white- dark:text-white"
       href="https://tw-elements.com/"
-      >Sqaud Camel</a
+      ><br> Made by Sqaud Camel</a
     >
   </div>
 </footer>
