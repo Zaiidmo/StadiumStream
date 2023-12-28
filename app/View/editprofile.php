@@ -16,7 +16,7 @@
 </head>
 
 <body class="bg-gray-300 dark:bg-gray-900">
-    <?php include "../app/View/includes/Dash_navigation.php"; ?>
+    <?php include "../app/View/includes/navbar.php"; ?>
     <main id="main" class="mt-2 px-10 lg:mt-5 lg:px-28 ">
         <div class="grid grid-cols-3 gap-4 pt-6 xl:gap-4 ">
             <div id="title" class="col-span-full flex flex-col ">

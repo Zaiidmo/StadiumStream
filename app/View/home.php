@@ -10,7 +10,7 @@
 
 </head>
 
-<body class="">
+<body class="bg-gray-300 dark:bg-gray-900">
     <?php
     include '../app/View/includes/navbar.php';
     ?>
@@ -32,7 +32,7 @@
 
                             <p class="max-w-xl mb-4 text-base text-gray-200 md:text-lg">
                                 Look no further! Our SBS The Show tickets are the simplest way for you to experience a live Kpop recording. </p>
-                            <button type="button" class="text-white bg-orange hover:bg-green-700 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-10 py-3.5 text-center inline-flex items-center dark:bg-orange-600 dark:hover:bg-green-700 dark:focus:ring-green-800">
+                            <button type="button" class="text-gray-300 bg-orange hover:bg-green-700 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-10 py-3.5 text-center inline-flex items-center dark:bg-orange-600 dark:hover:bg-green-700 dark:focus:ring-green-800">
                                 Get Started
                                 <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
                                     <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9" />
@@ -55,7 +55,7 @@
     <!--  end Hero section -->
     <!-- filter section -->
 
-    <section class="bg-gray-50 w-full dark:bg-gray-900 ">
+    <section class="text-gray-300 w-full dark:bg-gray-900 ">
         <div class=" container max-w-7xl my-5 flex justify-center mx-auto">
             <div class="w-full bg-primary-100  py-8 shadow-md dark:bg-gray-800 sm:rounded-lg">
                 <div class="flex flex-col items-center justify-between p-4 space-y-3 md:flex-row md:space-y-0 md:space-x-4">
@@ -404,6 +404,7 @@
 
 </body>
 
+<script src="public/assets/js/navbar.js"></script>
 <script src="public/assets/js/theme.js"></script>
 <script src="public/assets/js/home.js"></script>
 

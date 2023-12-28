@@ -16,7 +16,7 @@
 </head>
 
 <body class="bg-gray-300 dark:bg-gray-800">
-    <?php include "../app/View/includes/Dash_navigation.php"; ?>
+    <?php include "../app/View/includes/navbar.php"; ?>
     <main id="main">
         <div id="profile-card" class="p-16 pl-24">
             <div class="p-8 bg-white rounded-lg  dark:bg-gray-900 shadow mt-24">
