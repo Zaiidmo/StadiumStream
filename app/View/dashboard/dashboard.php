@@ -7,7 +7,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard</title>
-    <link rel="stylesheet" href="../../../public/assets/dist/output.css">
+    <link rel="stylesheet" href="public/assets/dist/output.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
 </head>
 
@@ -199,8 +199,8 @@
     </main>
 
 </body>
-<script src="../../../public/assets/js/charts.js"></script>
-<script src="../../../public/assets/js/navigation.js"></script>
-<script src="../../../public/assets/js/theme.js"></script>
+<script src="public/assets/js/charts.js"></script>
+<script src="public/assets/js/navigation.js"></script>
+<script src="public/assets/js/theme.js"></script>
 
 </html>

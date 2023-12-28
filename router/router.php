@@ -21,7 +21,6 @@ class Router
             $controller = ucwords($uri[1] ) . 'Controller';
             unset($uri[1]);
             $controller = "App\Controller\\" . $controller;
-            //$controller = MVC\CONTROLLERS\HomeController
             if (class_exists($controller)) {
                 $this->controller = $controller;
             } else {

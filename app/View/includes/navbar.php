@@ -72,7 +72,7 @@
 <header class="z-40 fixed w-screen py-4 flex bg-primary-100  shadow-md dark:bg-gray-800">
   <nav class="container mx-auto w-full flex justify-between items-center h-full px-6 text-gray-600 dark:text-gray-300">
     <div id="logo" class="flex items-center z-40">
-      <a href="../home" class="flex ml-4 md:mr-24 gap-5 items-center">
+      <a href="home" class="flex ml-4 md:mr-24 gap-5 items-center">
         <svg width="35" height="35" viewBox="0 0 128 128" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path d="M43.53 5.3C43.53 4.22 44.13 3.82 45.28 3.82C46.43 3.82 82.89 3.68 83.5 3.68C84.1 3.68 84.78 4.28 84.71 5.09C84.64 5.9 84.78 17.32 84.71 17.92C84.64 18.52 84.31 19.2 83.43 19.26C82.56 19.33 45.75 19.46 45.01 19.46C44.27 19.46 43.67 18.59 43.6 17.78C43.53 16.97 43.53 5.97 43.53 5.3Z" fill="#546F7B" />
           <path d="M48.7 18.66H53.47V23.9H48.7V18.66ZM75.17 18.87H79.71V23.95H75.17V18.87Z" fill="#546F7B" />
@@ -96,8 +96,8 @@
       </a>
     </div>
     <div id="right-side" class="flex justify-evenly">
-      <a href="signin/signin" class="text-white bg-transparent focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-2xl text-sm px-4 py-2 text-center   border border-white-900 hover:bg-green-800  dark:focus:ring-blue-800 mx-2">Login</a>
-      <a href="signup/signup" class="text-white bg-transparent focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-2xl text-sm px-4 py-2 text-center   border border-white-900 hover:bg-green-800  dark:focus:ring-blue-800 mx-2">Sign up</a>
+      <a href="signin" class="text-white bg-transparent focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-2xl text-sm px-4 py-2 text-center   border border-white-900 hover:bg-green-800  dark:focus:ring-blue-800 mx-2">Login</a>
+      <a href="signup" class="text-white bg-transparent focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-2xl text-sm px-4 py-2 text-center   border border-white-900 hover:bg-green-800  dark:focus:ring-blue-800 mx-2">Sign up</a>
       <ul class="flex items-center flex-shrink-0 space-x-6">
         <!-- Theme toggler -->
         <li class="flex">
@@ -152,7 +152,7 @@
           </button>
           <ul id="profile-menu" class="hidden absolute right-0 w-56 p-2 mt-2 space-y-2 text-gray-600 bg-white border border-gray-100 rounded-md shadow-md dark:border-gray-700 dark:text-gray-300 dark:bg-gray-700" aria-label="submenu">
             <li class="flex">
-              <a class="inline-flex items-center w-full px-2 py-1 text-sm font-semibold transition-colors duration-150 rounded-md hover:bg-gray-100 hover:text-gray-800 dark:hover:bg-gray-800 dark:hover:text-gray-200" href="profile/profile">
+              <a class="inline-flex items-center w-full px-2 py-1 text-sm font-semibold transition-colors duration-150 rounded-md hover:bg-gray-100 hover:text-gray-800 dark:hover:bg-gray-800 dark:hover:text-gray-200" href="profile">
                 <svg class="w-4 h-4 mr-3" aria-hidden="true" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor">
                   <path d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path>
                 </svg>
@@ -160,7 +160,7 @@
               </a>
             </li>
             <li class="flex">
-              <a class="inline-flex items-center w-full px-2 py-1 text-sm font-semibold transition-colors duration-150 rounded-md hover:bg-gray-100 hover:text-gray-800 dark:hover:bg-gray-800 dark:hover:text-gray-200" href="editprofile/editprofile">
+              <a class="inline-flex items-center w-full px-2 py-1 text-sm font-semibold transition-colors duration-150 rounded-md hover:bg-gray-100 hover:text-gray-800 dark:hover:bg-gray-800 dark:hover:text-gray-200" href="editprofile">
                 <svg class="w-4 h-4 mr-3" aria-hidden="true" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor">
                   <path d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"></path>
                   <path d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
@@ -169,7 +169,7 @@
               </a>
             </li>
             <li class="flex">
-              <a class="inline-flex items-center w-full px-2 py-1 text-sm font-semibold transition-colors duration-150 rounded-md hover:bg-gray-100 hover:text-gray-800 dark:hover:bg-gray-800 dark:hover:text-gray-200" href="#">
+              <a class="inline-flex items-center w-full px-2 py-1 text-sm font-semibold transition-colors duration-150 rounded-md hover:bg-gray-100 hover:text-gray-800 dark:hover:bg-gray-800 dark:hover:text-gray-200" href="logout">
                 <svg class="w-4 h-4 mr-3" aria-hidden="true" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor">
                   <path d="M11 16l-4-4m0 0l4-4m-4 4h14m-5 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h7a3 3 0 013 3v1"></path>
                 </svg>

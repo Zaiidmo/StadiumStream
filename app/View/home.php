@@ -32,7 +32,7 @@
 
                             <p class="max-w-xl mb-4 text-base text-gray-200 md:text-lg">
                                 Look no further! Our SBS The Show tickets are the simplest way for you to experience a live Kpop recording. </p>
-                            <a href="contact/contact">
+                            <a href="contact">
                                 <button type="button" class="text-gray-300 bg-orange hover:bg-green-700 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-10 py-3.5 text-center inline-flex items-center dark:bg-orange-600 dark:hover:bg-green-700 dark:focus:ring-green-800">
                                     Get in touch
                                     <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
@@ -40,7 +40,7 @@
                                     </svg>
                                 </button>
                             </a>
-                            <a href="buyticket/buyticket">
+                            <a href="buyticket">
                                 <button type="button" class="mx-5 text-white bg-orange hover:bg-green-700 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-10 py-3.5 text-center inline-flex items-center dark:bg-orange-600 dark:hover:bg-green-700 dark:focus:ring-green-800">
                                     Get Your Ticket
                                     <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
@@ -114,25 +114,25 @@
                                 <li class="flex items-center">
                                     <input id="apple" type="checkbox" value="" class="w-4 h-4 bg-gray-100 border-gray-300 rounded text-primary-600 focus:ring-primary-500 dark:focus:ring-primary-600 dark:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500" />
                                     <label for="apple" class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-100">
-                                        Apple (56)
+                                        top games 
                                     </label>
                                 </li>
                                 <li class="flex items-center">
                                     <input id="fitbit" type="checkbox" value="" class="w-4 h-4 bg-gray-100 border-gray-300 rounded text-primary-600 focus:ring-primary-500 dark:focus:ring-primary-600 dark:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500" />
                                     <label for="fitbit" class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-100">
-                                        Fitbit (56)
+                                        this week (56)
                                     </label>
                                 </li>
                                 <li class="flex items-center">
                                     <input id="dell" type="checkbox" value="" class="w-4 h-4 bg-gray-100 border-gray-300 rounded text-primary-600 focus:ring-primary-500 dark:focus:ring-primary-600 dark:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500" />
                                     <label for="dell" class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-100">
-                                        Dell (56)
-                                    </label>
+                                    today's matchs
+                                </label>
                                 </li>
                                 <li class="flex items-center">
                                     <input id="asus" type="checkbox" value="" checked class="w-4 h-4 bg-gray-100 border-gray-300 rounded text-primary-600 focus:ring-primary-500 dark:focus:ring-primary-600 dark:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500" />
                                     <label for="asus" class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-100">
-                                        Asus (97)
+                                    this mounth
                                     </label>
                                 </li>
                             </ul>
