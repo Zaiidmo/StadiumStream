@@ -2,6 +2,6 @@
 namespace App\Controller;
 class HomeController {
     public function index() {
-        echo "Hello World <br>";
+        include '../app/View/home.php';
     }
 }
