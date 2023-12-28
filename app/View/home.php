@@ -146,7 +146,7 @@
         </div>
         <div class="container max-w-7xl px-2 mx-auto">
             <div class="grid-cols-1 sm:grid md:grid-cols-3 ">
-                <div class="mx-3 mt-6 flex flex-col rounded-lg bg-white shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] dark:bg-neutral-700 sm:shrink-0 sm:grow sm:basis-0">
+                <div class="match-card-display mx-3 mt-6 flex flex-col rounded-lg bg-white shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] dark:bg-neutral-700 sm:shrink-0 sm:grow sm:basis-0">
                     <a href="#!">
                         <img class="rounded-t-lg" src="public/assets/images/match4.jpg" alt="Skyscrapers" />
                     </a>
@@ -172,7 +172,59 @@
                         <small>Last updated 3 mins ago</small>
                     </div>
                 </div>
-                <div class="mx-3 mt-6 flex flex-col rounded-lg bg-white shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] dark:bg-neutral-700 sm:shrink-0 sm:grow sm:basis-0">
+                <div class="match-card-display mx-3 mt-6 flex flex-col rounded-lg bg-white shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] dark:bg-neutral-700 sm:shrink-0 sm:grow sm:basis-0">
+                    <a href="#!">
+                        <img class="rounded-t-lg" src="public/assets/images/match4.jpg" alt="Skyscrapers" />
+                    </a>
+                    <div class="p-3">
+                        <h5 class="mb-2 text-xl font-medium leading-tight text-neutral-800 dark:text-neutral-50">
+                            Card title
+                        </h5>
+                        <p class=" text-base text-neutral-600 dark:text-neutral-200">
+                            This is a wider card with supporting text below as a natural
+                            lead-in to additional content. This content is a little bit
+                            longer.
+                        </p>
+                    </div>
+                    <div class="p-3 flex justify-end">
+                        <a href="buyTicket" class="text-orange border border-orange py-2 px-3 rounded inline-flex  items-center">
+                            Buy Ticket
+                            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" class="w-6 h-6 ml-2">
+                                <path d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                            </svg>
+                        </a>
+                    </div>
+                    <div class="mt-auto border-t-2 border-neutral-100 px-6 py-3 text-center dark:border-neutral-600 dark:text-neutral-50">
+                        <small>Last updated 3 mins ago</small>
+                    </div>
+                </div>
+                <div class="match-card-display mx-3 mt-6 flex flex-col rounded-lg bg-white shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] dark:bg-neutral-700 sm:shrink-0 sm:grow sm:basis-0">
+                    <a href="#!">
+                        <img class="rounded-t-lg" src="public/assets/images/match4.jpg" alt="Skyscrapers" />
+                    </a>
+                    <div class="p-3">
+                        <h5 class="mb-2 text-xl font-medium leading-tight text-neutral-800 dark:text-neutral-50">
+                            Card title
+                        </h5>
+                        <p class=" text-base text-neutral-600 dark:text-neutral-200">
+                            This is a wider card with supporting text below as a natural
+                            lead-in to additional content. This content is a little bit
+                            longer.
+                        </p>
+                    </div>
+                    <div class="p-3 flex justify-end">
+                        <a href="buyTicket" class="text-orange border border-orange py-2 px-3 rounded inline-flex  items-center">
+                            Buy Ticket
+                            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" class="w-6 h-6 ml-2">
+                                <path d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                            </svg>
+                        </a>
+                    </div>
+                    <div class="mt-auto border-t-2 border-neutral-100 px-6 py-3 text-center dark:border-neutral-600 dark:text-neutral-50">
+                        <small>Last updated 3 mins ago</small>
+                    </div>
+                </div>
+                <div style="display: none !important;" class="match-card-display mx-3 mt-6 flex flex-col rounded-lg bg-white shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] dark:bg-neutral-700 sm:shrink-0 sm:grow sm:basis-0">
                     <a href="#!">
                         <img class="rounded-t-lg" src="public/assets/images/match4.jpg" alt="Skyscrapers" />
                     </a>
@@ -198,7 +250,7 @@
                         <small>Last updated 3 mins ago</small>
                     </div>
                 </div>
-                <div class="mx-3 mt-6 flex flex-col rounded-lg bg-white shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] dark:bg-neutral-700 sm:shrink-0 sm:grow sm:basis-0">
+                <div style="display: none !important;" class="match-card-display mx-3 mt-6 flex flex-col rounded-lg bg-white shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] dark:bg-neutral-700 sm:shrink-0 sm:grow sm:basis-0">
                     <a href="#!">
                         <img class="rounded-t-lg" src="public/assets/images/match4.jpg" alt="Skyscrapers" />
                     </a>
@@ -227,7 +279,7 @@
             </div>
         </div>
         <div class="fter:h-px my-16 flex items-center before:h-px before:flex-1  before:bg-gray-300 before:content-[''] after:h-px after:flex-1 after:bg-gray-300  after:content-['']">
-            <button type="button" class="flex items-center rounded-full border border-gray-300 bg-secondary-50 px-3 py-2 text-center text-sm font-medium text-gray-900 hover:bg-gray-100">
+            <button id="loadmoreId" type="button" class="flex items-center rounded-full border border-gray-300 bg-secondary-50 px-3 py-2 text-center text-sm font-medium text-gray-900 hover:bg-gray-100">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="mr-1 h-4 w-4">
                     <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd" />
                 </svg>
@@ -283,7 +335,7 @@
                         </p>
                     </div>
                     <div class="p-3 flex justify-center">
-                        <a href="" class="text-orange border border-orange py-2 px-3 rounded inline-flex  items-center">
+                        <a href="" id="loadmore" class="text-orange border border-orange py-2 px-3 rounded inline-flex  items-center">
                             View More
                             <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" class="w-6 h-6 ml-2">
                                 <path d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
@@ -351,6 +403,8 @@
     ?>
 
 </body>
+
 <script src="public/assets/js/theme.js"></script>
+<script src="public/assets/js/home.js"></script>
 
 </html>
