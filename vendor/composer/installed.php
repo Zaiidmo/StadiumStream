@@ -3,6 +3,8 @@
         'name' => 'zaiid/stadium-stream',
         'pretty_version' => 'dev-master',
         'version' => 'dev-master',
+        'reference' => '8fc9d36c58313a9eab0cef8010d3eb1dc59db9fb',
+        'reference' => '68186a04a3b61451b1aeb725d75f336413736821',
         'reference' => '1eb75f7a9d997efb671459ee569a9364c9737239',
         'type' => 'library',
         'install_path' => __DIR__ . '/../../',
@@ -133,6 +135,8 @@
         'zaiid/stadium-stream' => array(
             'pretty_version' => 'dev-master',
             'version' => 'dev-master',
+            'reference' => '8fc9d36c58313a9eab0cef8010d3eb1dc59db9fb',
+            'reference' => '68186a04a3b61451b1aeb725d75f336413736821',
             'reference' => '1eb75f7a9d997efb671459ee569a9364c9737239',
             'type' => 'library',
             'install_path' => __DIR__ . '/../../',
