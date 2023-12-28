@@ -159,7 +159,7 @@
                         <h4 class="mb-4 font-semibold text-gray-800 dark:text-gray-300">
                             Sold Tickets
                         </h4>
-                        <canvas id="myChart">Tickets</canvas>
+                        <canvas id="Tickets">Tickets</canvas>
                         <!-- <div class="flex justify-center mt-4 space-x-3 text-sm text-gray-600 dark:text-gray-400">
                             Chart legend
                             <div class="flex items-center">
@@ -176,21 +176,21 @@
                             </div>
                         </div> -->
                     </div>
-                    <div class="min-w-0 p-4 bg-white rounded-lg shadow-xs dark:bg-gray-800">
+                    <div class="min-w-0 p-4 bg-white rounded-lg shadow-xs dark:bg-gray-800 text-black dark:text-white">
                         <h4 class="mb-4 font-semibold text-gray-800 dark:text-gray-300">
                             Top Ranked Nations
                         </h4>
-                        <canvas id="teams"></canvas>
+                        <canvas class="text-black dark:text-white" id="Nations"></canvas>
                         <div class="flex justify-center mt-4 space-x-3 text-sm text-gray-600 dark:text-gray-400">
                             <!-- Chart legend -->
-                            <div class="flex items-center">
-                                <span class="inline-block w-3 h-3 mr-1 bg-teal-600 rounded-full"></span>
+                            <!-- <div class="flex items-center">
+                                <span class="inline-block w-3 h-3 mr-1 bg- teal-600 rounded-full"></span>
                                 <span>Organic</span>
                             </div>
                             <div class="flex items-center">
                                 <span class="inline-block w-3 h-3 mr-1 bg-purple-600 rounded-full"></span>
                                 <span>Paid</span>
-                            </div>
+                            </div> -->
                         </div>
                     </div>
                 </div>

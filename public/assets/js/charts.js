@@ -1,7 +1,6 @@
-const xValues = ['Monday',60,70,80,90,100,110,120,130,140,150];
-const yValues = [10,8,5,9,10,17,3,11,7,14,1];
-
-new Chart("myChart", {
+const xValues = ['Monday','Tuesday','Wednesday','Thursday','Friday','Saturday','Sunday'];
+const yValues = [1000,400,633,288,899,909,200,450];
+new Chart("Tickets", {
   type: "line",
   data: {
     labels: xValues,
@@ -12,4 +11,31 @@ new Chart("myChart", {
     }]
   },
   options:{tickets}
+}); 
+// Nations Pie Chart 
+var xxValues = ["Morocco", "Algheria", "Mauritania", "Tanzania", "South Africa","Tunisia", "Egypt", "Evory Cost", "Mouzambique", "alaallalal"];
+var yyValues = [55, 49, 44, 24, 15,12, 3, 19, 1, 20];
+var barColors = [
+  "#b91d47",
+  "#00aba9",
+  "#2b5797",
+  "#e8c3b9",
+  "#1e7145"
+];
+
+new Chart("Nations", {
+  type: "pie",
+  data: {
+    labels: xxValues,
+    datasets: [{
+      backgroundColor: barColors,
+      data: yyValues
+    }]
+  },
+  options: {
+    title: {
+      display: true,
+      text: "Played Games for different Nations"
+    }
+  }
 });
