@@ -22,22 +22,22 @@
                         <div class="bg-white dark:bg-gray-700 shadow rounded-lg p-6">
                             <h1 class="text-xl font-semibold mb-4 text-gray-900 dark:text-gray-100">Team Data</h1>
                             <p class="text-gray-600 dark:text-gray-300 mb-6">Here you can add team's informations.</p>
-                            <form>
+                            <form enctype="multipart/form-data" action="Teams/create" method="POST"> 
                                 <div class="md:grid-cols-2 gap-4 mb-4">
-                                    <input type="text" placeholder="Nation name" class="border p-2 rounded w-full">
+                                    <input type="text" placeholder="Nation name" name="name" class="border p-2 rounded w-full">
                                 </div>
                                 <div class="mb-4">
-                                    <input type="text" placeholder="Coach" class="border p-2 rounded w-full">
+                                    <input type="text" placeholder="Coach" name="Coach" class="border p-2 rounded w-full">
                                 </div>
                                 <div class="mb-4">
-                                    <input type="text" placeholder="Founding Year" class="border p-2 rounded w-full">
+                                    <input type="text" placeholder="Founding Year" name="Founding_Year" class="border p-2 rounded w-full">
                                 </div>
                                 <div class="mb-4">
-                                    <input type="file" placeholder="Flag Upload " class="border p-2 rounded w-full">
+                                    <input type="file" placeholder="Flag Upload " name="flag" class="border p-2 rounded w-full">
                                 </div>
                                 
                                 <a href="stadium">
-                                    <button type="button" id="theme-toggle" class="px-4 py-2 bg-primary-100 rounded  text-white hover:bg-blue-600 focus:outline-none transition-colors">
+                                    <button type="submit" id="theme-toggle" class="px-4 py-2 bg-primary-100 rounded  text-white hover:bg-blue-600 focus:outline-none transition-colors">
                                         Confirm And Submit
                                     </button>
                                 </a>
