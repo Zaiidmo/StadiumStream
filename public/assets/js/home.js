@@ -1,4 +1,4 @@
-const loadmoreId = document.querySelector('#loadmore');
+const loadmoreId = document.querySelector('#loadmoreId');
 const matchCard = document.querySelectorAll('.match-card-display');
 let index = 0;
 loadmoreId.addEventListener('click', function(){
@@ -17,8 +17,6 @@ loadmoreId.addEventListener('click', function(){
         for (let i = index; i < index+3; i++) {;
             matchCard[i].classList.remove('hidden');
             matchCard[i].classList.add('flex');  
-            console.log('Ook');
-
    
         }
         index+=3;

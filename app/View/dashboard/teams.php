@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CAN23- TEAMS</title>
-    <link rel="stylesheet" href="../../../public/assets/dist/output.css">
+    <link rel="stylesheet" href="public/assets/dist/output.css">
 </head>
 
 <body class="bg-gray-300 dark:bg-gray-900">
@@ -421,7 +421,7 @@
     </main>
     <?php include "../app/View/includes/Dash_footer.php"; ?>
 </body>
-<script src="../../../public/assets/js/navigation.js"></script>
-<script src="../../../public/assets/js/theme.js"></script>
+<script src="public/assets/js/navigation.js"></script>
+<script src="public/assets/js/theme.js"></script>
 
 </html>

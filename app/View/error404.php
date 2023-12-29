@@ -17,8 +17,8 @@
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"></path>
             </svg>
         </div>
-        <p class="mt-4 font-poppins tracking-wider text-gray-600">Let's get you back <a href="/home" class="text-blue-500">home</a>.</p>
+        <p class="mt-4 font-poppins tracking-wider text-gray-600">Let's get you back <a href="home" class="text-blue-500">home</a>.</p>
     </div>
 </body>
-<script src="../../public/assets/js/theme.js"></script>
+<script src="public/assets/js/theme.js"></script>
 </html>

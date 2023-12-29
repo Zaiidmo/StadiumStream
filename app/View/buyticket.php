@@ -5,6 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Get Your Ticket</title>
+    <meta name="keywords" content="HTML, CSS, Youcode, tailwindCSS, StadiumStream, CAN24">
+    <meta name="author" content="Waheli">
+    <meta name="description" content="StadiumStream to Sell Football tickets">
     <link rel="stylesheet" href="public/assets/dist/output.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/flowbite.min.js"></script>
 

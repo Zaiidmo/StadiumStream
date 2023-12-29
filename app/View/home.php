@@ -4,7 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>StadiumStream</title>
+    <meta name="keywords" content="HTML, CSS, Youcode, tailwindCSS, StadiumStream, CAN24">
+    <meta name="author" content="Waheli">
+    <meta name="description" content="StadiumStream to Sell Football tickets">
     <link rel="stylesheet" href="public/assets/dist/output.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/flowbite.min.js"></script>
 
@@ -154,7 +157,7 @@
             <div class="grid-cols-1 sm:grid md:grid-cols-3 ">
                 <div class="match-card-display  mx-3 mt-6 flex flex-col rounded-lg bg-white shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] dark:bg-gray-800 sm:shrink-0 sm:grow sm:basis-0">
                     <a href="#!">
-                        <img class="rounded-t-lg" src="public/assets/images/match4.jpg" alt="Skyscrapers" />
+                        <img class="rounded-t-lg" src="public/assets/images/match4.jpg" alt="football" />
                     </a>
                     <div class="p-5">
                         <h5 class="mb-2 text-xl font-medium leading-tight text-neutral-800 dark:text-neutral-50">

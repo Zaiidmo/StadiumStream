@@ -77,7 +77,8 @@
         </div>
     </main>
 </body>
-<script src="../../../public/assets/js/navigation.js"></script>
-<script src="../../../public/assets/js/theme.js"></script>
-
+<script src="public/assets/js/navigation.js"></script>
+<script src="public/assets/js/navbar.js"></script>
+<script src="public/assets/js/theme.js"></script>
+<script src="public/assets/js/home.js"></script>
 </html>

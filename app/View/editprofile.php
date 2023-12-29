@@ -17,7 +17,7 @@
 
 <body class="bg-gray-300 dark:bg-gray-900">
     <?php include "../app/View/includes/navbar.php"; ?>
-    <main id="main" class="mt-2 px-10 lg:mt-5 lg:px-28 ">
+    <main id="main" class="mt-2 px-10   ">
         <div class="grid grid-cols-3 gap-4 pt-6 xl:gap-4 ">
             <div id="title" class="col-span-full flex flex-col ">
                 <h1 class="text-3xl font-semibold font-mono text-gray-700 dark:text-gray-200">User Profile</h1>
@@ -434,7 +434,9 @@
         </div>
     </main>
 </body>
-<script src=" ../../../public/assets/js/navigation.js"></script>
-<script src="../../../public/assets/js/theme.js"></script>
+<script src="public/assets/js/navigation.js"></script>
+<script src="public/assets/js/navbar.js"></script>
+<script src="public/assets/js/theme.js"></script>
+<script src="public/assets/js/home.js"></script>
 
 </html>
