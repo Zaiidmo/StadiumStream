@@ -12,11 +12,11 @@
     <!-- <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> -->
     <!-- <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;400;500;600;700;800&display=swap" rel="stylesheet"> -->
     <title>Profile</title>
-    <link rel="stylesheet" href="../../../public/assets/dist/output.css">
+    <link rel="stylesheet" href="public/assets/dist/output.css">
 </head>
 
 <body class="bg-gray-300 dark:bg-gray-800">
-    <?php include "../app/View/includes/Dash_navigation.php"; ?>
+    <?php include "../app/View/includes/navbar.php"; ?>
     <main id="main">
         <div id="profile-card" class="p-16 pl-24">
             <div class="p-8 bg-white rounded-lg  dark:bg-gray-900 shadow mt-24">
@@ -77,7 +77,8 @@
         </div>
     </main>
 </body>
-<script src="../../../public/assets/js/navigation.js"></script>
-<script src="../../../public/assets/js/theme.js"></script>
-
+<script src="public/assets/js/navigation.js"></script>
+<script src="public/assets/js/navbar.js"></script>
+<script src="public/assets/js/theme.js"></script>
+<script src="public/assets/js/home.js"></script>
 </html>

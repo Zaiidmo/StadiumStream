@@ -7,13 +7,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard</title>
-    <link rel="stylesheet" href="../../../public/assets/dist/output.css">
+    <link rel="stylesheet" href="public/assets/dist/output.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
 </head>
 
 <body class="bg-gray-300 dark:bg-gray-900">
     <?php include "../app/View/includes/Dash_navigation.php"; ?>
-    <main id="main" class="px-28">
+    <main id="main" class= px-28">
         <div class="h-full overflow-y-auto">
             <div class="container px-6 mx-auto grid">
                 <h2 class="my-6 text-4xl font-semibold font-poppins tracking-widest text-gray-700 dark:text-gray-200">
@@ -197,10 +197,11 @@
             </div>
         </div>
     </main>
+    <?php include "../app/View/includes/Dash_footer.php"; ?>
 
 </body>
-<script src="../../../public/assets/js/charts.js"></script>
-<script src="../../../public/assets/js/navigation.js"></script>
-<script src="../../../public/assets/js/theme.js"></script>
+<script src="public/assets/js/charts.js"></script>
+<script src="public/assets/js/navigation.js"></script>
+<script src="public/assets/js/theme.js"></script>
 
 </html>

@@ -1,6 +1,6 @@
 document.getElementById('sidebar-toggle-button').addEventListener('click', function() {
     document.getElementById('sidebar').classList.toggle('hidden');
-    document.getElementById('main').classList.toggle('sm:ml-64');
+    document.getElementById('main').classList.toggle('ml-64');
 })
 document.getElementById('profile-menu-toggler').addEventListener('click',function(){
     document.getElementById('profile-menu').classList.toggle('hidden');
@@ -8,12 +8,6 @@ document.getElementById('profile-menu-toggler').addEventListener('click',functio
 document.getElementById('notification-button').addEventListener('click', function(){
     document.getElementById('notifications').classList.toggle('hidden');
 })
-
-// document.body.addEventListener('click', function(){
-//     document.getElementById('profile-menu').classList.add('hidden');
-//     document.getElementById('sidebar').classList.add('hidden');
-//     document.getElementById('main').classList.remove('sm:ml-64');
-// })
 
 document.body.addEventListener('click', function (event) {
     const profileMenu = document.getElementById('profile-menu');
