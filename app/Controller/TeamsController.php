@@ -2,7 +2,7 @@
 namespace App\Controller;
 
 use App\Model\TeamModel;
-global $conn;
+
 class TeamsController {
     public function index() {
         $teams = new TeamModel();
@@ -10,4 +10,7 @@ class TeamsController {
         include "../app/View/dashboard/teams.php";
     }
 
+    public function addteam() {
+        include "../app/View/dashboard/addteam.php";
+    }
 }
