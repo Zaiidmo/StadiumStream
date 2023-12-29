@@ -8,7 +8,7 @@
                 </path>
             </svg>
         </button>
-        <a href="dashboard" class="flex ml-4 md:mr-24 gap-5 items-center">
+        <a href="home" class="flex ml-4 md:mr-24 gap-5 items-center">
             <svg width="35" height="35" viewBox="0 0 128 128" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M43.53 5.3C43.53 4.22 44.13 3.82 45.28 3.82C46.43 3.82 82.89 3.68 83.5 3.68C84.1 3.68 84.78 4.28 84.71 5.09C84.64 5.9 84.78 17.32 84.71 17.92C84.64 18.52 84.31 19.2 83.43 19.26C82.56 19.33 45.75 19.46 45.01 19.46C44.27 19.46 43.67 18.59 43.6 17.78C43.53 16.97 43.53 5.97 43.53 5.3Z" fill="#546F7B" />
                 <path d="M48.7 18.66H53.47V23.9H48.7V18.66ZM75.17 18.87H79.71V23.95H75.17V18.87Z" fill="#546F7B" />
