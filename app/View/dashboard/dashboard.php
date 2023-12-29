@@ -197,6 +197,7 @@
             </div>
         </div>
     </main>
+    <?php include "../app/View/includes/Dash_footer.php"; ?>
 
 </body>
 <script src="public/assets/js/charts.js"></script>
