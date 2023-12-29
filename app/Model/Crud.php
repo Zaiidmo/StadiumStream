@@ -1,15 +1,16 @@
 <?php
+
 namespace App\Model;
+
 use config\Connection;
 use PDO;
 use PDOException;
-class Crud
-{
-    private $db;
 
-    public function __construct($db)
+class Crud extends Connection
+{
+    public function __construct()
     {
-        $this->db = $db;
+        parent::__construct();
     }
 
     public function create($tableName, $data)
@@ -19,7 +20,7 @@ class Crud
             $values = ":" . implode(", :", array_keys($data));
 
             $query = "INSERT INTO $tableName ($columns) VALUES ($values)";
-            $stmt = $this->db->getConnection()->prepare($query);
+            $stmt = $this->pdo->prepare($query);
             $stmt->execute($data);
 
             echo "Record added successfully!";
@@ -32,7 +33,7 @@ class Crud
     {
         try {
             $query = "SELECT * FROM $tableName";
-            $stmt = $this->db->getConnection()->query($query);
+            $stmt = $this->pdo->query($query);
 
             $records = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
@@ -55,7 +56,7 @@ class Crud
             $query = "UPDATE $tableName SET $update_arr WHERE id = :id";
             $data['id'] = $id;
 
-            $stmt = $this->db->getConnection()->prepare($query);
+            $stmt = $this->pdo->prepare($query);
             $stmt->execute($data);
 
             echo "Record updated successfully!";
@@ -70,7 +71,7 @@ class Crud
             $query = "DELETE FROM $tableName WHERE ID = :id";
 
             // Prepare and execute the SQL statement
-            $stmt = $this->db->getConnection()->prepare($query);
+            $stmt = $this->pdo->prepare($query);
             $stmt->bindParam(":id", $id, PDO::PARAM_INT);
             $stmt->execute();
 
@@ -82,5 +83,3 @@ class Crud
         }
     }
 }
-
-$team = new Crud($conn);
