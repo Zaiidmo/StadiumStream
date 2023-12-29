@@ -8,16 +8,13 @@
     <meta name="keywords" content="HTML, CSS, Youcode, tailwindCSS, StadiumStream, CAN23">
     <meta name="author" content="TheVlpha">
     <meta name="description" content="StadiumStream to Sell Football tickets">
-    <!-- <link rel="preconnect" href="https://fonts.googleapis.com"> -->
-    <!-- <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> -->
-    <!-- <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;400;500;600;700;800&display=swap" rel="stylesheet"> -->
     <title>Profile</title>
     <link rel="stylesheet" href="public\assets\dist\output.css">
 </head>
 
 <body class="bg-gray-300 dark:bg-gray-900">
     <?php include "../app/View/includes/navbar.php"; ?>
-    <main id="main" class="mt-2 px-10   ">
+    <main id="main" class="pt-20 px-10   ">
         <div class="grid grid-cols-3 gap-4 pt-6 xl:gap-4 ">
             <div id="title" class="col-span-full flex flex-col ">
                 <h1 class="text-3xl font-semibold font-mono text-gray-700 dark:text-gray-200">User Profile</h1>
@@ -434,7 +431,6 @@
         </div>
     </main>
 </body>
-<script src="public/assets/js/navigation.js"></script>
 <script src="public/assets/js/navbar.js"></script>
 <script src="public/assets/js/theme.js"></script>
 <script src="public/assets/js/home.js"></script>
