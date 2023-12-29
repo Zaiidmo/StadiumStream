@@ -1,5 +1,5 @@
 <!-- Desktop sidebar -->
-<header class="z-40 fixed w-screen py-4 flex bg-gray-50 shadow-md dark:bg-gray-800">
+<header class="z-40 fixed w-screen top-0 py-4 flex bg-gray-50 shadow-md dark:bg-gray-800">
     <div id="logo" class="flex items-center ml-auto z-40">
         <button data-drawer-target="logo-sidebar" data-drawer-toggle="logo-sidebar" aria-controls="logo-sidebar" type="button" id="sidebar-toggle-button" class="inline-flex items-center p-2 text-sm text-gray-500 rounded-lg smXl:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600">
             <span class="sr-only">Open sidebar</span>
@@ -121,7 +121,7 @@
         </ul>
     </div>
 </header>
-<aside id="sidebar" class="fixed hidden z-0 left-0 w-64 shadow-md h-screen transition-transform -translate-x-full sm:translate-x-0" aria-label="Sidebar">
+<aside id="sidebar" class="fixed hidden z-30 left-0 w-64 pt-10 shadow-md h-screen transition-transform -translate-x-full sm:translate-x-0" aria-label="Sidebar">
     <div class="h-full px-3 overflow-y-auto shadow-md bg-gray-50 dark:bg-gray-800">
         <ul class="space-y-2 font-medium mt-16">
             <li>

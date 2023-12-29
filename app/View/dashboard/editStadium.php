@@ -10,7 +10,7 @@
 
 <body class="bg-gray-300 dark:bg-gray-900">
     <?php include "../app/View/includes/Dash_navigation.php"; ?>
-    <main id="main" class="px-28">
+    <main id="main" class="h-screen px-28">
         <h2 class="my-6 text-4xl font-semibold text-center font-poppins tracking-widest text-gray-700 dark:text-gray-200">
             <span class="text-primary-100 dark:text-orange">EDIT </span> STADIUM
         </h2>
