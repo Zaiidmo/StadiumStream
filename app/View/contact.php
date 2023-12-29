@@ -16,7 +16,7 @@
     include '../app/View/includes/navbar.php';
     ?>
     <!-- <img src="public/assets/images/herobg.svg" class="z-1 absolute inset-0 object-cover w-full h-full" alt="" /> -->
-    <section class="contact-gradiant  dark:bg-gray-900 font-poppins relative py-28">
+    <section class="contact-gradiant  dark:bg-gray-900 font-poppins relative md:py-28">
         <img src="public/assets/images/orangeShape.svg" class="orange-shape invisible md:visible" alt="orange-shape">
         <div class="flex flex-col items-center justify-center  px-6 py-8  md:h-screen">
             <div
