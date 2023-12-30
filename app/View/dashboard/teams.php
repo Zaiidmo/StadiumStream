@@ -82,7 +82,6 @@
 
         </div>
     </main>
-    <?php include "../app/View/includes/Dash_footer.php"; ?>
 </body>
 <script src="public/assets/js/navigation.js"></script>
 <script src="public/assets/js/theme.js"></script>

@@ -19,7 +19,7 @@ class Crud extends Connection
             $columns = implode(", ", array_keys($data));
             $values = ":" . implode(", :", array_keys($data));
 
-            $query = "INSERT INTO $tableName ($columns) VALUES ($values)";
+            $query = "INSERT INTO `$tableName` ($columns) VALUES ($values)";
             $stmt = $this->pdo->prepare($query);
             $stmt->execute($data);
 
@@ -32,7 +32,7 @@ class Crud extends Connection
     public function read($tableName)
     {
         try {
-            $query = "SELECT * FROM $tableName";
+            $query = "SELECT * FROM `$tableName` ";
             $stmt = $this->pdo->query($query);
 
             $records = $stmt->fetchAll(PDO::FETCH_ASSOC);
@@ -53,7 +53,7 @@ class Crud extends Connection
             }
             $update_arr = implode(", ", $update_arr);
 
-            $query = "UPDATE $tableName SET $update_arr WHERE id = :id";
+            $query = "UPDATE `$tableName` SET $update_arr WHERE id = :id";
             $data['id'] = $id;
 
             $stmt = $this->pdo->prepare($query);
@@ -68,13 +68,13 @@ class Crud extends Connection
     public function delete($tableName, $id)
     {
         try {
-            $query = "DELETE FROM $tableName WHERE ID = :id";
+            $query = "DELETE FROM `$tableName` WHERE ID = :id";
 
             // Prepare and execute the SQL statement
             $stmt = $this->pdo->prepare($query);
             $stmt->bindParam(":id", $id, PDO::PARAM_INT);
             $stmt->execute();
-
+            
             // Output a success message
             echo "Record deleted successfully!";
         } catch (PDOException $e) {
