@@ -38,12 +38,12 @@
                                     <div class="flex items-center text-sm">
                                         <!-- Avatar with inset shadow -->
                                         <div class="relative hidden w-8 h-8 mr-3 rounded-full md:block">
-                                            <img class="object-cover w-full h-full rounded-full" src="<?= $team['flag'] ?>" alt="" />
+                                            <img src="<?=URL_DIR?>public/assets/uploads/<?= $team['flag']?>" alt="Team Flag" class="object-cover w-full h-full rounded-full" />
                                             <div class="absolute inset-0 rounded-full shadow-inner" aria-hidden="true"></div>
                                         </div>
                                         <div>
                                             <p class="font-semibold"><?= $team['name'] ?></p>
-                                            <p class="text-xs text-gray-600 dark:text-gray-400">
+                                            <p class="text-xs text-gray-600     :text-gray-400">
                                                 10x Developer
                                             </p>
                                         </div>

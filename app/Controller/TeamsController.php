@@ -37,7 +37,7 @@ class TeamsController
 
             if (move_uploaded_file($flag['tmp_name'], $targetFileName)) {
                 // File uploaded successfully, add file path to the $data array
-                $data['flag'] = $targetFileName;
+                $data['flag'] = $filename . '.jpeg';
             } else {
                 // Handle file upload error
                 echo 'File upload failed.';
