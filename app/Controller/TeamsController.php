@@ -13,6 +13,7 @@ class TeamsController
         include "../app/View/dashboard/teams.php";
     }
 
+    //redirecting to the create fornm
     public function addteam()
     {
         include "../app/View/dashboard/addteam.php";
@@ -28,12 +29,18 @@ class TeamsController
                 'founded_year' => $_POST['Founding_Year'],
             ];
 
-            if (isset($_FILES['flag']) && is_uploaded_file($_FILES['flag']['tmp_name'])) {
+            if (isset($_FILES['flag']) && $_FILES['flag']['error'] === UPLOAD_ERR_OK) {
                 $teamData['flag'] = $_FILES['flag'];
             }
+
             $teamModel = new TeamModel();
 
+            // Create team record
             $teamModel->create('teams', $teamData);
+
+            // Redirect to another page after processing the form
+            header("Location: /path/to/redirect");
+            exit();
         }
     }
 }
