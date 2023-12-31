@@ -55,4 +55,10 @@ class TeamsController
         // Use the addTeam method to insert data into the "team" table
         $teamModel->addTeam($data);
     }
+
+    public function delete($id)
+    {
+        $teams = new TeamModel();
+        $teams->deleteTeam($id);
+    }
 }
