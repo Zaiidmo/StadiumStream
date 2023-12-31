@@ -21,5 +21,6 @@ class TeamModel extends Crud
     {
         $tableName = 'team';
         $this->delete($tableName, $id);
+        header('Location: ../../teams');
     }
 }
