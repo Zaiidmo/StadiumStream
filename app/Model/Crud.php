@@ -21,11 +21,23 @@ class Crud extends Connection
 
             $query = "INSERT INTO `$tableName` ($columns) VALUES ($values)";
             $stmt = $this->pdo->prepare($query);
-            $stmt->execute($data);
+
+            // Bind parameters
+            foreach ($data as $key => $value) {
+                // If the value is an array, it might be a file upload
+                if (is_array($value) && $value['error'] === UPLOAD_ERR_OK) {
+                    $fileContent = file_get_contents($value['tmp_name']);
+                    $stmt->bindValue(":$key", $fileContent, PDO::PARAM_LOB);
+                } else {
+                    $stmt->bindValue(":$key", $value);
+                }
+            }
+
+            $stmt->execute();
 
             echo "Record added successfully!";
         } catch (PDOException $e) {
-            echo "Error creating record: " . $e->getMessage();
+            echo "Error adding record: " . $e->getMessage();
         }
     }
 
@@ -74,7 +86,7 @@ class Crud extends Connection
             $stmt = $this->pdo->prepare($query);
             $stmt->bindParam(":id", $id, PDO::PARAM_INT);
             $stmt->execute();
-            
+
             // Output a success message
             echo "Record deleted successfully!";
         } catch (PDOException $e) {

@@ -13,7 +13,7 @@ class MatchModel extends Crud
         // return $this->read('match');
 
         try {
-            $query = "	SELECT
+            $query = "	SELECT m.image,
             m.id,T1.name AS team1,T2.name AS team2,S.name as stadiumName,DATE(m.`time`) AS matchDay FROM `match` m 
              INNER JOIN team T1 ON m.team1 = T1.id 
              INNER JOIN team T2 ON m.team2 = T2.id 

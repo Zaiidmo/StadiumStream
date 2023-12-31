@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -21,7 +20,7 @@
         <h2 class="my-6 text-4xl font-semibold text-center font-poppins tracking-widest text-gray-700 dark:text-gray-200">
             <span class="text-primary-100 dark:text-orange">Teams</span> - CAN 2023
         </h2>
-        <form action="matches\addMatch" method="post">
+        <form  enctype="multipart/form-data" action="matches\addMatch" method="post">
             <button type="submit" class="px-4 py-2 my-2 bg-orange rounded  text-white hover:bg-primary-100 focus:outline-none transition-colors">
                 Add a Match
             </button>
@@ -31,17 +30,18 @@
                     <thead>
                         <tr class="bg-gray-200">
                             <th class="border-y border-gray-100 bg-gray-50/50 p-2 dark:border-gray-700 bg-gray-50 dark:text-gray-400 dark:bg-gray-800">Team A</th>
-                            <th class="border-y border-gray-100 bg-gray-50/50 p-2 dark:border-gray-700 bg-gray-50 dark:text-gray-400 dark:bg-gray-800" >Team B</th>
+                            <th class="border-y border-gray-100 bg-gray-50/50 p-2 dark:border-gray-700 bg-gray-50 dark:text-gray-400 dark:bg-gray-800">Team B</th>
                             <th class="border-y border-gray-100 bg-gray-50/50 p-2 dark:border-gray-700 bg-gray-50 dark:text-gray-400 dark:bg-gray-800">Stadium</th>
                             <th class="border-y border-gray-100 bg-gray-50/50 p-2 dark:border-gray-700 bg-gray-50 dark:text-gray-400 dark:bg-gray-800">Date</th>
+                            <th class="border-y border-gray-100 bg-gray-50/50 p-2 dark:border-gray-700 bg-gray-50 dark:text-gray-400 dark:bg-gray-800">Image</th>
 
                         </tr>
                     </thead>
                     <tbody id="attendees-list">
                         <tr>
-                            <td class="border border-gray-300 px-4 py-2 dark:border-gray-700 bg-gray-50 dark:text-gray-400 dark:bg-gray-800">
+                            <td class="border border-gray-300 px-3 py-2 dark:border-gray-700 bg-gray-50 dark:text-gray-400 dark:bg-gray-800">
 
-                                <select name="team2" class="p-2 px-10 rounded border dark:border-gray-700 bg-gray-50 dark:text-gray-400 dark:bg-gray-800">
+                                <select name="team2" class="p-2 px-2 rounded border dark:border-gray-700 bg-gray-50 dark:text-gray-400 dark:bg-gray-800">
                                     <?php foreach ($Teams as $team) { ?>
 
                                         <option value="<?= $team['id'] ?>"><?= $team['name'] ?></option>
@@ -50,9 +50,9 @@
                                 </select>
 
                             </td>
-                            <td class="border border-gray-300 px-4 py-2 dark:border-gray-700 bg-gray-50 dark:text-gray-400 dark:bg-gray-800">
+                            <td class="border border-gray-300 px-3 py-2 dark:border-gray-700 bg-gray-50 dark:text-gray-400 dark:bg-gray-800">
 
-                                <select name="team1" class="p-2 px-10 rounded border dark:border-gray-700 bg-gray-50 dark:text-gray-400 dark:bg-gray-800">
+                                <select name="team1" class="p-2 px-2 rounded border dark:border-gray-700 bg-gray-50 dark:text-gray-400 dark:bg-gray-800">
                                     <?php foreach ($Teams as $team) { ?>
 
                                         <option value="<?= $team['id'] ?>"><?= $team['name'] ?></option>
@@ -61,9 +61,9 @@
                                 </select>
 
                             </td>
-                            <td class="border border-gray-300 px-4 py-2 dark:border-gray-700 bg-gray-50 dark:text-gray-400 dark:bg-gray-800">
+                            <td class="border border-gray-300 px-3 py-2 dark:border-gray-700 bg-gray-50 dark:text-gray-400 dark:bg-gray-800">
 
-                                <select name="stade" class="p-2 px-10 rounded border dark:border-gray-700 bg-gray-50 dark:text-gray-400 dark:bg-gray-800">
+                                <select name="stade" class="p-2 px-2 rounded border dark:border-gray-700 bg-gray-50 dark:text-gray-400 dark:bg-gray-800">
                                     <?php foreach ($Stadiums as $Stadium) { ?>
                                         <option value="<?= $Stadium['id'] ?>"><?= $Stadium['name'] ?></option>
                                     <?php } ?>
@@ -71,10 +71,15 @@
                                 </select>
 
                             </td>
-                            <td class="border border-gray-300 px-4 py-2 dark:border-gray-700 bg-gray-50 dark:text-gray-400 dark:bg-gray-800">
+                            <td class="border border-gray-300 px-3 py-2 dark:border-gray-700 bg-gray-50 dark:text-gray-400 dark:bg-gray-800">
                                 <p>Date:
-                                    <input class="p-2 px-10 rounded border dark:border-gray-700 bg-gray-50 dark:text-gray-400 dark:bg-gray-800" name="time" value="" type="text" id="datepicker" />
+                                    <input class="p-2 px-2 rounded border dark:border-gray-700 bg-gray-50 dark:text-gray-400 dark:bg-gray-800" name="time" value="" type="text" id="datepicker" />
                                 </p>
+                            </td>
+                            <td class="border border-gray-300 px-3 py-2 dark:border-gray-700 bg-gray-50 dark:text-gray-400 dark:bg-gray-800">
+
+                                <input class="p-2 px-2 rounded border dark:border-gray-700 bg-gray-50 dark:text-gray-400 dark:bg-gray-800 cursor-pointer " name="image" value="" id="file_input" type="file">
+
                             </td>
                         </tr>
                     </tbody>
@@ -102,7 +107,7 @@
                                 <td class="px-4 py-3">
                                     <div class="flex items-center text-sm">
                                         <div class="relative hidden w-8 h-8 mr-3 rounded-full md:block">
-                                            <img class="object-cover w-full h-full rounded-full" src="https://images.unsplash.com/flagged/photo-1570612861542-284f4c12e75f?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=200&fit=max&ixid=eyJhcHBfaWQiOjE3Nzg0fQ" alt="" loading="lazy" />
+                                        <img src="public/assets/uploads/<?=$match['image']?>" alt="Team Flag" class="object-cover w-full h-full rounded-full" />
                                             <div class="absolute inset-0 rounded-full shadow-inner" aria-hidden="true"></div>
                                         </div>
                                         <div>
@@ -133,7 +138,7 @@
                                                 </svg>
                                             </button>
                                         </a>
-                                        <a href="matches/deleteMatch/<?= $match["id"] ?>">
+                                        <a href="matches/deleteMatch/<?= $match["id"] ?>" onclick="return confirm('Do you really want to Delete ?');">   
                                             <button class="flex items-center justify-between px-2 py-2 text-sm font-medium leading-5 text-purple-600 rounded-lg dark:text-gray-400 focus:outline-none focus:shadow-outline-gray" aria-label="Delete">
                                                 <svg class="w-5 h-5" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20">
                                                     <path fill-rule="evenodd" d="M9 2a1 1 0 00-.894.553L7.382 4H4a1 1 0 000 2v10a2 2 0 002 2h8a2 2 0 002-2V6a1 1 0 100-2h-3.382l-.724-1.447A1 1 0 0011 2H9zM7 8a1 1 0 012 0v6a1 1 0 11-2 0V8zm5-1a1 1 0 00-1 1v6a1 1 0 102 0V8a1 1 0 00-1-1z" clip-rule="evenodd"></path>
