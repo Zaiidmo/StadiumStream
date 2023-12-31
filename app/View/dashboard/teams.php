@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CAN23- TEAMS</title>
-    <link rel="stylesheet" href="<?=URL_DIR?>public/assets/dist/output.css">
+    <link rel="stylesheet" href="<?= URL_DIR ?>public/assets/dist/output.css">
 </head>
 
 <body class="bg-gray-300 dark:bg-gray-900">
@@ -14,7 +14,7 @@
         <h2 class="my-6 mt-10 text-4xl font-semibold text-center font-poppins tracking-widest text-gray-700 dark:text-gray-200">
             <span class="text-primary-100 dark:text-orange">Teams</span> - CAN 2023
         </h2>
-        <a href="Teams/addteam/">
+        <a href="Teams/creationpage/">
             <button type="button" class="px-4 py-2 m-4 bg-orange rounded  text-white hover:bg-primary-100 focus:outline-none transition-colors">
                 Add a Team
             </button>
@@ -38,7 +38,7 @@
                                     <div class="flex items-center text-sm">
                                         <!-- Avatar with inset shadow -->
                                         <div class="relative hidden w-8 h-8 mr-3 rounded-full md:block">
-                                            <img class="object-cover w-full h-full rounded-full" src="<?= $team['flag']?>" alt="" loading="lazy" />
+                                            <img class="object-cover w-full h-full rounded-full" src="<?= $team['flag'] ?>" alt="" />
                                             <div class="absolute inset-0 rounded-full shadow-inner" aria-hidden="true"></div>
                                         </div>
                                         <div>
@@ -84,7 +84,7 @@
     </main>
     <?php include "../app/View/includes/Dash_footer.php"; ?>
 </body>
-<script src="public/assets/js/navigation.js"></script>
-<script src="public/assets/js/theme.js"></script>
+<script src="<?= URL_DIR ?>public/assets/js/navigation.js"></script>
+<script src="<?= URL_DIR ?>public/assets/js/theme.js"></script>
 
 </html>

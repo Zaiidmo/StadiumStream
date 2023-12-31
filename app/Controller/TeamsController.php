@@ -14,33 +14,45 @@ class TeamsController
     }
 
     //redirecting to the create fornm
-    public function addteam()
+    public function creationpage()
     {
         include "../app/View/dashboard/addteam.php";
     }
     // Add a team to the database
-    public function create()
+    public function createTeam()
     {
-        if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-            // Retrieve form data
-            $teamData = [
-                'name' => $_POST['name'],
-                'coach' => $_POST['coach'],
-                'founded_year' => $_POST['Founding_Year'],
-            ];
+        // Create an instance of the TeamModel
+        $teamModel = new TeamModel();
 
-            if (isset($_FILES['flag']) && $_FILES['flag']['error'] === UPLOAD_ERR_OK) {
-                $teamData['flag'] = $_FILES['flag'];
+        // Initialize the $data array
+        $data = [];
+
+        // Check if the 'flag' file input is set and not empty
+        if (isset($_FILES['flag']) && !empty($_FILES['flag']['tmp_name'])) {
+            // Process file upload here and store the file path in the $data array
+            $flag = $_FILES['flag'];
+            $uploadDirectory = "C:/laragon/www/StadiumStream/public/assets/uploads/"; // Update this path to your local directory
+            $filename = preg_replace("/[^a-zA-Z0-9]/", "_", $_POST['name']);
+            $targetFileName = $uploadDirectory . $filename . "." . strtolower(pathinfo($flag['name'], PATHINFO_EXTENSION));
+
+            if (move_uploaded_file($flag['tmp_name'], $targetFileName)) {
+                // File uploaded successfully, add file path to the $data array
+                $data['flag'] = $targetFileName;
+            } else {
+                // Handle file upload error
+                echo 'File upload failed.';
+                return;
             }
-
-            $teamModel = new TeamModel();
-
-            // Create team record
-            $teamModel->create('teams', $teamData);
-
-            // Redirect to another page after processing the form
-            header("Location: /path/to/redirect");
-            exit();
         }
+
+        // Add other form fields to the $data array
+        $data['name'] = $_POST['name'];
+        $data['coach'] = $_POST['coach'];
+        $data['founded_year'] = $_POST['founding_year'];
+
+        // Add other fields as needed
+
+        // Use the addTeam method to insert data into the "team" table
+        $teamModel->addTeam($data);
     }
 }
