@@ -61,4 +61,18 @@ class TeamsController
         $teams = new TeamModel();
         $teams->deleteTeam($id);
     }
+
+    // public function displayeditteam($id){
+    //     $teams = new TeamModel();
+    //     $teams = $teams->readTeams();
+        
+    // }
+    
+    public function editteam(){
+        $teams = new TeamModel();
+        $id = $_POST['id'];
+        unset($_POST['id']);
+        var_dump($_POST);die;
+        $teams->editTeam($_POST, $id);
+    }
 }

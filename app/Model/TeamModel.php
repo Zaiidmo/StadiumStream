@@ -23,4 +23,10 @@ class TeamModel extends Crud
         $this->delete($tableName, $id);
         header('Location: ../../teams');
     }
+    public function editTeam($data, $id)
+    {
+        $tableName = 'team';
+        $this->update($tableName, $data, $id);
+        header('Location: <?=URL_DIR?>teams');
+    }
 }
