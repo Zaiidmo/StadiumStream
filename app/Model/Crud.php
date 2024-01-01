@@ -45,10 +45,11 @@ class Crud extends Connection
     {
         try {
             $query = "SELECT * FROM `$tableName` ";
+
+            
             $stmt = $this->pdo->query($query);
 
             $records = $stmt->fetchAll(PDO::FETCH_ASSOC);
-
             return $records; // Return the fetched records
         } catch (PDOException $e) {
             echo "Error fetching records: " . $e->getMessage();

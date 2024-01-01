@@ -36,15 +36,30 @@ class MatchModel extends Crud
         return $this->read('stade');
     }
 
-    public function addMatch($tabel,$data)
+    public function addMatch($tabel, $data)
     {
         return $this->create($tabel, $data);
     }
 
-    public function deleteMatch($tabel,$id)
+    public function deleteMatch($tabel, $id)
     {
 
-            return $this->delete($tabel, $id);
-        
+        return $this->delete($tabel, $id);
+    }
+    public function updateMatch($tabelname, $id)
+    {
+        try {
+            $query = "SELECT * FROM `$tabelname` where id=$id";         
+            $stmt = $this->pdo->query($query);
+            $records = $stmt->fetchAll(PDO::FETCH_ASSOC);
+            return $records; // Return the fetched records
+        } catch (PDOException $e) {
+            echo "Error fetching records: " . $e->getMessage();
+            return []; // Return an empty array in case of an error
+        }
+        var_dump($records);die;
+    }
+    public function submitUpdateMatch($table,$data,$id){
+        return $this->update($table,$data,$id);
     }
 }

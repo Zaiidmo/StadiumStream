@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CAN23- TEAMS</title>
-    <link rel="stylesheet" href="public/assets/dist/output.css">
+    <link rel="stylesheet" href="<?= URL_DIR ?>public/assets/dist/output.css">
     <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
     <link rel="stylesheet" href="/resources/demos/style.css">
     <script src="https://code.jquery.com/jquery-3.6.0.js"></script>

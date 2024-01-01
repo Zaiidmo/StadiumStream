@@ -18,8 +18,7 @@ class MatchesController
     }
 
 
-    public function addMatch()
-    {
+    public function addMatch(){
         // Create an instance of the TeamModel
         $matchobj = new MatchModel();
 
@@ -53,10 +52,10 @@ class MatchesController
         // Add other fields as needed
 
         // Use the addTeam method to insert data into the "team" table
-        $matchobj->addMatch("match",$data);
+        $matchobj->addMatch("match", $data);
         header('Location: /StadiumStream/matches');
     }
-    
+
 
     //delete match
     public function deleteMatch($id)
@@ -64,5 +63,22 @@ class MatchesController
         $match = new MatchModel;
         $match->deleteMatch("match", $id);
         header('Location: /StadiumStream/matches');
+    }
+    //update match
+    public function updateMatch($id){
+        $matche = new MatchModel;
+        $Teams = $matche->fetchTeams();
+        $Stadiums = $matche->fetchStadiums();
+        $selectedmatch = $matche->updateMatch("match",$id);
+        // var_dump($selectedmatch);die;
+        include '../app/View/dashboard/updateMatch.php';    
+    }
+    public function submitUpdateMatch(){
+        $match = new MatchModel();
+        $id = $_POST['id'];
+        unset($_POST['id']);
+        $match->submitUpdateMatch("match",$_POST,$id);
+        header('Location: /StadiumStream/matches');
+
     }
 }
