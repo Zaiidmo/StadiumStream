@@ -72,7 +72,6 @@ class TeamsController
         $teams = new TeamModel();
         $id = $_POST['id'];
         unset($_POST['id']);
-        var_dump($_POST);die;
         $teams->editTeam($_POST, $id);
     }
 }

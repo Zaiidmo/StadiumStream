@@ -26,7 +26,8 @@ class TeamModel extends Crud
     public function editTeam($data, $id)
     {
         $tableName = 'team';
+        $redirect = URL_DIR . 'teams';
         $this->update($tableName, $data, $id);
-        header('Location: <?=URL_DIR?>teams');
+        header("Location: $redirect");
     }
 }
