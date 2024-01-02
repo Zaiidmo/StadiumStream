@@ -1,8 +1,7 @@
 <?php
 namespace App\Controller;
 
-use App\Model\Users;
-use GrahamCampbell\ResultType\Success;
+use App\Model\User;
 
 class SignupController
 {
@@ -45,17 +44,18 @@ class SignupController
                 'password' => password_hash($password, PASSWORD_DEFAULT)
             ];
 
-            $usersModel = new Users();
+            $usersModel = new User();
             $userCreated = $usersModel->createUser($userData);
 
             if ($userCreated) {
                 // User created successfully, redirect to index page
                 $_SESSION['success'] = "You succesfuly created your account";
-                header('Location: ../signup');
+                header('Location: ../signin');
                 exit;
             } else {
                 // Error creating user
                 $_SESSION['failed'] = "Failed creating your account";
+                header('Location: ../signup');
             }
         }
     }

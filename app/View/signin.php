@@ -1,6 +1,3 @@
-<?php
-// include(__DIR__."/includes/head.php");
-?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -30,7 +27,10 @@
                         class="text-xl font-bold leading-tight tracking-tight text-gray-100 md:text-2xl dark:text-white drop-shadow-md">
                         Sign in to your account
                     </h1>
-                    <form class="space-y-4 md:space-y-6" id="form" action="#">
+                    <?php if(isset($_SESSION['error'])){
+                        echo "<p class='text-red-500'>{$_SESSION['error']}</p>";
+                    }?>
+                    <form class="space-y-4 md:space-y-6" id="form" method="POST" action="Signin/readUser">
                         <div class="formGroup">
                             <label for="email" class="block mb-2 text-sm font-medium text-gray-100 dark:text-white">Your
                                 email</label>
@@ -54,7 +54,6 @@
                                     <input id="remember" name="remember" aria-describedby="remember" type="checkbox"
                                         class="w-4 h-4 border border-gray-300 rounded bg-gray-100 focus:ring-3 focus:ring-orange dark:bg-gray-700 dark:border-gray-600 dark:focus:ring-orange dark:ring-offset-gray-800"
                                         required>
-
                                 </div>
                                 <div class="ml-3 text-sm">
                                     <label for="remember" class="text-gray-300 dark:text-gray-300">Remember me</label>
