@@ -22,6 +22,18 @@ class Crud extends Connection
             $query = "INSERT INTO `$tableName` ($columns) VALUES ($values)";
             $stmt = $this->pdo->prepare($query);
 
+            // Bind parameters
+            foreach ($data as $key => $value) {
+                // If the value is an array, it might be a file upload
+                if (is_array($value) && $value['error'] === UPLOAD_ERR_OK) {
+                    $fileContent = file_get_contents($value['tmp_name']);
+                    $stmt->bindValue(":$key", $fileContent, PDO::PARAM_LOB);
+                } else {
+                    $stmt->bindValue(":$key", $value);
+                }
+            }
+
+            $stmt->execute();
             foreach ($data as $key => $value) {
 
                 if (is_array($value) && $value['error'] === UPLOAD_ERR_OK) {
@@ -40,6 +52,9 @@ class Crud extends Connection
         }
     }
 
+
+
+
     public function read($tableName)
     {
         try {
@@ -52,10 +67,17 @@ class Crud extends Connection
             return $records; 
         } catch (PDOException $e) {
             echo "Error fetching records: " . $e->getMessage();
+            return []; // Return an empty array in case of an error
+            // Log the error (you may want to use a logging library or write to a log file)
+            error_log("Error fetching records: " . $e->getMessage());
+
+            // Re-throw the exception to let the calling code handle it
+            throw $e;
+            echo "Error fetching records: " . $e->getMessage();
             return []; 
         }
     }
-    
+
     public function update($tableName, $data, $id)
     {
         try {

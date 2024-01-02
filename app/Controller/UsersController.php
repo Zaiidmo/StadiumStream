@@ -1,7 +1,16 @@
-<?php 
+<?php
+
 namespace App\Controller;
-class UsersController {
-    public function index() {
+
+use App\Model\UserModel;
+
+class UsersController
+{
+    public function index()
+    {
+        $users = new UserModel();
+        $users = $users->displayusers();
         include "../app/View/dashboard/users.php";
     }
 }
+
