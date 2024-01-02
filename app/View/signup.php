@@ -30,7 +30,7 @@ session_start();
                         class="text-xl font-bold leading-tight tracking-tight text-gray-100 md:text-2xl dark:text-white">
                         Create An Account
                     </h1>
-                    <form action="./Controller/SignupController.php/registerUser" method="POST" id="form">
+                    <form action="Signup/registerUser" method="POST" id="form">
                         <div class="grid gap-4 sm:grid-cols-2 sm:gap-6">
                             <div class="w-full formGroup">
                                 <label for="first_name"

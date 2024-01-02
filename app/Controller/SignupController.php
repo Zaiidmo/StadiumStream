@@ -2,6 +2,7 @@
 namespace App\Controller;
 
 use App\Model\Users;
+use GrahamCampbell\ResultType\Success;
 
 class SignupController
 {
@@ -34,7 +35,6 @@ class SignupController
                 $_SESSION['errors'] = $errors;
 
                 // Redirect back to the signup page
-                header('Location: ../app/View/signup.php');
                 exit;
             }
 
@@ -50,11 +50,12 @@ class SignupController
 
             if ($userCreated) {
                 // User created successfully, redirect to index page
-                header('Location: ../../public/index.php');
+                $_SESSION['success'] = "You succesfuly created your account";
+                header('Location: ../signup');
                 exit;
             } else {
                 // Error creating user
-                echo "Error creating user";
+                $_SESSION['failed'] = "Failed creating your account";
             }
         }
     }
