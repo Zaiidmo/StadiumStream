@@ -52,16 +52,16 @@ class SignupController
             $userCreated = $user->createUser($userData);
             header("Location: $redirect");
 
-            // if ($userCreated) {
-            //     // User created successfully, redirect to index page
-            //     $_SESSION['success'] = "You succesfuly created your account";
-            //     header('Location: ../signin');
-            //     exit;
-            // } else {
-            //     // Error creating user
-            //     $_SESSION['failed'] = "Failed creating your account";
-            //     header('Location: ../signup');
-            // }
+            if ($userCreated) {
+                // User created successfully, redirect to index page
+                $_SESSION['success'] = "You succesfuly created your account";
+                header('Location: ../signin');
+                exit;
+            } else {
+                // Error creating user
+                $_SESSION['failed'] = "Failed creating your account";
+                header('Location: ../signup');
+            }
         }
     }
 }

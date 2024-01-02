@@ -13,7 +13,6 @@ class UserModel extends Crud {
     public function createUser($userData)
     {
         try {
-            // var_dump($userData);
             return $this->create('user', $userData) !== false;
         } catch (PDOException $e) {
             echo "PDO Exception: " . $e->getMessage();
