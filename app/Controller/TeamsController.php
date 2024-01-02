@@ -54,6 +54,8 @@ class TeamsController
 
         // Use the addTeam method to insert data into the "team" table
         $teamModel->addTeam($data);
+        $redirect = URL_DIR . 'teams';
+        header("Location: $redirect");
     }
 
     public function delete($id)

@@ -12,7 +12,7 @@
     <?php include "../app/View/includes/Dash_navigation.php"; ?>
     <main id="main" class="mt-32 h-screen px-28">
         <h2 class="my-6 text-4xl font-semibold text-center font-poppins tracking-widest text-gray-700 dark:text-gray-200">
-            <span class="text-primary-100 dark:text-orange">Registered</span> Users
+            Already <span class="text-primary-100 dark:text-orange">Purshased</span> Tickets
         </h2>
         <div class="w-full overflow-hidden rounded-lg shadow-xs">
             <div class="w-full overflow-x-auto">
@@ -46,7 +46,7 @@
                                     <?= $ticket['user_id'] ?>
                                 </td>
                                 <td class="px-4 py-3 text-xs">
-                                        <?= $ticket['match_id'] ?>
+                                    <?= $ticket['match_id'] ?>
                                 </td>
                                 <td class="px-4 py-3 text-xs">
                                     <span class="px-2 py-1 font-semibold leading-tight text-green-700 bg-green-100 rounded-full dark:bg-green-700 dark:text-green-100">
