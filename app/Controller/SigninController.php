@@ -1,7 +1,9 @@
 <?php
+
 namespace App\Controller;
 
 use App\Model\User;
+use App\Model\UserModel;
 
 class SigninController
 {
@@ -14,31 +16,43 @@ class SigninController
     {
         $email = $_POST['email'];
         $password = $_POST['password'];
-
-        $userModel = new User();
-
-        $users = $userModel->read('user');
-
-        $foundUser = null;
-        foreach ($users as $user) {
-            if ($user['email'] === $email) {
-                $foundUser = $user;
-                break;
+        $userModel = new UserModel();
+        $users = $userModel->signin($email);
+        //Stocking DATA
+        if ($users > 0) {
+            $pwdCheck = password_verify($password, $users['password']);
+            if ($pwdCheck) {
+                // Password is correct, set session variables
+                $redirect = URL_DIR . 'home';
+                $_SESSION['id'] = $users['id'];
+                $_SESSION['full_name'] = $users['full_name'];
+                $_SESSION['email'] = $users['email'];
+                $_SESSION['phone_number'] = $users['phone_number'];
+                header("Location: $redirect");
+                // echo 'You have successfully logged in.';
+            } else {
+                echo 'Incorrect Password!';
             }
-        }
-        if ($foundUser && password_verify($password, $foundUser['password'])) {
-            $_SESSION['user_id'] = $foundUser['id'];
-            $_SESSION['username'] = $foundUser['username'];
-            $_SESSION['email'] = $foundUser['email'];
-            $_SESSION['success'] = "You are successfuly logged in";
 
-            header('Location: ../');
-            exit();
         } else {
-            $_SESSION['error'] = "Invalid email or password. Please try again.";
-            header('Location: ../signin');
-            exit();
+            echo 'User Not Found !!!';
         }
     }
 
+
+    // if ($foundUser && password_verify($password, $foundUser['password'])) {
+    //     $_SESSION['id'] = $records['id'];
+    //     $_SESSION['full_name'] = $foundUser['full_name'];
+    //     $_SESSION['email'] = $foundUser['email'];
+    //     $_SESSION['phone_number'] = $foundUser['phone_number'];
+    //     $_SESSION['role'] = $foundUser['role'];
+    //     $_SESSION['success'] = "You are successfuly logged in";
+
+    //     header('Location: ../');
+    //     exit();
+    // } else {
+    //     $_SESSION['error'] = "Invalid email or password. Please try again.";
+    //     header('Location: ../signin');
+    //     exit();
+    // }
 }
