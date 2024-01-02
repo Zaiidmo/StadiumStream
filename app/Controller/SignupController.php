@@ -1,7 +1,9 @@
 <?php
+
 namespace App\Controller;
 
 use App\Model\User;
+use App\Model\UserModel;
 
 class SignupController
 {
@@ -15,9 +17,9 @@ class SignupController
             $firstName = $_POST['first_name'];
             $lastName = $_POST['last_name'];
             $email = $_POST['email'];
+            $phone = $_POST['phone_number'];
             $password = $_POST['password'];
             $confirmPassword = $_POST['confirm_password'];
-
             // Perform form validation
             $errors = [];
 
@@ -41,11 +43,14 @@ class SignupController
             $userData = [
                 'full_name' => $firstName . ' ' . $lastName,
                 'email' => $email,
+                'phone_number' => $phone,
                 'password' => password_hash($password, PASSWORD_DEFAULT)
             ];
 
-            $usersModel = new User();
-            $userCreated = $usersModel->createUser($userData);
+            $user = new UserModel();
+            $redirect = URL_DIR . 'signin';
+            $userCreated = $user->createUser($userData);
+            header("Location: $redirect");
 
             if ($userCreated) {
                 // User created successfully, redirect to index page

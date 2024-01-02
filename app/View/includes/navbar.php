@@ -58,7 +58,7 @@
     <div id="right-side" class="flex justify-evenly">
       <ul class="flex items-center flex-shrink-0 space-x-6">
         <!-- Profile menu -->
-        <?php if (isset($_SESSION['user_id'])) { ?>
+        <?php if (isset($_SESSION['id'])) : ?>          
           <li class="relative z-50">
             <button id="notification-button"
               class="z-50 relative align-middle rounded-md focus:outline-none focus:shadow-outline-purple">
@@ -149,14 +149,15 @@
             </ul>
 
           </li>
-        <?php } else { ?>
+        <?php else : ?>
           <a href="signin"
             class="text-white bg-transparent focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-2xl text-sm px-4 py-2 text-center   border border-white-900 hover:bg-green-800  dark:focus:ring-blue-800 mx-2">Login</a>
           <a href="signup"
             class="text-white bg-transparent focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-2xl text-sm px-4 py-2 text-center   border border-white-900 hover:bg-green-800  dark:focus:ring-blue-800">Sign
             up
           </a>
-        <?php } ?>
+          <?php endif ?>
+
         <!-- Theme toggler -->
         <li class="flex">
           <div id="theme-toggler">

@@ -6,8 +6,7 @@ use config\Connection;
 use PDO;
 use PDOException;
 class buyticketModel extends Connection {
-    public function fetchSingleMatche($id){
-        
+    public function fetchSingleMatche($id){  
         try {
             $query = "	SELECT m.image,
             m.id,T1.name AS team1,T2.name AS team2,S.name as stadiumName,DATE(m.`time`) AS matchDay FROM `match` m 
