@@ -8,9 +8,6 @@
     <meta name="keywords" content="HTML, CSS, Youcode, tailwindCSS, StadiumStream, CAN23">
     <meta name="author" content="TheVlpha">
     <meta name="description" content="StadiumStream to Sell Football tickets">
-    <!-- <link rel="preconnect" href="https://fonts.googleapis.com"> -->
-    <!-- <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> -->
-    <!-- <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;400;500;600;700;800&display=swap" rel="stylesheet"> -->
     <title>Profile</title>
     <link rel="stylesheet" href="public/assets/dist/output.css">
 </head>

@@ -30,6 +30,7 @@ class SigninController
             $_SESSION['user_id'] = $foundUser['id'];
             $_SESSION['username'] = $foundUser['username'];
             $_SESSION['email'] = $foundUser['email'];
+            $_SESSION['success'] = "You are successfuly logged in";
 
             header('Location: ../');
             exit();
