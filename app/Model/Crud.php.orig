@@ -22,20 +22,14 @@ class Crud extends Connection
             $query = "INSERT INTO `$tableName` ($columns) VALUES ($values)";
             $stmt = $this->pdo->prepare($query);
 
+<<<<<<< HEAD
+            foreach ($data as $key => $value) {
+
+=======
             // Bind parameters
             foreach ($data as $key => $value) {
                 // If the value is an array, it might be a file upload
-                if (is_array($value) && $value['error'] === UPLOAD_ERR_OK) {
-                    $fileContent = file_get_contents($value['tmp_name']);
-                    $stmt->bindValue(":$key", $fileContent, PDO::PARAM_LOB);
-                } else {
-                    $stmt->bindValue(":$key", $value);
-                }
-            }
-
-            $stmt->execute();
-            foreach ($data as $key => $value) {
-
+>>>>>>> 1faa1246daaa7feae763ca4b7a9d3db4b4231177
                 if (is_array($value) && $value['error'] === UPLOAD_ERR_OK) {
                     $fileContent = file_get_contents($value['tmp_name']);
                     $stmt->bindValue(":$key", $fileContent, PDO::PARAM_LOB);
@@ -66,15 +60,16 @@ class Crud extends Connection
             $records = $stmt->fetchAll(PDO::FETCH_ASSOC);
             return $records; 
         } catch (PDOException $e) {
+<<<<<<< HEAD
             echo "Error fetching records: " . $e->getMessage();
-            return []; // Return an empty array in case of an error
+            return []; 
+=======
             // Log the error (you may want to use a logging library or write to a log file)
             error_log("Error fetching records: " . $e->getMessage());
 
             // Re-throw the exception to let the calling code handle it
             throw $e;
-            echo "Error fetching records: " . $e->getMessage();
-            return []; 
+>>>>>>> 1faa1246daaa7feae763ca4b7a9d3db4b4231177
         }
     }
 

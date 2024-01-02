@@ -8,7 +8,7 @@
     <meta name="keywords" content="HTML, CSS, Youcode, tailwindCSS, StadiumStream, CAN24">
     <meta name="author" content="Waheli">
     <meta name="description" content="StadiumStream to Sell Football tickets">
-    <link rel="stylesheet" href="public/assets/dist/output.css">
+    <link rel="stylesheet" href="<?= URL_DIR ?>public/assets/dist/output.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/flowbite.min.js"></script>
 
 </head>
@@ -23,27 +23,31 @@
 
     <section class="relative">
         <div class="relative">
-            <img src="public/assets/images/herobg.svg" class="absolute inset-0 object-cover w-full h-full" alt="" />
+            <img src="<?= URL_DIR ?>public/assets/images/herobg.svg" class="absolute inset-0 object-cover w-full h-full" alt="" />
             <div class="relative customgradient">
                 <div class="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
-                    <div class="flex flex-col items-center justify-around xl:flex-row">
+                    
+                
+                <div class="flex flex-col items-center justify-around xl:flex-row">
                         <div class="">
-                            <img class="rounded-full w-40 h-40" src="public/assets/images/Morocco.png" alt="image description">
+                            <img class="rounded-full w-40 h-40" src="<?= URL_DIR ?>public/assets/images/Morocco.png" alt="image description">
                         </div>
                         <div class="">
                             <div class="flex flex-col items-center justify-center mx-auto max-w-7xl px-6 pt-16 pb-12 sm:px-12 lg:pt-24">
                                 <h2 class="font-extrabold tracking-tight sm:text-4xl text-white">
-                                    <span class="mx-2 text-white">Morocco</span>
+                                    <span class="mx-2 text-white"><?= $singlematch['team1'] ?>
+
+                                    </span>
                                     VS
-                                    <span class="mx-2  text-white">Algeria</span>
+                                    <span class="mx-2  text-white"><?= $singlematch['team2'] ?>
+                                    </span>
                                 </h2>
                                 <p class="mt-2 text-sm font-semibold text-gray-400">
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla convallis eros at sem tincidunt
-                                    hendrerit.
+                                <?= $singlematch['stadiumName'] ?>
                                 </p>
 
                                 <span class="py-2 text-m font-semibold text-white">
-                                    MATCH COMING IN :
+                                    MATCH COMING IN : 
                                 </span>
 
                                 <div class="flex items-end justify-center z-10">
@@ -67,17 +71,18 @@
 
                                 <div class="rounded-md shadow z-10 mt-5">
                                     <span href="#" class="w-full px-8 py-3 border border-transparent text-base leading-6 font-light rounded-full text-white bg-orange  md:py-4 md:text-md md:px-16">
-                                        <span class="text-white font-bold">17/02/2024</span>
+                                        <span class="text-white font-bold"><?= $singlematch['matchDay'] ?></span>
                                     </span>
                                 </div>
                             </div>
 
                         </div>
                         <div class="">
-                            <img class="rounded-full w-40 h-40" src="public/assets/images/algeria.png" alt="image description">
+                            <img class="rounded-full w-40 h-40" src="<?= URL_DIR ?>public/assets/images/algeria.png" alt="image description">
                         </div>
                     </div>
                 </div>
+
             </div>
         </div>
     </section>
@@ -87,14 +92,14 @@
                 <div class="px-4  py-4 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
                     <div class="flex shadow-md overflow-hidden  rounded-xl bg-grey-100 flex-col  xl:flex-row">
                         <div class="col-2">
-                            <img class=" w-full px-4" src="public/assets/images/16x9.jpg" alt="image description">
+                            <img class=" w-full px-4" src="<?= URL_DIR ?>public/assets/uploads/<?= $singlematch['image'] ?>" alt="image description">
                         </div>
                         <div class="col-1">
                             <div class="flex  flex-col  items-start  mx-auto max-w-7xl px-2 pt-2 pb-10 sm:px-8 lg:pt-4">
                                 <h2 class="font-extrabold tracking-tight sm:text-4xl text-black">
-                                    <span class="mx-2 text-black">Morocco</span>
+                                    <span class="mx-2 text-black"><?= $singlematch['team1'] ?></span>
                                     VS
-                                    <span class="mx-2  text-black">Algeria</span>
+                                    <span class="mx-2  text-black"><?= $singlematch['team2'] ?></span>
                                 </h2>
                                 <p class="mt-2 text-sm font-semibold text-gray-400">
                                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla convallis eros at sem tincidunt

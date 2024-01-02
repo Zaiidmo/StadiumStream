@@ -698,6 +698,7 @@
         },
         {
             "name": "symfony/translation",
+<<<<<<< HEAD
             "version": "v6.0.19",
             "source": {
                 "type": "git",
@@ -708,6 +709,18 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/symfony/translation/zipball/9c24b3fdbbe9fb2ef3a6afd8bbaadfd72dad681f",
                 "reference": "9c24b3fdbbe9fb2ef3a6afd8bbaadfd72dad681f",
+=======
+            "version": "v6.4.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/translation.git",
+                "reference": "a2ab2ec1a462e53016de8e8d5e8912bfd62ea681"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/translation/zipball/a2ab2ec1a462e53016de8e8d5e8912bfd62ea681",
+                "reference": "a2ab2ec1a462e53016de8e8d5e8912bfd62ea681",
+>>>>>>> 1faa1246daaa7feae763ca4b7a9d3db4b4231177
                 "shasum": ""
             },
             "require": {
@@ -773,7 +786,11 @@
             "description": "Provides tools to internationalize your application",
             "homepage": "https://symfony.com",
             "support": {
+<<<<<<< HEAD
                 "source": "https://github.com/symfony/translation/tree/v6.0.19"
+=======
+                "source": "https://github.com/symfony/translation/tree/v6.4.2"
+>>>>>>> 1faa1246daaa7feae763ca4b7a9d3db4b4231177
             },
             "funding": [
                 {
@@ -789,7 +806,11 @@
                     "type": "tidelift"
                 }
             ],
+<<<<<<< HEAD
             "time": "2023-01-01T08:36:10+00:00"
+=======
+            "time": "2023-12-18T09:25:29+00:00"
+>>>>>>> 1faa1246daaa7feae763ca4b7a9d3db4b4231177
         },
         {
             "name": "symfony/translation-contracts",

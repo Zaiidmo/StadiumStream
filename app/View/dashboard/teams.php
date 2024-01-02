@@ -50,10 +50,10 @@
                                     </div>
                                 </td>
                                 <td class="px-4 py-3 text-sm">
-                                    <?= $team['coach'] ?>
+                                    <?= $teams['coach'] ?>
                                 </td>
                                 <td class="px-4 py-3 text-sm">
-                                    <?= $team['founded_year'] ?>
+                                    <?= $teams['founded_year'] ?>
                                 </td>
                                 <td class="px-4 py-3 text-xs">
                                     <span class="px-2 py-1 font-semibold leading-tight text-green-700 bg-green-100 rounded-full dark:bg-green-700 dark:text-green-100">
@@ -123,7 +123,6 @@
 
         </div>
     </main>
-    <?php include "../app/View/includes/Dash_footer.php"; ?>
 </body>
 <script>
     function confirmDelete() {
