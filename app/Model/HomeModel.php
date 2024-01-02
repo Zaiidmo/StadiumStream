@@ -5,6 +5,7 @@ use PDO;
 use PDOException;
 class HomeModel extends MatchModel{
     public function fetchAllMatches(){
-       return $this->fetchMatches();
-    }
+        return $this->fetchMatches();
+     }
+
 }

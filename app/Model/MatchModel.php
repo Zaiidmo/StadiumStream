@@ -52,10 +52,10 @@ class MatchModel extends Crud
             $query = "SELECT * FROM `$tabelname` where id=$id";         
             $stmt = $this->pdo->query($query);
             $records = $stmt->fetchAll(PDO::FETCH_ASSOC);
-            return $records; // Return the fetched records
+            return $records; 
         } catch (PDOException $e) {
             echo "Error fetching records: " . $e->getMessage();
-            return []; // Return an empty array in case of an error
+            return []; 
         }
         var_dump($records);die;
     }

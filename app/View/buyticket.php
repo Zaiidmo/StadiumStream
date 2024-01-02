@@ -8,7 +8,7 @@
     <meta name="keywords" content="HTML, CSS, Youcode, tailwindCSS, StadiumStream, CAN24">
     <meta name="author" content="Waheli">
     <meta name="description" content="StadiumStream to Sell Football tickets">
-    <link rel="stylesheet" href="public/assets/dist/output.css">
+    <link rel="stylesheet" href="<?= URL_DIR ?>public/assets/dist/output.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/flowbite.min.js"></script>
 
 </head>
@@ -23,17 +23,17 @@
 
     <section class="relative">
         <div class="relative">
-            <img src="public/assets/images/herobg.svg" class="absolute inset-0 object-cover w-full h-full" alt="" />
+            <img src="<?= URL_DIR ?>public/assets/images/herobg.svg" class="absolute inset-0 object-cover w-full h-full" alt="" />
             <div class="relative customgradient">
                 <div class="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
                     <div class="flex flex-col items-center justify-around xl:flex-row">
                         <div class="">
-                            <img class="rounded-full w-40 h-40" src="public/assets/images/Morocco.png" alt="image description">
+                            <img class="rounded-full w-40 h-40" src="<?= URL_DIR ?>public/assets/images/Morocco.png" alt="image description">
                         </div>
                         <div class="">
                             <div class="flex flex-col items-center justify-center mx-auto max-w-7xl px-6 pt-16 pb-12 sm:px-12 lg:pt-24">
                                 <h2 class="font-extrabold tracking-tight sm:text-4xl text-white">
-                                    <span class="mx-2 text-white">Morocco</span>
+                                    <span class="mx-2 text-white"></span>
                                     VS
                                     <span class="mx-2  text-white">Algeria</span>
                                 </h2>
@@ -74,7 +74,7 @@
 
                         </div>
                         <div class="">
-                            <img class="rounded-full w-40 h-40" src="public/assets/images/algeria.png" alt="image description">
+                            <img class="rounded-full w-40 h-40" src="<?= URL_DIR ?>public/assets/images/algeria.png" alt="image description">
                         </div>
                     </div>
                 </div>
@@ -87,7 +87,7 @@
                 <div class="px-4  py-4 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
                     <div class="flex shadow-md overflow-hidden  rounded-xl bg-grey-100 flex-col  xl:flex-row">
                         <div class="col-2">
-                            <img class=" w-full px-4" src="public/assets/images/16x9.jpg" alt="image description">
+                            <img class=" w-full px-4" src="<?= URL_DIR ?>public/assets/images/16x9.jpg" alt="image description">
                         </div>
                         <div class="col-1">
                             <div class="flex  flex-col  items-start  mx-auto max-w-7xl px-2 pt-2 pb-10 sm:px-8 lg:pt-4">
