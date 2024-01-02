@@ -16,7 +16,7 @@ class buyticketModel extends Connection {
              INNER JOIN stade S ON m.stade = S.id
              where m.id=$id;";
             $stmt = $this->pdo->query($query);
-            $records = $stmt->fetchAll(PDO::FETCH_ASSOC);
+            $records = $stmt->fetch(PDO::FETCH_ASSOC);
 
             return $records;
         } catch (PDOException $e) {

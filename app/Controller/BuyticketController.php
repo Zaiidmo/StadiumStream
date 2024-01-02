@@ -7,8 +7,10 @@ use App\Model\MatchModel;
 class BuyticketController extends MatchModel{
     public function index($id){
         $obj = new buyticketModel();
-        return $singlematch =  $obj->fetchSingleMatche($id);
-        include "../app/View/buyticket.php";
+        $singlematch =  $obj->fetchSingleMatche($id);
+        // var_dump($singlematch);die;
+        // echo $singlematch->team1;
+        require "../app/View/buyticket.php";
     }
 
 
