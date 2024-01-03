@@ -17,6 +17,30 @@ $(document).ready(function(){
 
 });
 
+//search by date range
+$(document).ready(function(){
+    $("#searchbutton").click(function(){ 
+        var startDate = $("#startDateInput").val(); 
+        var endDate = $("#endDateInput").val(); 
+        
+
+        if(startDate !== "" && endDate !== ""){
+            $.ajax({
+                url: "Home/searchByDateRange", 
+                method: "post",
+                data: { 
+                    start_date: startDate,
+                    end_date: endDate 
+                },
+                success: function(res){
+                    // console.log(JSON.parse(res));
+                    displayMatches(JSON.parse(res));
+                }
+            });
+        }
+    });
+});
+
 function displayMatches(matche){
     let matchcontainer = document.getElementById("match-container");
     matchcontainer.innerHTML="";

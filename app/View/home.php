@@ -83,21 +83,31 @@
                         </form>
                     </div>
                     <div class="w-full md:w-1/2 py-2">
-                        <label for="phone-input" class="block mb-5 text-s font-medium text-white dark:text-white">Search For stadium :</label>
+                        <label for="phone-input" class="block mb-5 text-s font-medium text-white dark:text-white">Search by date </label>
 
-                        <form class="flex items-center">
-                            <label for="simple-search" class="sr-only">Search</label>
+                        <div class="flex items-center">
+                            <label for="simple-search" class="sr-only">from</label>
                             <div class="relative w-full">
                                 <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
                                     <svg aria-hidden="true" class="w-5 h-5 text-gray-500 dark:text-gray-400" fill="currentColor" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                                         <path fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clip-rule="evenodd" />
                                     </svg>
                                 </div>
-                                <input type="text" id="simple-search" class="block w-full p-2 pl-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Search For Stadium" required="">
+                                <input type="date" id="startDateInput" class="block w-full p-2 pl-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Search For Stadium" required="">
                             </div>
-                        </form>
+                            <label for="simple-search" class="sr-only">To</label>
+                            <div class="relative w-full mx-2">
+                                <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
+                                    <svg aria-hidden="true" class="w-5 h-5 text-gray-500 dark:text-gray-400" fill="currentColor" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clip-rule="evenodd" />
+                                    </svg>
+                                </div>
+                                <input type="date" id="endDateInput" class="block w-full p-2 pl-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Search For Stadium" required="">
+                            </div>
+                            <button id="searchbutton" class="w-full text-white bg-orange hover:bg-orange focus:ring-4 focus:outline-none focus:ring-orange font-medium rounded-lg text-sm px-3 py-2.5 text-center dark:bg-orange dark:hover:bg-orange dark:focus:ring-orange">search</button>
+                        </div>
                     </div>
-                    <div class="w-full md:w-1/3 py-2">
+                    <!-- <div class="w-full md:w-1/3 py-2">
                         <label for="phone-input" class="block mb-5 text-s font-medium text-white dark:text-white">Filter by Date</label>
                         <button id="filterDropdownButton" data-dropdown-toggle="filterDropdown" class="flex items-center justify-center w-full px-4 py-2 text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-lg focus:outline-none hover:bg-gray-100 hover:text-primary-700 focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700" type="button">
                             <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="w-4 h-4 mr-2 text-gray-400" viewbox="0 0 20 20" fill="currentColor">
@@ -108,7 +118,6 @@
                                 <path clip-rule="evenodd" fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" />
                             </svg>
                         </button>
-                        <!-- Dropdown menu -->
                         <div id="filterDropdown" class="z-10 hidden w-48 p-3 bg-white rounded-lg shadow dark:bg-gray-700">
                             <h6 class="mb-3 text-sm font-medium text-gray-900 dark:text-white">
                                 Upcoming Match
@@ -117,7 +126,7 @@
                                 <li class="flex items-center">
                                     <input id="apple" type="checkbox" value="" class="w-4 h-4 bg-gray-100 border-gray-300 rounded text-primary-600 focus:ring-primary-500 dark:focus:ring-primary-600 dark:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500" />
                                     <label for="apple" class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-100">
-                                        top games 
+                                        top games
                                     </label>
                                 </li>
                                 <li class="flex items-center">
@@ -129,18 +138,18 @@
                                 <li class="flex items-center">
                                     <input id="dell" type="checkbox" value="" class="w-4 h-4 bg-gray-100 border-gray-300 rounded text-primary-600 focus:ring-primary-500 dark:focus:ring-primary-600 dark:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500" />
                                     <label for="dell" class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-100">
-                                    today's matchs
-                                </label>
+                                        today's matchs
+                                    </label>
                                 </li>
                                 <li class="flex items-center">
                                     <input id="asus" type="checkbox" value="" checked class="w-4 h-4 bg-gray-100 border-gray-300 rounded text-primary-600 focus:ring-primary-500 dark:focus:ring-primary-600 dark:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500" />
                                     <label for="asus" class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-100">
-                                    this mounth
+                                        this mounth
                                     </label>
                                 </li>
                             </ul>
                         </div>
-                    </div>
+                    </div> -->
                 </div>
             </div>
         </div>
@@ -158,7 +167,7 @@
                 <?php
                 foreach ($matches as $match) {
                 ?>
-                    <div  class="match-card-display  mx-3 mt-6 flex flex-col rounded-lg bg-white shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] dark:bg-gray-800 sm:shrink-0 sm:grow sm:basis-0">
+                    <div class="match-card-display  mx-3 mt-6 flex flex-col rounded-lg bg-white shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] dark:bg-gray-800 sm:shrink-0 sm:grow sm:basis-0">
                         <a href="#!">
                             <img class="rounded-t-lg" src="public/assets/uploads/<?= $match['image'] ?>" alt="football" />
                         </a>
@@ -167,13 +176,13 @@
                                 <?= $match['team1'] ?> VS <?= $match['team2'] ?>
                             </h5>
                             <p class=" text-base text-neutral-600 dark:text-neutral-200">
-                                Experience the thrill at <strong><?= $match['stadiumName'] ?></strong> , where <strong><?= $match['team1'] ?></strong> 
-                                and <strong><?= $match['team2'] ?></strong> 
+                                Experience the thrill at <strong><?= $match['stadiumName'] ?></strong> , where <strong><?= $match['team1'] ?></strong>
+                                and <strong><?= $match['team2'] ?></strong>
                                 face off in an epic showdown on <strong><?= $match['matchDay'] ?></strong> Don't miss the action secure your tickets now and join us for an unforgettable match day! Buy your tickets today to witness the magic live in the stadium!
                             </p>
                         </div>
                         <div class="p-3 flex justify-end">
-                            <a href="buyTicket\index\<?=$match['id']?>" class="text-orange border border-orange py-2 px-3 rounded inline-flex  items-center">
+                            <a href="buyTicket\index\<?= $match['id'] ?>" class="text-orange border border-orange py-2 px-3 rounded inline-flex  items-center">
                                 Buy Ticket
                                 <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" class="w-6 h-6 ml-2">
                                     <path d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
@@ -363,6 +372,7 @@
 </body>
 <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
 <script src="public/assets/js/navbar.js"></script>
+<script src="public/assets/js/searchByDate.js"></script>
 <script src="public/assets/js/liveSearch.js"></script>
 <script src="public/assets/js/theme.js"></script>
 <script src="public/assets/js/home.js"></script>
