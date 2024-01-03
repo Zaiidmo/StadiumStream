@@ -71,7 +71,9 @@ class SigninController
                 echo 'User Not Found !!!';
             }
         }
-    }
+            }}
+
+            
 
     public function logout()
     {
@@ -104,4 +106,5 @@ class SigninController
         // header('Location: ../signin');
     }
 
+}
 }
