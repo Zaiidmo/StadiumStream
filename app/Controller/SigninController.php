@@ -2,7 +2,6 @@
 
 namespace App\Controller;
 
-use App\Model\User;
 use App\Model\UserModel;
 
 class SigninController
