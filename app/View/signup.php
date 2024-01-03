@@ -1,6 +1,3 @@
-<?php
-// include(__DIR__."/includes/head.php");
-?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -15,21 +12,20 @@
     <?php
     include '../app/View/includes/navbar.php';
     ?>
-        <img src="public/assets/images/herobg.svg" class="z-1 absolute inset-0 object-cover w-full h-full" alt="" />
-
-    <section class="signup-gradient  dark:bg-gray-900 font-poppins relative">
-        <img src="/assets/images/orangeShape.svg" class="orange-shape invisible md:visible" alt="orange-shape">
+    <!-- <img src="public/assets/images/herobg.svg" class="z-1 absolute inset-0 object-cover w-full h-full" alt="" /> -->
+    <section class="signup-gradient dark:bg-gray-900 font-poppins relative md:py-20">
+        <img src="public/assets/images/orangeShape.svg" class="orange-shape invisible md:visible" alt="orange-shape">
         <div class="flex flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0">
             <a href="#" class="flex items-center mb-6 text-2xl font-semibold text-gray-100 dark:text-white">
                 <img class="w-8 h-8 mr-2" src="public/assets/images/logo.svg" alt="logo">
                 StadiumStream
             </a>
-            <div class="w-full bg-primary-100  rounded-2xl shadow dark:border md:mt-0 sm:max-w-md xl:p-0 dark:bg-gray-800 dark:border-gray-700">
+            <div class="w-full bg-primary-100 rounded-2xl shadow dark:border md:mt-0 sm:max-w-md xl:p-0 dark:bg-gray-800 dark:border-gray-700">
                 <div class="p-6 space-y-4 md:space-y-6 sm:p-8">
                     <h1 class="text-xl font-bold leading-tight tracking-tight text-gray-100 md:text-2xl dark:text-white">
                         Create An Account
                     </h1>
-                    <form action="#" id="form">
+                    <form action="Signup/registerUser" method="POST" id="form">
                         <div class="grid gap-4 sm:grid-cols-2 sm:gap-6">
                             <div class="w-full formGroup">
                                 <label for="first_name" class="block mb-2 text-sm font-medium text-gray-100 dark:text-white">First
@@ -50,7 +46,11 @@
                                     adress</label>
                                 <input type="email" name="email" id="email" class="bg-gray-200 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-orange focus:border-orange block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="name@company.com" pattern="^(.+)@(.+)$" required>
                                 <p class="error mt-2 text-sm text-red-600 dark:text-red-500 drop-shadow-md hidden"></p>
-
+                            </div>
+                            <div class="sm:col-span-2 formGroup">
+                                <label for="phone number" class="block mb-2 text-sm font-medium text-gray-100 dark:text-white">phone number</label>
+                                <input type="phone_number" name="phone_number" id="phone_number" class="bg-gray-200 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-orange focus:border-orange block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="06xxxxxxxx"  required>
+                                <p class="error mt-2 text-sm text-red-600 dark:text-red-500 drop-shadow-md hidden"></p>
                             </div>
                             <div class="sm:col-span-2 formGroup">
                                 <label for="password" class="block mb-2 text-sm font-medium text-gray-100 dark:text-white">Password</label>
@@ -90,6 +90,17 @@
                                 </p>
                             </div>
                         </div>
+                        <?php if (isset($_SESSION['errors'])) : ?>
+                            <ul>
+                                <?php foreach ($_SESSION['errors'] as $error) : ?>
+                                    <li class="text-red-500">
+                                        <?php echo $error ?>
+                                    </li>
+                                <?php endforeach; ?>
+                            </ul>
+                        <?php
+                            unset($_SESSION['errors']);
+                        endif; ?>
                     </form>
                 </div>
             </div>
@@ -104,7 +115,7 @@
     <?php
     include '../app/View/includes/footer.php';
     ?>
-
+    <script src="public/assets/js/validation.js"></script>
     <script src="public/assets/js/navbar.js"></script>
     <script src="public/assets/js/theme.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/flowbite.min.js"></script>

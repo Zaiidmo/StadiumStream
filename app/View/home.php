@@ -117,7 +117,7 @@
                                 <li class="flex items-center">
                                     <input id="apple" type="checkbox" value="" class="w-4 h-4 bg-gray-100 border-gray-300 rounded text-primary-600 focus:ring-primary-500 dark:focus:ring-primary-600 dark:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500" />
                                     <label for="apple" class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-100">
-                                        top games 
+                                        top games
                                     </label>
                                 </li>
                                 <li class="flex items-center">
@@ -129,13 +129,13 @@
                                 <li class="flex items-center">
                                     <input id="dell" type="checkbox" value="" class="w-4 h-4 bg-gray-100 border-gray-300 rounded text-primary-600 focus:ring-primary-500 dark:focus:ring-primary-600 dark:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500" />
                                     <label for="dell" class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-100">
-                                    today's matchs
-                                </label>
+                                        today's matchs
+                                    </label>
                                 </li>
                                 <li class="flex items-center">
                                     <input id="asus" type="checkbox" value="" checked class="w-4 h-4 bg-gray-100 border-gray-300 rounded text-primary-600 focus:ring-primary-500 dark:focus:ring-primary-600 dark:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500" />
                                     <label for="asus" class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-100">
-                                    this mounth
+                                        this mounth
                                     </label>
                                 </li>
                             </ul>
@@ -155,163 +155,39 @@
         </div>
         <div class="container max-w-7xl px-2 mx-auto">
             <div class="grid-cols-1 sm:grid md:grid-cols-3 ">
-                <div class="match-card-display  mx-3 mt-6 flex flex-col rounded-lg bg-white shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] dark:bg-gray-800 sm:shrink-0 sm:grow sm:basis-0">
-                    <a href="#!">
-                        <img class="rounded-t-lg" src="public/assets/images/match4.jpg" alt="football" />
-                    </a>
-                    <div class="p-5">
-                        <h5 class="mb-2 text-xl font-medium leading-tight text-neutral-800 dark:text-neutral-50">
-                            Card title
-                        </h5>
-                        <p class=" text-base text-neutral-600 dark:text-neutral-200">
-                            This is a wider card with supporting text below as a natural
-                            lead-in to additional content. This content is a little bit
-                            longer.
-                        </p>
-                    </div>
-                    <div class="p-3 flex justify-end">
-                        <a href="buyTicket" class="text-orange border border-orange py-2 px-3 rounded inline-flex  items-center">
-                            Buy Ticket
-                            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" class="w-6 h-6 ml-2">
-                                <path d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
-                            </svg>
+                <?php
+                foreach ($matches as $match) {
+                ?>
+                    <div class="match-card-display  mx-3 mt-6 flex flex-col rounded-lg bg-white shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] dark:bg-gray-800 sm:shrink-0 sm:grow sm:basis-0">
+                        <a href="#!">
+                            <img class="rounded-t-lg" src="public/assets/uploads/<?= $match['image'] ?>" alt="football" />
                         </a>
+                        <div class="p-5">
+                            <h5 class="mb-2 text-xl font-medium leading-tight text-neutral-800 dark:text-neutral-50">
+                                <?= $match['team1'] ?> VS <?= $match['team2'] ?>
+                            </h5>
+                            <p class=" text-base text-neutral-600 dark:text-neutral-200">
+                                Experience the thrill at <strong><?= $match['stadiumName'] ?></strong> , where <strong><?= $match['team1'] ?></strong> 
+                                and <strong><?= $match['team2'] ?></strong> 
+                                face off in an epic showdown on <strong><?= $match['matchDay'] ?></strong> Don't miss the action secure your tickets now and join us for an unforgettable match day! Buy your tickets today to witness the magic live in the stadium!
+                            </p>
+                        </div>
+                        <div class="p-3 flex justify-end">
+                            <a href="buyTicket\index\<?=$match['id']?>" class="text-orange border border-orange py-2 px-3 rounded inline-flex  items-center">
+                                Buy Ticket
+                                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" class="w-6 h-6 ml-2">
+                                    <path d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                                </svg>
+                            </a>
+                        </div>
+                        <div class="mt-auto border-t-2 border-neutral-100 px-6 py-3 text-center dark:border-neutral-600 dark:text-neutral-50">
+                            <small> <?= $match['matchDay'] ?></small>
+                        </div>
                     </div>
-                    <div class="mt-auto border-t-2 border-neutral-100 px-6 py-3 text-center dark:border-neutral-600 dark:text-neutral-50">
-                        <small>Last updated 3 mins ago</small>
-                    </div>
-                </div>
-                <div class="match-card-display  mx-3 mt-6 flex flex-col rounded-lg bg-white shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] dark:bg-gray-800 sm:shrink-0 sm:grow sm:basis-0">
-                    <a href="#!">
-                        <img class="rounded-t-lg" src="public/assets/images/match4.jpg" alt="Skyscrapers" />
-                    </a>
-                    <div class="p-5">
-                        <h5 class="mb-2 text-xl font-medium leading-tight text-neutral-800 dark:text-neutral-50">
-                            Card title
-                        </h5>
-                        <p class=" text-base text-neutral-600 dark:text-neutral-200">
-                            This is a wider card with supporting text below as a natural
-                            lead-in to additional content. This content is a little bit
-                            longer.
-                        </p>
-                    </div>
-                    <div class="p-3 flex justify-end">
-                        <a href="buyTicket" class="text-orange border border-orange py-2 px-3 rounded inline-flex  items-center">
-                            Buy Ticket
-                            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" class="w-6 h-6 ml-2">
-                                <path d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
-                            </svg>
-                        </a>
-                    </div>
-                    <div class="mt-auto border-t-2 border-neutral-100 px-6 py-3 text-center dark:border-neutral-600 dark:text-neutral-50">
-                        <small>Last updated 3 mins ago</small>
-                    </div>
-                </div>
-                <div class="match-card-display  mx-3 mt-6 flex flex-col rounded-lg bg-white shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] dark:bg-gray-800 sm:shrink-0 sm:grow sm:basis-0">
-                    <a href="#!">
-                        <img class="rounded-t-lg" src="public/assets/images/match4.jpg" alt="Skyscrapers" />
-                    </a>
-                    <div class="p-5">
-                        <h5 class="mb-2 text-xl font-medium leading-tight text-neutral-800 dark:text-neutral-50">
-                            Card title
-                        </h5>
-                        <p class=" text-base text-neutral-600 dark:text-neutral-200">
-                            This is a wider card with supporting text below as a natural
-                            lead-in to additional content. This content is a little bit
-                            longer.
-                        </p>
-                    </div>
-                    <div class="p-3 flex justify-end">
-                        <a href="buyTicket" class="text-orange border border-orange py-2 px-3 rounded inline-flex  items-center">
-                            Buy Ticket
-                            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" class="w-6 h-6 ml-2">
-                                <path d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
-                            </svg>
-                        </a>
-                    </div>
-                    <div class="mt-auto border-t-2 border-neutral-100 px-6 py-3 text-center dark:border-neutral-600 dark:text-neutral-50">
-                        <small>Last updated 3 mins ago</small>
-                    </div>
-                </div>
-                <div class="match-card-display hidden mx-3 mt-6 flex-col rounded-lg bg-white shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] dark:bg-gray-800 sm:shrink-0 sm:grow sm:basis-0">
-                    <a href="#!">
-                        <img class="rounded-t-lg" src="public/assets/images/match4.jpg" alt="Skyscrapers" />
-                    </a>
-                    <div class="p-5">
-                        <h5 class="mb-2 text-xl font-medium leading-tight text-neutral-800 dark:text-neutral-50">
-                            Card title
-                        </h5>
-                        <p class=" text-base text-neutral-600 dark:text-neutral-200">
-                            This is a wider card with supporting text below as a natural
-                            lead-in to additional content. This content is a little bit
-                            longer.
-                        </p>
-                    </div>
-                    <div class="p-3 flex justify-end">
-                        <a href="buyTicket" class="text-orange border border-orange py-2 px-3 rounded inline-flex  items-center">
-                            Buy Ticket
-                            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" class="w-6 h-6 ml-2">
-                                <path d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
-                            </svg>
-                        </a>
-                    </div>
-                    <div class="mt-auto border-t-2 border-neutral-100 px-6 py-3 text-center dark:border-neutral-600 dark:text-neutral-50">
-                        <small>Last updated 3 mins ago</small>
-                    </div>
-                </div>
-                <div class="match-card-display hidden mx-3 mt-6 flex-col rounded-lg bg-white shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] dark:bg-gray-800 sm:shrink-0 sm:grow sm:basis-0">
-                    <a href="#!">
-                        <img class="rounded-t-lg" src="public/assets/images/match4.jpg" alt="Skyscrapers" />
-                    </a>
-                    <div class="p-5">
-                        <h5 class="mb-2 text-xl font-medium leading-tight text-neutral-800 dark:text-neutral-50">
-                            Card title
-                        </h5>
-                        <p class=" text-base text-neutral-600 dark:text-neutral-200">
-                            This is a wider card with supporting text below as a natural
-                            lead-in to additional content. This content is a little bit
-                            longer.
-                        </p>
-                    </div>
-                    <div class="p-3 flex justify-end">
-                        <a href="buyTicket" class="text-orange border border-orange py-2 px-3 rounded inline-flex  items-center">
-                            Buy Ticket
-                            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" class="w-6 h-6 ml-2">
-                                <path d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
-                            </svg>
-                        </a>
-                    </div>
-                    <div class="mt-auto border-t-2 border-neutral-100 px-6 py-3 text-center dark:border-neutral-600 dark:text-neutral-50">
-                        <small>Last updated 3 mins ago</small>
-                    </div>
-                </div>
-                <div class="match-card-display hidden mx-3 mt-6 flex-col rounded-lg bg-white shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] dark:bg-gray-800 sm:shrink-0 sm:grow sm:basis-0">
-                    <a href="#!">
-                        <img class="rounded-t-lg" src="public/assets/images/match4.jpg" alt="Skyscrapers" />
-                    </a>
-                    <div class="p-5">
-                        <h5 class="mb-2 text-xl font-medium leading-tight text-neutral-800 dark:text-neutral-50">
-                            Card title
-                        </h5>
-                        <p class=" text-base text-neutral-600 dark:text-neutral-200">
-                            This is a wider card with supporting text below as a natural
-                            lead-in to additional content. This content is a little bit
-                            longer.
-                        </p>
-                    </div>
-                    <div class="p-3 flex justify-end">
-                        <a href="buyTicket" class="text-orange border border-orange py-2 px-3 rounded inline-flex  items-center">
-                            Buy Ticket
-                            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" class="w-6 h-6 ml-2">
-                                <path d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
-                            </svg>
-                        </a>
-                    </div>
-                    <div class="mt-auto border-t-2 border-neutral-100 px-6 py-3 text-center dark:border-neutral-600 dark:text-neutral-50">
-                        <small>Last updated 3 mins ago</small>
-                    </div>
-                </div>
-                
+                <?php
+                }
+                ?>
+
             </div>
         </div>
         <div class="fter:h-px my-16 flex items-center before:h-px before:flex-1  before:bg-gray-300 before:content-[''] after:h-px after:flex-1 after:bg-gray-300  after:content-['']">
@@ -429,7 +305,7 @@
         </div>
         <div class="fter:h-px my-16 flex items-center before:h-px before:flex-1  before:bg-gray-300 before:content-[''] after:h-px after:flex-1 after:bg-gray-300  after:content-['']">
             <button type="button" class="flex items-center rounded-full border border-gray-300 bg-secondary-50 px-3 py-2 text-center text-sm font-medium bg-white dark:bg-gray-100  text-gray-900 hover:bg-gray-100">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"  fill="black" class="mr-1 h-4 w-4">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="black" class="mr-1 h-4 w-4">
                     <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd" />
                 </svg>
                 View More
