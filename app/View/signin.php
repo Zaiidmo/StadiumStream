@@ -27,20 +27,7 @@
                         class="text-xl font-bold leading-tight tracking-tight text-gray-100 md:text-2xl dark:text-white drop-shadow-md">
                         Sign in to your account
                     </h1>
-                    <?php if (isset($_SESSION['error'])) {
-                        echo '<div class="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative" role="alert">';
-                        echo '<strong class="font-bold">Error!</strong>';
-                        echo '<span class="block sm:inline">' . $_SESSION['error'] . '</span>';
-                        echo '<span class="absolute top-0 bottom-0 right-0 px-4 py-3">';
-                        echo '<svg class="fill-current h-6 w-6 text-red-500" role="button" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">';
-                        echo '<title>Close</title>';
-                        echo '<path d="M14.348 14.849a1 1 0 0 1-1.414 0L10 11.414l-2.93 2.435a1 1 0 1 1-1.242-1.566l3-2.5a1 1 0 0 1 1.172 0l3 2.5a1 1 0 0 1 0 1.566z"/>';
-                        echo '</svg>';
-                        echo '</span>';
-                        echo '</div>';
-                        unset($_SESSION['error']); // Clear the error message after displaying it
-                    }
-                    ?>
+                    
                     <form class="space-y-4 md:space-y-6" id="form" method="POST" action="Signin/readUser">
                         <div class="formGroup">
                             <label for="email" class="block mb-2 text-sm font-medium text-gray-100 dark:text-white">Your
@@ -74,7 +61,7 @@
                                 class="text-sm font-medium text-orange hover:underline dark:text-orange drop-shadow-md">Forgot
                                 password?</a>
                         </div>
-                        <button type="submit"
+                        <button type="submit" name="login"
                             class="w-full text-white bg-orange hover:bg-orange focus:ring-4 focus:outline-none focus:ring-orange font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-orange dark:hover:bg-orange dark:focus:ring-orange">Sign
                             in</button>
                         <p class="text-sm font-light text-gray-300 dark:text-gray-400">
