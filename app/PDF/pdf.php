@@ -18,7 +18,7 @@ class TicketPDF extends FPDF
 
         // $this -> SetFillColor(18, 78, 55);
         // $this -> Rect(0,0, $this -> GetPageWidth(),50,'F');
-        $this->Image(URL_DIR ."public/assets/uploads/1vs1.jpg", 0, 0, $this->GetPageWidth(), $this->GetPageHeight());
+        // $this->Image(URL_DIR ."public/assets/uploads/1vs1.jpg", 0, 0, $this->GetPageWidth(), $this->GetPageHeight());
 
         // $this->Image("../../public/images/pngegg.png", 0, 0, $this->GetPageWidth(), $this->GetPageHeight());
 
@@ -26,7 +26,7 @@ class TicketPDF extends FPDF
 
 
         // $this->Image("../../public/images/gg.png", 2, 2, 15, 10);
-        $this->SetY(8);
+        // $this->SetY(8);
         // $this->Image("../../public/images/bal.png", -6, 20, 20, 20);
         // $this->Image("../../public/images/playerTT.png", 160, 15, 70, 70);
 
@@ -38,9 +38,7 @@ class TicketPDF extends FPDF
         $this->SetFont('poppins', '', 30);
 
         $this->Cell(0, 8, 'Await  you', 0, 1, 'C');
-
-
-        $this->SetFont('Arial', 'B', 10);
+        $this->SetFont('Poppins', '', 10);
         $this->SetTextColor(255, 255, 255);
 
         $this->SetFont('poppins', '', 15);
