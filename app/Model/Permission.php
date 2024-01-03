@@ -7,7 +7,7 @@ use PDOException;
 
 class Permission extends Crud
 {
-    public function check()
+    public function check($Page)
     {
         if (isset($_SESSION['id'])) {
             $redirect = URL_DIR . 'signin';
@@ -22,12 +22,12 @@ class Permission extends Crud
                     // Step 2: Check the role_id and execute permissions accordingly
                     switch ($userRole['role_id']) {
                         case 1:
-                            // User permissions (adjust as needed)
+                            // User permissions
                             include "../app/View/home.php";
                             break;
                         case 2:
-                            // Admin permissions (adjust as needed)
-                            include "../app/View/dashboard/admin_dashboard.php";
+                            // Admin permissions
+                            include "../app/View/dashboard/$Page.php";
                             break;
                             // Add more cases for other roles if needed
 

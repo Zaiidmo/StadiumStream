@@ -2,15 +2,17 @@
 
 namespace App\Controller;
 
+use App\Model\Permission;
 use App\Model\TeamModel;
 
 class TeamsController
 {
     public function index()
     {
+        $teamspage = new Permission();
+        $teamspage->check('team');
         $teams = new TeamModel();
         $teams = $teams->readTeams();
-        include "../app/View/dashboard/teams.php";
     }
 
     //redirecting to the create fornm

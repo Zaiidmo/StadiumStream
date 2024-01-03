@@ -1,9 +1,14 @@
 <?php
+
 namespace App\Controller;
-class StadiumController{
-    public function index(){
-        include "../app/View/dashboard/stadium.php";
 
+use App\Model\Permission;
 
+class StadiumController
+{
+    public function index()
+    {
+        $Stadiumpage = new Permission();
+        $Stadiumpage->check('stadium');
     }
 }

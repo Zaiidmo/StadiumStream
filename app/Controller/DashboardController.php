@@ -9,6 +9,6 @@ class DashboardController
     public function index()
     {
         $dashboard = new Permission();
-        $dashboard->check();
+        $dashboard->check('dashboard');
     }
 }
