@@ -3,6 +3,7 @@
 namespace app\Controller;
 
 use App\Model\MatchModel;
+use App\Model\Permission;
 
 global $conn;
 class MatchesController
@@ -10,15 +11,25 @@ class MatchesController
     //get the View and fetching all data
     public function index()
     {
-        $matche = new MatchModel;
-        $matches = $matche->fetchMatches();
-        $Teams = $matche->fetchTeams();
-        $Stadiums = $matche->fetchStadiums();
-        include '../app/View/dashboard/matches.php';
+        $teamspage = new Permission();
+        $role = $teamspage->check();
+        // If the user is logged in and has the role of admin (role_id = 2)
+        if ($role == 2) {
+            $matche = new MatchModel;
+            $matches = $matche->fetchMatches();
+            $Teams = $matche->fetchTeams();
+            $Stadiums = $matche->fetchStadiums();
+            include '../app/View/dashboard/matches.php';
+        } else {
+            // Handle other cases, or simply redirect if necessary
+            $redirect = URL_DIR . 'error404';
+            header("Location: $redirect");
+        }
     }
 
 
-    public function addMatch(){
+    public function addMatch()
+    {
         // Create an instance of the TeamModel
         $matchobj = new MatchModel();
 
@@ -65,20 +76,21 @@ class MatchesController
         header('Location: /StadiumStream/matches');
     }
     //update match
-    public function updateMatch($id){
+    public function updateMatch($id)
+    {
         $matche = new MatchModel;
         $Teams = $matche->fetchTeams();
         $Stadiums = $matche->fetchStadiums();
-        $selectedmatch = $matche->updateMatch("match",$id);
+        $selectedmatch = $matche->updateMatch("match", $id);
         // var_dump($selectedmatch);die;
-        include '../app/View/dashboard/updateMatch.php';    
+        include '../app/View/dashboard/updateMatch.php';
     }
-    public function submitUpdateMatch(){
+    public function submitUpdateMatch()
+    {
         $match = new MatchModel();
         $id = $_POST['id'];
         unset($_POST['id']);
-        $match->submitUpdateMatch("match",$_POST,$id);
+        $match->submitUpdateMatch("match", $_POST, $id);
         header('Location: /StadiumStream/matches');
-
     }
 }

@@ -10,7 +10,7 @@ class TicketsController
     public function index()
     {
         $ticketspage = new Permission();
-        $ticketspage->check('team');
+        $ticketspage->check('tickets');
         $tickets = new TicketsModel();
         $tickets = $tickets->displaytickets();
     }
