@@ -20,23 +20,24 @@
     <!-- Hero section -->
 
     <section class="relative">
-        <?php
-        if (isset($_SESSION['success'])) {
-            echo '<div class="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded relative" role="alert">';
-            echo '<strong class="font-bold">Success!</strong>';
-            echo '<span class="block sm:inline">' . $_SESSION['success'] . '</span>';
-            echo '<span class="absolute top-0 bottom-0 right-0 px-4 py-3">';
-            echo '<svg class="fill-current h-6 w-6 text-green-500" role="button" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">';
-            echo '<title>Close</title>';
-            echo '<path d="M14.348 14.849a1 1 0 0 1-1.414 0L10 11.414l-2.93 2.435a1 1 0 1 1-1.242-1.566l3-2.5a1 1 0 0 1 1.172 0l3 2.5a1 1 0 0 1 0 1.566z"/>';
-            echo '</svg>';
-            echo '</span>';
-            echo '</div>';
-            unset($_SESSION['success']);
-        } ?>
+
         <div class="relative">
             <img src="public/assets/images/herobg.svg" class="absolute inset-0 object-cover w-full h-full" alt="" />
             <div class="relative customgradient">
+                <?php
+                if (isset($_SESSION['success'])) {
+                    echo '<div class="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded relative" role="alert">';
+                    echo '<strong class="font-bold">Success!</strong>';
+                    echo '<span class="block sm:inline">' . $_SESSION['success'] . '</span>';
+                    echo '<span class="absolute top-0 bottom-0 right-0 px-4 py-3">';
+                    echo '<svg class="fill-current h-6 w-6 text-green-500" role="button" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">';
+                    echo '<title>Close</title>';
+                    echo '<path d="M14.348 14.849a1 1 0 0 1-1.414 0L10 11.414l-2.93 2.435a1 1 0 1 1-1.242-1.566l3-2.5a1 1 0 0 1 1.172 0l3 2.5a1 1 0 0 1 0 1.566z"/>';
+                    echo '</svg>';
+                    echo '</span>';
+                    echo '</div>';
+                    unset($_SESSION['success']);
+                } ?>
                 <div class="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
                     <div class="flex flex-col items-center justify-between xl:flex-row">
                         <div class="w-full max-w-3xl mb-10 xl:mb-0  xl:w-12/16">
@@ -45,7 +46,6 @@
                                 <br class="hidden md:block" />
                                 <span class=" text-orange text-7xl font-bold ">Football Journey!</span>
                             </h2>
-
 
                             <p class="max-w-xl mb-4 text-base text-gray-200 md:text-lg">
                                 Look no further! Our SBS The Show tickets are the simplest way for you to experience a
