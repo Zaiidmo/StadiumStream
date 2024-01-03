@@ -9,4 +9,11 @@ class HomeController {
         $matches =$obj->fetchAllMatches();
         include '../app/View/home.php';
     }
+
+    public function liveSearch(){
+        if(isset($_POST['query'])){
+            $input = $_POST['query'];
+            var_dump($input);die;
+        }
+    }
 }

@@ -78,7 +78,7 @@
                                         <path fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clip-rule="evenodd" />
                                     </svg>
                                 </div>
-                                <input type="text" id="simple-search" class="block w-full p-2 pl-10 text-sm text-gray-900 border border-gray-300 rounded-lg focus:ring-primary-500 focus:border-primary-500 dark:bg-green-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Search For Match" required="">
+                                <input type="text" id="searchinput" class="block w-full p-2 pl-10 text-sm text-gray-900 border border-gray-300 rounded-lg focus:ring-primary-500 focus:border-primary-500 dark:bg-green-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Search For Match" required="">
                             </div>
                         </form>
                     </div>
@@ -361,8 +361,9 @@
     ?>
 
 </body>
-
+<script src="https://code.jquery.com/jquery-3.7.0.js"></script>
 <script src="public/assets/js/navbar.js"></script>
+<script src="public/assets/js/liveSearch.js"></script>
 <script src="public/assets/js/theme.js"></script>
 <script src="public/assets/js/home.js"></script>
 
