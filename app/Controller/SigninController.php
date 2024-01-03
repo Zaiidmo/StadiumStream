@@ -14,22 +14,6 @@ class SigninController
 
     public function readUser()
     {
-        $email = $_POST['email'];
-        $password = $_POST['password'];
-        $userModel = new UserModel();
-        $users = $userModel->signin($email);
-        //Stocking DATA
-        if ($users > 0) {
-            $pwdCheck = password_verify($password, $users['password']);
-            if ($pwdCheck) {
-                // Password is correct, set session variables
-                $redirect = URL_DIR . 'home';
-                $_SESSION['id'] = $users['id'];
-                $_SESSION['full_name'] = $users['full_name'];
-                $_SESSION['email'] = $users['email'];
-                $_SESSION['phone_number'] = $users['phone_number'];
-                header("Location: $redirect");
-                // echo 'You have successfully logged in.';
         session_start();
         if (isset($_POST['login'])) {
             $email = $_POST['email'];
@@ -52,28 +36,11 @@ class SigninController
                 } else {
                     echo 'Incorrect Password!';
                 }
-        $email = $_POST['email'];
-        $password = $_POST['password'];
-        $userModel = new UserModel();
-        $users = $userModel->signin($email);
-        if ($users > 0) {
-            $pwdCheck = password_verify($password, $users['password']);
-            if ($pwdCheck) {
-                // Password is correct, set session variables
-                $redirect = URL_DIR . 'home';
-                $_SESSION['id'] = $users['id'];
-                $_SESSION['full_name'] = $users['full_name'];
-                $_SESSION['email'] = $users['email'];
-                $_SESSION['phone_number'] = $users['phone_number'];
-                header("Location: $redirect");
-                // echo 'You have successfully logged in.';
             } else {
                 echo 'User Not Found !!!';
             }
         }
-            }}
-
-            
+    }
 
     public function logout()
     {
@@ -106,5 +73,4 @@ class SigninController
         // header('Location: ../signin');
     }
 
-}
 }

@@ -154,11 +154,11 @@
             <p class="max-w-3xl mx-auto mt-4 text-xl dark:text-white text-center ">Explore the latest features that enhance your learning experience and make it even more exciting.</p>
         </div>
         <div class="container max-w-7xl px-2 mx-auto">
-            <div class="grid-cols-1 sm:grid md:grid-cols-3 ">
+            <div id="match-container" class="grid-cols-1 sm:grid md:grid-cols-3 ">
                 <?php
                 foreach ($matches as $match) {
                 ?>
-                    <div class="match-card-display  mx-3 mt-6 flex flex-col rounded-lg bg-white shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] dark:bg-gray-800 sm:shrink-0 sm:grow sm:basis-0">
+                    <div  class="match-card-display  mx-3 mt-6 flex flex-col rounded-lg bg-white shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] dark:bg-gray-800 sm:shrink-0 sm:grow sm:basis-0">
                         <a href="#!">
                             <img class="rounded-t-lg" src="public/assets/uploads/<?= $match['image'] ?>" alt="football" />
                         </a>
