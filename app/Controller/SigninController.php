@@ -42,20 +42,35 @@ class SigninController
         }
     }
 
+    public function logout()
+    {
+        if (isset($_POST['logout'])) {
+            session_start();
+            // Unset all of the session variables
+            $_SESSION = array();
+            $redirect = URL_DIR . 'home';
+        
+            // If it's desired to kill the session, also delete the session cookie
+            // Note: This will destroy the session, and not just the session data
+            if (ini_get("session.use_cookies")) {
+                $params = session_get_cookie_params();
+                setcookie(session_name(), '', time() - 42000,
+                    $params["path"], $params["domain"],
+                    $params["secure"], $params["httponly"]
+                );
+            }
+        
+            // Finally, destroy the session
+            session_destroy();
+        
+            // Redirect to the login page or any other page after logout
+            header("Location: $redirect");
+            exit();
+        }
+        // session_start();
+        // session_unset();
+        // session_destroy();
+        // header('Location: ../signin');
+    }
 
-    // if ($foundUser && password_verify($password, $foundUser['password'])) {
-    //     $_SESSION['id'] = $records['id'];
-    //     $_SESSION['full_name'] = $foundUser['full_name'];
-    //     $_SESSION['email'] = $foundUser['email'];
-    //     $_SESSION['phone_number'] = $foundUser['phone_number'];
-    //     $_SESSION['role'] = $foundUser['role'];
-    //     $_SESSION['success'] = "You are successfuly logged in";
-
-    //     header('Location: ../');
-    //     exit();
-    // } else {
-    //     $_SESSION['error'] = "Invalid email or password. Please try again.";
-    //     header('Location: ../signin');
-    //     exit();
-    // }
 }
