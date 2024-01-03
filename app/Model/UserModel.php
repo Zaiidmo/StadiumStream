@@ -22,28 +22,6 @@ class UserModel extends Crud
         }
     }
 
-    //     public function signin($email)
-    //     {
-    //         try {
-    //             $query = "SELECT * FROM `user` WHERE email = $email ";
-
-
-    //             $stmt = $this->pdo->query($query);
-
-    //             $records = $stmt->fetch(PDO::FETCH_ASSOC);
-    //             return $records;
-    //         } catch (PDOException $e) {
-    //             echo "Error fetching records: " . $e->getMessage();
-    //             return []; // Return an empty array in case of an error
-    //             // Log the error (you may want to use a logging library or write to a log file)
-    //             error_log("Error fetching records: " . $e->getMessage());
-
-    //             // Re-throw the exception to let the calling code handle it
-    //             throw $e;
-    //             echo "Error fetching records: " . $e->getMessage();
-    //             return [];    }
-    // }
-    // }
     public function signin($email)
     {
         try {

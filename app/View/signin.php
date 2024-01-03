@@ -61,7 +61,7 @@
                                 class="text-sm font-medium text-orange hover:underline dark:text-orange drop-shadow-md">Forgot
                                 password?</a>
                         </div>
-                        <button type="submit"
+                        <button type="submit" name="login"
                             class="w-full text-white bg-orange hover:bg-orange focus:ring-4 focus:outline-none focus:ring-orange font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-orange dark:hover:bg-orange dark:focus:ring-orange">Sign
                             in</button>
                         <p class="text-sm font-light text-gray-300 dark:text-gray-400">
