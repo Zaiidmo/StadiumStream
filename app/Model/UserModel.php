@@ -15,7 +15,22 @@ class UserModel extends Crud
     public function createUser($userData)
     {
         try {
-            return $this->create('user', $userData) !== false;
+            //insert data into user table
+            $userCreated = $this->create('user', $userData) !== false;
+            if($userCreated){
+                //retrieve the userID
+                $userID = $this->pdo->lastInsertId();
+                //insert data into user_role table
+                $userRoleData = [
+                    'user_id' => $userID,
+                    'role_id' => 1
+                ];
+                $userRoleCreated = $this->create('user_role', $userRoleData) !== false;
+                return $userRoleCreated;
+            } else {
+                return false;
+            }
+            
         } catch (PDOException $e) {
             echo "PDO Exception: " . $e->getMessage();
             return false;
