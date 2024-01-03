@@ -14,7 +14,6 @@
 
 <body class="bg-gray-300 dark:bg-gray-800">
     <?php include "../app/View/includes/navbar.php"; ?>
-    <?php if (isset($_SESSION['id'])) : ?>          
     <main id="main">
         <div id="profile-card" class="p-16 pl-24">
             <div class="p-8 bg-white rounded-lg  dark:bg-gray-900 shadow mt-24">
@@ -72,9 +71,6 @@
             </div>
         </div>
     </main>
-    <?php else : 
-        header("Location: error404")?>
-    <?php endif; ?>
         
 </body>
 <script src="public/assets/js/navigation.js"></script>
