@@ -30,7 +30,7 @@
                 
                 <div class="flex flex-col items-center justify-around xl:flex-row">
                         <div class="">
-                            <img class="rounded-full w-40 h-40" src="<?= URL_DIR ?>public/assets/images/Morocco.png" alt="image description">
+                            <img class="rounded-full w-40 h-40" src="<?= URL_DIR ?>public/assets/uploads/<?= $singlematch['flag1'] ?>" alt="image description">
                         </div>
                         <div class="">
                             <div class="flex flex-col items-center justify-center mx-auto max-w-7xl px-6 pt-16 pb-12 sm:px-12 lg:pt-24">
@@ -77,7 +77,7 @@
 
                         </div>
                         <div class="">
-                            <img class="rounded-full w-40 h-40" src="<?= URL_DIR ?>public/assets/images/algeria.png" alt="image description">
+                            <img class="rounded-full w-40 h-40" src="<?= URL_DIR ?>public/assets/uploads/<?= $singlematch['flag2'] ?>" alt="image description">
                         </div>
                     </div>
                 </div>

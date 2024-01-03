@@ -18,7 +18,6 @@ class SigninController
         $password = $_POST['password'];
         $userModel = new UserModel();
         $users = $userModel->signin($email);
-        //Stocking DATA
         if ($users > 0) {
             $pwdCheck = password_verify($password, $users['password']);
             if ($pwdCheck) {
