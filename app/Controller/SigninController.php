@@ -33,10 +33,16 @@ class SigninController
                     header("Location: $redirect");
                     // echo 'You have successfully logged in.';
                 } else {
-                    echo 'Incorrect Password!';
+                    $password_incorect =  'Incorrect Password!';
+                    $_SESSION['password_incorect'] = $password_incorect;
+                    $redirect = URL_DIR . 'signin';
+                    header("Location: $redirect");
                 }
             } else {
-                echo 'User Not Found !!!';
+                $user_not_found =  'User Not Found !!!';
+                    $_SESSION['user_not_found'] = $user_not_found;
+                    $redirect = URL_DIR . 'signin';
+                    header("Location: $redirect");
             }
         }
     }
