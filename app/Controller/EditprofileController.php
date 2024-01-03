@@ -1,7 +1,16 @@
-<?php 
+<?php
+
 namespace App\Controller;
-class EditprofileController {
-    public function index() {
-        include "../app/View/Editprofile.php";
+
+class EditprofileController
+{
+    public function index()
+    {
+        if (isset($_SESSION['id'])) {
+            include "../app/View/Editprofile.php";
+        } else {
+            $redirect = URL_DIR . 'signin';
+            header("Location: $redirect");
+        }
     }
 }
