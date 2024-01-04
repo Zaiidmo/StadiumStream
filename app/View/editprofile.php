@@ -52,26 +52,25 @@
                     </div>
                 </div>
             </div>
-            <!-- Right Side -->
             <div class="lg:col-span-2 lg:mt-10">
                 <div
                     class="p-4 mb-4 bg-white border border-gray-200 rounded-lg shadow-sm 2xl:col-span-2 dark:border-gray-700 sm:p-6 dark:bg-gray-800">
                     <h3 class="mb-4 text-xl font-semibold dark:text-white">General information</h3>
-                    <form action="Editprofile/updateProfile" post="POST">
+                    <form action="Editprofile/updateProfile" method="POST">
                         <div class="grid grid-cols-6 gap-6">
                             <div class="col-span-6 sm:col-span-3">
-                                <label for="first-name" name="first_name"
+                                <label for="first-name"
                                     class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">First
                                     Name</label>
-                                <input type="text" name="first-name" id="first-name"
+                                <input type="text" name="first_name" id="first-name"
                                     class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
                                     value="<?php echo $userData['first_name']; ?>" required>
                             </div>
                             <div class="col-span-6 sm:col-span-3">
-                                <label for="last-name" name="last_name"
+                                <label for="last-name"
                                     class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Last
                                     Name</label>
-                                <input type="text" name="last-name" id="last-name"
+                                <input type="text" name="last_name" id="last-name"
                                     class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
                                     value="<?php echo $userData['last_name']; ?>" required>
                             </div>
@@ -86,7 +85,7 @@
                                 <label for="phone-number" name="phone_number"
                                     class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Phone
                                     Number</label>
-                                <input type="number" id="phone-number"
+                                <input type="text" id="phone-number"
                                     class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
                                     name="phone_number" value="<?php echo $userData['phone_number']; ?>" required>
                             </div>
@@ -102,9 +101,10 @@
         </div>
 
     </main>
+    <script src="public/assets/js/navbar.js"></script>
+    <script src="public/assets/js/theme.js"></script>
+    <script src="public/assets/js/home.js"></script>
 </body>
-<script src="public/assets/js/navbar.js"></script>
-<script src="public/assets/js/theme.js"></script>
-<script src="public/assets/js/home.js"></script>
+
 
 </html>

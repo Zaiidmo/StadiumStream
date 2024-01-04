@@ -22,6 +22,7 @@ class EditprofileController
                 $userData['first_name'] = $nameParts[0]; // Set first_name
                 $userData['last_name'] = isset($nameParts[1]) ? $nameParts[1] : ''; // Set last_name
 
+
                 include "../app/View/editprofile.php"; // Include the view for editing user profile
             } else {
                 // Handle error: User data not found
@@ -44,11 +45,9 @@ class EditprofileController
             $userId = $_SESSION['id']; // Get the user's ID from the session
             $userModel = new UserModel();
 
-            // Retrieve form data and perform form validation
-
             // If form validation passes, update the user's profile
             $userData = [
-                'full_name' => $_POST['first_name']." ".$_POST['last_name'],
+                'full_name' => $_POST['first_name'] . " " . $_POST['last_name'],
                 'email' => $_POST['email'],
                 'phone_number' => $_POST['phone_number'],
             ];
@@ -56,9 +55,13 @@ class EditprofileController
             $userUpdated = $userModel->updateUser($userId, $userData); // Update the user's data
 
             if ($userUpdated) {
+                $_SESSION['full_name'] = $userData['full_name'];
+                $_SESSION['email'] = $userData['email'];
+                $_SESSION['phone_number'] = $userData['phone_number'];
                 $_SESSION['success'] = "Your profile has been updated successfully";
                 $redirect = URL_DIR . 'profile';
                 header("Location: $redirect");
+                exit();
             } else {
                 $_SESSION['error'] = "Failed to update your profile";
             }
