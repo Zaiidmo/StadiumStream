@@ -1,0 +1,45 @@
+<?php
+<<<<<<< HEAD
+namespace App\Controller;
+
+use App\Model\Statistics;
+=======
+
+namespace App\Controller;
+
+use App\Model\Permission;
+>>>>>>> dashboard
+
+class DashboardController
+{
+    public function index()
+    {
+<<<<<<< HEAD
+        $statisticsModel = new Statistics();
+
+        $totalUsersData = $statisticsModel->getTotalUsers();
+        $totalTeamsData = $statisticsModel->getTotalTeams();
+        $totalGamesData = $statisticsModel->getTotalGames();
+        $soldTicketsCountData = $statisticsModel->getSoldTicketsCount();
+
+        $totalUsers = $totalUsersData['totalUsers'];
+        $totalTeams = $totalTeamsData['totalTeams'];
+        $totalMatches = $totalGamesData['totalMatches'];
+        $soldTicketsCount = $soldTicketsCountData['soldTicketsCount'];
+
+        include "../app/View/dashboard/dashboard.php";
+=======
+        $dashboard = new Permission();
+        $role = $dashboard->check();
+
+        // If the user is logged in and has the role of admin (role_id = 2)
+        if ($role == 2) {
+            include "../app/View/dashboard/dashboard.php";
+        } else {
+            // if the user is not an admin 
+            $redirect = URL_DIR . 'error404';
+            header("Location: $redirect");
+        }
+>>>>>>> dashboard
+    }
+}
