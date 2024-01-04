@@ -30,7 +30,7 @@
                 
                 <div class="flex flex-col items-center justify-around xl:flex-row">
                         <div class="">
-                            <img class="rounded-full w-40 h-40" src="<?= URL_DIR ?>public/assets/images/Morocco.png" alt="image description">
+                            <img class="rounded-full w-40 h-40" src="<?= URL_DIR ?>public/assets/uploads/<?= $singlematch['flag1'] ?>" alt="image description">
                         </div>
                         <div class="">
                             <div class="flex flex-col items-center justify-center mx-auto max-w-7xl px-6 pt-16 pb-12 sm:px-12 lg:pt-24">
@@ -77,7 +77,7 @@
 
                         </div>
                         <div class="">
-                            <img class="rounded-full w-40 h-40" src="<?= URL_DIR ?>public/assets/images/algeria.png" alt="image description">
+                            <img class="rounded-full w-40 h-40" src="<?= URL_DIR ?>public/assets/uploads/<?= $singlematch['flag2'] ?>" alt="image description">
                         </div>
                     </div>
                 </div>
@@ -110,7 +110,7 @@
                                 <div class="">
                                     <div class="flex justify-between">
                                         <div class="text-4xl text-gray-700 dark:text-gray-400 leading-none text-right py-2">
-                                            $349<span class="ml-1 text-dark-2 text-base">/once</span></div>
+                                        <?= $singlematch['price'] ?> $ <span class="ml-1 text-dark-2 text-base">/once</span></div>
                                     </div>
                                     <div class="border-b  border-light-2 w-full mt-6 mb-8"></div>
                                     <ul class="mb-10">
@@ -130,7 +130,7 @@
                                         </li>
                                     </ul>
 
-                                    <a class="inline-flex items-center justify-center bg-primary-100 hover:bg-orange text-white h-10 px-5 rounded-lg text-sm font-medium leading-none transition-all duration-200 whitespace-nowrap disabled:opacity-50 disabled:cursor-default hover:bg-blue-4 w-full" href="../../Buyticket/generateTicket/<?=$id?>">
+                                    <a class="inline-flex items-center justify-center bg-primary-100 hover:bg-orange text-white h-10 px-5 rounded-lg text-sm font-medium leading-none transition-all duration-200 whitespace-nowrap disabled:opacity-50 disabled:cursor-default hover:bg-blue-4 w-full" href="../../Buyticket/reserveTicket/<?=$id?>">
                                         <span>Get ticket</span>
                                     </a>
                                 </div>
