@@ -25,7 +25,7 @@ class generatepdf
         $pdf = new TicketPDF();
         $pdf->AliasNbPages();
         $pdf->AddPage();
-        $pdf->SetFont('Arial', 'B', 16);
+        $pdf->SetFont('Poppins', 'B', 16);
         $pdf->Cell(40, 10, 'Hello World!');
         $pdf->Output();
     }
