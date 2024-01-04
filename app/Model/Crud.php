@@ -91,7 +91,14 @@ class Crud extends Connection
             echo "Error deleting record: " . $e->getMessage();
         }
     }
-
+    public function getRecordById($tableName, $id)
+    {
+        $query = "SELECT * FROM $tableName WHERE id = :id";
+        $stmt = $this->pdo->prepare($query);
+        $stmt->bindParam(':id', $id, PDO::PARAM_INT);
+        $stmt->execute();
+        return $stmt->fetch(PDO::FETCH_ASSOC);
+    }
     public function show_stats($table, $condition = '')
     {
         try {

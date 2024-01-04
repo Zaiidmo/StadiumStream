@@ -13,7 +13,7 @@
 </head>
 
 <body class="bg-gray-300 dark:bg-gray-800">
-    <?php include "../app/View/includes/navbar.php"; ?>
+    <?php include "../app/View/includes/navbar.php";?>
     <main id="main">
         <div id="profile-card" class="p-16 pl-24">
             <div class="p-8 bg-white rounded-lg  dark:bg-gray-900 shadow mt-24">
@@ -43,8 +43,8 @@
                     </div>
                 </div>
                 <div class="mt-20 text-center ">
-                    <h1 class="text-4xl font-medium dark:text-white text-gray-700"><?php if(isset($_SESSION['username'])) echo $_SESSION['username'] ?></h1>
-                    <p class="font-light text-gray-600 dark:text-white mt-3"><?php if(isset($_SESSION['username'])) echo $_SESSION['email'] ?></p>
+                    <h1 class="text-4xl font-medium dark:text-white text-gray-700"><?php if(isset($_SESSION['full_name'])) echo $_SESSION['full_name'];?></h1>
+                    <p class="font-light text-gray-600 dark:text-white mt-3"><?php if(isset($_SESSION['email'])) echo $_SESSION['email'] ?></p>
                 </div>
                 <!-- <div class="mt-12 flex flex-col justify-center">
                     <p class="text-gray-600 dark:text-white text-center font-light lg:px-16">An artist of considerable range, Ryan — the name taken by Melbourne-raised, Brooklyn-based Nick Murphy — writes, performs and records all of his own music, giving it a warm, intimate feel with a solid groove structure. An artist of considerable range.</p> <button class="text-indigo-500 py-2 px-4  font-medium mt-4"> Show more</button>
