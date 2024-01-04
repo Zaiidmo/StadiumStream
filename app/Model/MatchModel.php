@@ -57,7 +57,6 @@ class MatchModel extends Crud
             echo "Error fetching records: " . $e->getMessage();
             return []; 
         }
-        var_dump($records);die;
     }
     public function submitUpdateMatch($table,$data,$id){
         return $this->update($table,$data,$id);
