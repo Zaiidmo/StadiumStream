@@ -21,9 +21,9 @@ class BuyticketController extends MatchModel
 
     public function generateTicket()
     {
-        $id = $_GET['id'];
+        // $id = $_GET['id'];
         $ticket = new buyticketModel();
-        $ticket->fetchSingleMatche($id);
+        // $ticket->fetchSingleMatche($id);
         require '../app/PDF/pdf.php';
         $pdf = new TicketPDF();
         $pdf->SetAutoPageBreak(true, 0);
