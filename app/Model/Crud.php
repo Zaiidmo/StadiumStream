@@ -91,4 +91,18 @@ class Crud extends Connection
             echo "Error deleting record: " . $e->getMessage();
         }
     }
+
+    public function show_stats($table, $condition = '')
+    {
+        try {
+            $query = "SELECT COUNT(*) AS count FROM `$table` $condition";
+            $stmt = $this->pdo->prepare($query);
+            $stmt->execute();
+            $result = $stmt->fetch(PDO::FETCH_ASSOC);
+            return isset($result['count']) ? $result['count'] : 0;
+        } catch (PDOException $e) {
+            echo "Error fetching statistics: " . $e->getMessage();
+            return 0; // Return 0 in case of an error
+        }
+    }
 }
