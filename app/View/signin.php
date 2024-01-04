@@ -22,12 +22,23 @@
             </a>
             <div
                 class="w-full z-10 bg-primary-100 rounded-2xl shadow dark:border md:mt-0 sm:max-w-md xl:p-0 dark:bg-gray-800 dark:border-gray-700">
+                <?php if (isset($_SESSION['password_incorect'])) {
+                    echo "<div class='p-4 text-md text-center text-red-800 rounded-lg bg-red-300 dark:bg-red-800 dark:text-red-200 w-full'
+                            role='alert'>{$_SESSION['password_incorect']}
+                        </div>";
+                    session_destroy();
+                } else if (isset($_SESSION['user_not_found'])) {
+                    echo "<div class='p-4 text-md text-center text-red-800 rounded-lg bg-red-300 dark:bg-red-800 dark:text-red-200 w-full'
+                            role='alert'>{$_SESSION['user_not_found']}
+                        </div>";
+                    session_destroy();
+                } ?>
                 <div class="p-6 space-y-4 md:space-y-6 sm:p-8">
                     <h1
                         class="text-xl font-bold leading-tight tracking-tight text-gray-100 md:text-2xl dark:text-white drop-shadow-md">
                         Sign in to your account
                     </h1>
-                    
+
                     <form class="space-y-4 md:space-y-6" id="form" method="POST" action="Signin/readUser">
                         <div class="formGroup">
                             <label for="email" class="block mb-2 text-sm font-medium text-gray-100 dark:text-white">Your
@@ -69,6 +80,7 @@
                                 class="font-medium text-orange hover:underline dark:text-orange drop-shadow-md">Sign
                                 up</a>
                         </p>
+
                     </form>
                 </div>
             </div>

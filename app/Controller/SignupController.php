@@ -9,7 +9,15 @@ class SignupController
 {
     public function index()
     {
-        include("../app/View/signup.php");
+        if (session_status() == PHP_SESSION_NONE) {
+            session_start();
+        }
+        if (isset($_SESSION['id'])) {
+            $redirect = URL_DIR . 'profile';
+            header("Location: $redirect");
+        } else {
+            include("../app/View/signup.php");
+        }
     }
     public function registerUser()
     {

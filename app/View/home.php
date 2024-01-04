@@ -32,7 +32,6 @@
                                 <span class=" text-orange text-7xl font-bold ">Football Journey!</span>
                             </h2>
 
-
                             <p class="max-w-xl mb-4 text-base text-gray-200 md:text-lg">
                                 Look no further! Our SBS The Show tickets are the simplest way for you to experience a live Kpop recording. </p>
                             <a href="contact">

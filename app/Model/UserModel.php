@@ -17,7 +17,7 @@ class UserModel extends Crud
         try {
             //insert data into user table
             $userCreated = $this->create('user', $userData) !== false;
-            if($userCreated){
+            if ($userCreated) {
                 //retrieve the userID
                 $userID = $this->pdo->lastInsertId();
                 //insert data into user_role table
@@ -30,7 +30,7 @@ class UserModel extends Crud
             } else {
                 return false;
             }
-            
+
         } catch (PDOException $e) {
             echo "PDO Exception: " . $e->getMessage();
             return false;
@@ -48,5 +48,13 @@ class UserModel extends Crud
             echo 'Database Error: ' . $e->getMessage();
             exit();
         }
+    }
+    public function getUserById($userId)
+    {
+        return $this->getRecordById('user', $userId);
+    }
+    public function updateUser($userId, $userData)
+    {
+        return $this->update('user', $userData, $userId) !== false;
     }
 }
