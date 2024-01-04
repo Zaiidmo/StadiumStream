@@ -40,7 +40,7 @@ class BuyticketController extends MatchModel
         require '../app/PDF/pdf.php';
         $pdf = new TicketPDF();
         $pdf->SetAutoPageBreak(true, 0);
-        $pdf->AddPage('L', array($pdf->GetPageWidth(), 80));
+        $pdf->AddPage('L', array(250, 80));
         $pdf->SetFont('Arial', '', 12);
         $pdf->Output();
     }
