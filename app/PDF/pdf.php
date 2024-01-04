@@ -42,10 +42,16 @@ class TicketPDF extends FPDF
         //Stadium Holder 
         $this->SetFont('Poppins', '', 15);
         $this->SetXY(120, 63);
+        $this-> SetTextColor(255,255,255);
         $this->Cell(0, 0, $data['stadiumName'], 0, 1, 'G');
+
+        $this->SetFont('Poppins', '', 10);
+        $this->SetXY(120,76);
+        $this->Cell(0, 0, $data['uu_id'], 0, 1, 'G');
         
 
         //Teams Data 
+        $this->SetTextColor(0,0,0);
         $this->SetFont('Poppins', '', 15);
         $this->Image(URL_DIR . "public/assets/uploads/" . $data['flag1'], 135, 25, 18, 18, 'JPEG');
         $this->SetXY(131, 47);
