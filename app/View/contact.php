@@ -26,7 +26,7 @@
                         class="text-2xl md:text-3xl lg:text-4xl text-center font-extrabold drop-shadow-md leading-tight tracking-tight text-gray-100 dark:text-white">
                         Get in <span class="text-orange  drop-shadow-md">Touch</span>
                     </h1>
-                    <form action="#" id="form">
+                    <form id="form" action="Contact/send_mail" method="post">
                         <div class="grid gap-4 sm:grid-cols-2 sm:gap-6">
                             <div class="w-full formGroup">
                                 <label for="first_name"
@@ -58,10 +58,19 @@
 
                             </div>
                             <div class="sm:col-span-2 formGroup">
+                                <label for="subject"
+                                    class="block mb-2 text-sm font-medium text-gray-100 dark:text-white">Subject</label>
+                                <input type="text" name="subject" id="subject"
+                                    class="bg-gray-200 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-orange  focus:border-orange  block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-orange  dark:focus:border-orange "
+                                    placeholder="Your Subject" required minlength="5">
+                                <p class="error mt-2 text-sm text-red-600 dark:text-red-500 drop-shadow-md hidden"></p>
+
+                            </div>
+                            <div class="sm:col-span-2 formGroup">
                                 <label for="description"
                                     class="block mb-2 text-sm font-medium text-gray-100 dark:text-white">Your
                                     message</label>
-                                <textarea id="description" rows="8"
+                                <textarea id="description" rows="8" name='message'
                                     class="block p-2.5 w-full text-sm text-gray-900 bg-gray-200 rounded-lg border border-gray-300 focus:ring-orange  focus:border-orange  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-orange  dark:focus:border-orange "
                                     placeholder="Write us your message here..." minlength="10" costommaxlength='50'
                                     required></textarea>
@@ -109,11 +118,10 @@
     <?php
     include '../app/View/includes/footer.php';
     ?>
-
+    <script src="public/assets/js/validation.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/flowbite.min.js"></script>
+    <script src="public/assets/js/navbar.js"></script>
+    <script src="public/assets/js/theme.js"></script>
 </body>
-<script src="public/assets/js/validation.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/flowbite.min.js"></script>
-<script src="public/assets/js/navbar.js"></script>
-<script src="public/assets/js/theme.js"></script>
 
 </html>
