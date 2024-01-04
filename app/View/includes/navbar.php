@@ -1,4 +1,4 @@
-<?php session_start() ?>
+<!-- <?php session_start() ?> -->
 <header class="z-40 fixed w-screen py-4 flex bg-primary-100  shadow-md dark:bg-gray-800">
   <nav class="container mx-auto w-full flex justify-between items-center h-full px-6 text-gray-600 dark:text-gray-300">
     <div id="logo" class="flex items-center z-40">
