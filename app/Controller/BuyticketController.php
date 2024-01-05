@@ -18,8 +18,9 @@ class BuyticketController extends MatchModel
         $singlematch =  $obj->fetchSingleMatche($id);
         // var_dump($singlematch);die;
         // echo $singlematch->team1;
-
+        
         require "../app/View/buyticket.php";
+
     }
 
     public function reserveTicket($id)
@@ -34,6 +35,7 @@ class BuyticketController extends MatchModel
         $currentTime = Carbon::now();
         $remaining_days = $currentTime->diffInDays($gameTime, false);
         if ($remaining_days < 1) {
+            $_SESSION['Remaining_days'] = $remaining_days;
             $_SESSION['error'] = "You can't reserve a ticket for this match";
             header("Location: " . URL_DIR . "home");
             exit();

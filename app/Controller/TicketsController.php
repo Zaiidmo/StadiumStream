@@ -13,6 +13,7 @@ class TicketsController
         $ticketspage->check('tickets');
         $tickets = new TicketsModel();
         $tickets = $tickets->displaytickets();
+        include "../app/View/dashboard/tickets.php";
     }
     public function cancel($id)
     {

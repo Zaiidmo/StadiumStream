@@ -72,7 +72,6 @@
 
         </div>
     </main>
-    <?php include "../app/View/includes/Dash_footer.php"; ?>
 
 </body>
 <script>
