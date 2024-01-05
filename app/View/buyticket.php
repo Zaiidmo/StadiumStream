@@ -113,14 +113,11 @@
                                             <?= $singlematch['price'] ?> $ <span class="ml-1 text-dark-2 text-base">/once</span>
                                         </div>
                                     </div>
+
                                     <div class="flex justify-between">
-                                        <div class="text-4xl text-gray-700 dark:text-gray-400 leading-none text-right py-2">
-                                            <?= $totalTickets['capacity'] ?>  <span class="ml-1 text-dark-2 text-base"> total tickets </span>
-                                        </div>
-                                    </div>
-                                    <div class="flex justify-between">
-                                        <div class="text-4xl text-gray-700 dark:text-gray-400 leading-none text-right py-2">
-                                            <?= $totalTickets['capacity'] ?>  <span class="ml-1 text-dark-2 text-base"> avaliable tickets </span>
+                                        <div class="text-2xl text-gray-700 dark:text-gray-400 leading-none text-right py-2">
+                                           <span ><?= $avaliableTickets  ?></span>  / <span class="ml-1 text-dark-2 text-base" ><?= $totalCapacity  ?></span>
+                                             <span class="ml-1 text-dark-2 text-base"> avaliable tickets </span>
                                         </div>
                                     </div>
                                     <div class="border-b  border-light-2 w-full mt-6 mb-8"></div>
@@ -141,7 +138,7 @@
                                         </li>
                                     </ul>
                                     <?php
-                                    if (isset($_SESSION['Remaining_days'])) : ?>
+                                    if (isset($_SESSION['Remaining_days']) || $avaliableTickets === 0 ) : ?>
                                         <button class="inline-flex items-center justify-center bg-primary-100 hover:bg-orange text-white h-10 px-5 rounded-lg text-sm font-medium leading-none transition-all duration-200 whitespace-nowrap disabled:opacity-50 disabled:cursor-default hover:bg-blue-4 w-full" href="../../Buyticket/reserveTicket/<?= $id ?>" disabled>
                                             <span>No tickets</span>
                                         </button>

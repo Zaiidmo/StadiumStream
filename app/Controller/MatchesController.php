@@ -54,11 +54,12 @@ class MatchesController
 
         $data['team2'] = $_POST['team2'];
         $data['team1'] = $_POST['team1'];
-        $data['time'] = $_POST['time'];
+        $data['time'] =  str_replace("T"," ",$_POST['time']). ":00";
         $data['stade'] = $_POST['stade'];
+        $data['ticket_price'] = $_POST['ticket_price'];
 
-        
-        $matchobj->addMatch("match", $data);
+        // var_dump($data['time']);die;
+        $matchobj->addMatch('match', $data);
         header('Location: /StadiumStream/matches');
     }
 

@@ -13,18 +13,19 @@ class Crud extends Connection
         parent::__construct();
     }
 
-    public function create($tableName, $data)
+    public function create($tableName,$data)
     {
         try {
             $columns = implode(", ", array_keys($data));
             $values = ":" . implode(", :", array_keys($data));
-            $query = "INSERT INTO $tableName ($columns) VALUES ($values)";
+            $query = "INSERT INTO `$tableName` ($columns) VALUES ($values)";
             $stmt = $this->pdo->prepare($query);
             $stmt->execute($data);
             echo "Record added successfully!";
         } catch (PDOException $e) {
             echo "Error creating record: " . $e->getMessage();
         }
+        
     }
 
 

@@ -32,7 +32,7 @@ class Statistics extends Crud
     }
     public function getCapacity($id)
     {
-        $query="SELECT d.capacity,m.team1,m.team2 FROM `match` m
+        $query="SELECT d.capacity FROM `match` m
         left JOIN stade d
         ON m.stade=d.id
         WHERE m.id = $id";
@@ -41,5 +41,13 @@ class Statistics extends Crud
         $result=$stmt->fetch(PDO::FETCH_ASSOC);
         return $result;
 
+    }
+    public function SoldTicketsMatch($id){
+        $query="SELECT COUNT(*) as SoldTicketsMatch FROM ticket t
+        WHERE t.match_id=$id";
+        $stmt = $this->pdo->prepare($query);
+        $stmt->execute();
+        $result=$stmt->fetch(PDO::FETCH_ASSOC);
+        return $result;
     }
 }

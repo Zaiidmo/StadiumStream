@@ -38,6 +38,7 @@ class MatchModel extends Crud
 
     public function addMatch($tabel, $data)
     {
+        
         return $this->create($tabel, $data);
     }
 

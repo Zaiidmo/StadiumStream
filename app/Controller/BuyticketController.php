@@ -18,21 +18,19 @@ class BuyticketController extends MatchModel
         $obj = new buyticketModel();
         $singlematch =  $obj->fetchSingleMatche($id);
         $statisticsModel = new Statistics();
-        $soldTickets=$soldTicketsCountData['soldTicketsCount'] = $statisticsModel->getSoldTicketsCount();
-        $getCancelTicket = $statisticsModel->getCanceldTicket();
-        $totalTickets = $this->getCapacity($id);
+        $MatchSoldTickets= $statisticsModel->SoldTicketsMatch($id);
+        // $getCancelTicket = $statisticsModel->getCanceldTicket();
+        $totalTickets= $statisticsModel->getCapacity($id);
+        $totalCapacity = array_values($totalTickets)[0];
+        $totalSoldTIckets = array_values($MatchSoldTickets)[0];
 
-        // var_dump($singlematch);die;
-        // echo $singlematch->team1;
+        $avaliableTickets = $totalCapacity-$totalSoldTIckets ;
+        // var_dump($totalSoldTIckets);die;
         
         require "../app/View/buyticket.php";
 
     }
-    public function getCapacity($id){
-        $statisticsModel = new Statistics();
-        $tickets=$statisticsModel->getCapacity($id);
-        return $tickets;
-    }
+
     public function reserveTicket($id)
     {
         $ticket = new buyticketModel();
