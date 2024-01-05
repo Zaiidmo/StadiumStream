@@ -13,6 +13,8 @@ class UsersController
         $Userspage->check('team');
         $users = new UserModel();
         $users = $users->displayusers();
+        include "../app/View/dashboard/users.php";
+
     }
 }
 
