@@ -26,9 +26,9 @@
             <img src="<?= URL_DIR ?>public/assets/images/herobg.svg" class="absolute inset-0 object-cover w-full h-full" alt="" />
             <div class="relative customgradient">
                 <div class="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
-                    
-                
-                <div class="flex flex-col items-center justify-around xl:flex-row">
+
+
+                    <div class="flex flex-col items-center justify-around xl:flex-row">
                         <div class="">
                             <img class="rounded-full w-40 h-40" src="<?= URL_DIR ?>public/assets/uploads/<?= $singlematch['flag1'] ?>" alt="image description">
                         </div>
@@ -42,11 +42,11 @@
                                     </span>
                                 </h2>
                                 <p class="mt-2 text-sm font-semibold text-gray-400">
-                                <?= $singlematch['stadiumName'] ?>
+                                    <?= $singlematch['stadiumName'] ?>
                                 </p>
 
                                 <span class="py-2 text-m font-semibold text-white">
-                                    MATCH COMING IN : 
+                                    MATCH COMING IN :
                                 </span>
 
                                 <div class="flex items-end justify-center z-10">
@@ -110,7 +110,7 @@
                                 <div class="">
                                     <div class="flex justify-between">
                                         <div class="text-4xl text-gray-700 dark:text-gray-400 leading-none text-right py-2">
-                                            $349<span class="ml-1 text-dark-2 text-base">/once</span></div>
+                                            <?= $singlematch['price'] ?> $ <span class="ml-1 text-dark-2 text-base">/once</span></div>
                                     </div>
                                     <div class="border-b  border-light-2 w-full mt-6 mb-8"></div>
                                     <ul class="mb-10">
@@ -129,10 +129,16 @@
                                             </span>
                                         </li>
                                     </ul>
-
-                                    <a class="inline-flex items-center justify-center bg-primary-100 hover:bg-orange text-white h-10 px-5 rounded-lg text-sm font-medium leading-none transition-all duration-200 whitespace-nowrap disabled:opacity-50 disabled:cursor-default hover:bg-blue-4 w-full" href="#">
-                                        <span>Get ticket</span>
-                                    </a>
+                                    <?php
+                                    if (isset($_SESSION['Remaining_days'])) : ?>
+                                        <button class="inline-flex items-center justify-center bg-primary-100 hover:bg-orange text-white h-10 px-5 rounded-lg text-sm font-medium leading-none transition-all duration-200 whitespace-nowrap disabled:opacity-50 disabled:cursor-default hover:bg-blue-4 w-full" href="../../Buyticket/reserveTicket/<?= $id ?>" disabled>
+                                            <span>No tickets</span>
+                                        </button>
+                                    <?php else : ?>
+                                        <a class="inline-flex items-center justify-center bg-primary-100 hover:bg-orange text-white h-10 px-5 rounded-lg text-sm font-medium leading-none transition-all duration-200 whitespace-nowrap disabled:opacity-50 disabled:cursor-default hover:bg-blue-4 w-full" href="../../Buyticket/reserveTicket/<?= $id ?>">
+                                            <span>Get ticket</span>
+                                        </a>
+                                    <?php endif; ?>
                                 </div>
                             </div>
 
