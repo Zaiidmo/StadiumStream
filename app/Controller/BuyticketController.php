@@ -15,8 +15,8 @@ class BuyticketController extends MatchModel
             $singlematch =  $obj->fetchSingleMatche($id);
             // var_dump($singlematch);die;
             // echo $singlematch->team1;
+
             require "../app/View/buyticket.php";
-            // var_dump($singlematch);
         }
 
         public function reserveTicket($id){
