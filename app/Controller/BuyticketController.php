@@ -8,6 +8,7 @@ use App\Controller\PayPalHandler;
 use app\fpdf\TicketPDF;
 use App\Model\buyticketModel;
 use App\Model\MatchModel;
+use App\Model\Statistics;
 use Carbon\Carbon;
 use PDOException;
 
@@ -18,9 +19,16 @@ class BuyticketController extends MatchModel
     {
         $obj = new buyticketModel();
         $singlematch =  $obj->fetchSingleMatche($id);
-        // var_dump($singlematch);die;
-        // echo $singlematch->team1;
+        $statisticsModel = new Statistics();
+        $MatchSoldTickets= $statisticsModel->SoldTicketsMatch($id);
+        // $getCancelTicket = $statisticsModel->getCanceldTicket();
+        $totalTickets= $statisticsModel->getCapacity($id);
+        $totalCapacity = array_values($totalTickets)[0];
+        $totalSoldTIckets = array_values($MatchSoldTickets)[0];
 
+        $avaliableTickets = $totalCapacity-$totalSoldTIckets ;
+        // var_dump($totalSoldTIckets);die;
+        
         require "../app/View/buyticket.php";
     }
 

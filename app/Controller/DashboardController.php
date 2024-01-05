@@ -17,7 +17,7 @@ class DashboardController
         $totalTeamsData = $statisticsModel->getTotalTeams();
         $totalGamesData = $statisticsModel->getTotalGames();
         $soldTicketsCountData = $statisticsModel->getSoldTicketsCount();
-        $getCapacity = $statisticsModel->getCapacity();
+        $getCapacity = $statisticsModel->getCanceldTicket();
         // var_dump($getCapacity);die;
         $totalUsers = $totalUsersData['totalUsers'];
         $totalTeams = $totalTeamsData['totalTeams'];
