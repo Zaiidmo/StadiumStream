@@ -7,6 +7,7 @@ session_start();
 use app\fpdf\TicketPDF;
 use App\Model\buyticketModel;
 use App\Model\MatchModel;
+use App\Model\Statistics;
 use Carbon\Carbon;
 
 class BuyticketController extends MatchModel
@@ -16,13 +17,22 @@ class BuyticketController extends MatchModel
     {
         $obj = new buyticketModel();
         $singlematch =  $obj->fetchSingleMatche($id);
+        $statisticsModel = new Statistics();
+        $soldTickets=$soldTicketsCountData['soldTicketsCount'] = $statisticsModel->getSoldTicketsCount();
+        $getCancelTicket = $statisticsModel->getCanceldTicket();
+        $totalTickets = $this->getCapacity($id);
+
         // var_dump($singlematch);die;
         // echo $singlematch->team1;
         
         require "../app/View/buyticket.php";
 
     }
-
+    public function getCapacity($id){
+        $statisticsModel = new Statistics();
+        $tickets=$statisticsModel->getCapacity($id);
+        return $tickets;
+    }
     public function reserveTicket($id)
     {
         $ticket = new buyticketModel();

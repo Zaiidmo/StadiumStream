@@ -108,9 +108,20 @@
                                 </p>
 
                                 <div class="">
+                                <div class="flex justify-between">
+                                        <div class="text-4xl text-gray-700 dark:text-gray-400 leading-none text-right py-2">
+                                            <?= $singlematch['price'] ?> $ <span class="ml-1 text-dark-2 text-base">/once</span>
+                                        </div>
+                                    </div>
                                     <div class="flex justify-between">
                                         <div class="text-4xl text-gray-700 dark:text-gray-400 leading-none text-right py-2">
-                                            <?= $singlematch['price'] ?> $ <span class="ml-1 text-dark-2 text-base">/once</span></div>
+                                            <?= $totalTickets['capacity'] ?>  <span class="ml-1 text-dark-2 text-base"> total tickets </span>
+                                        </div>
+                                    </div>
+                                    <div class="flex justify-between">
+                                        <div class="text-4xl text-gray-700 dark:text-gray-400 leading-none text-right py-2">
+                                            <?= $totalTickets['capacity'] ?>  <span class="ml-1 text-dark-2 text-base"> avaliable tickets </span>
+                                        </div>
                                     </div>
                                     <div class="border-b  border-light-2 w-full mt-6 mb-8"></div>
                                     <ul class="mb-10">

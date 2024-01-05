@@ -4,6 +4,7 @@ namespace app\Controller;
 
 use App\Model\MatchModel;
 use App\Model\Permission;
+use App\Model\Statistics;
 
 global $conn;
 class MatchesController
@@ -16,6 +17,7 @@ class MatchesController
         // If the user is logged in and has the role of admin (role_id = 2)
         if ($role == 2) {
             $matche = new MatchModel;
+            $objstatic = new Statistics;
             $matches = $matche->fetchMatches();
             $Teams = $matche->fetchTeams();
             $Stadiums = $matche->fetchStadiums();
@@ -86,4 +88,6 @@ class MatchesController
         $match->submitUpdateMatch("match", $_POST, $id);
         header('Location: /StadiumStream/matches');
     }
+
+
 }
