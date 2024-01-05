@@ -862,3 +862,25 @@
 
 ================================================================================================================================
 
+[05-01-2024 16:09:58] PayPal\Core\PayPalHttpConnection : INFO: POST https://api.sandbox.paypal.com/v1/oauth2/token
+[05-01-2024 16:09:59] PayPal\Core\PayPalHttpConnection : DEBUG: Request Headers 	: POST /v1/oauth2/token HTTP/2, Host: api.sandbox.paypal.com, user-agent: PayPalSDK/PayPal-PHP-SDK 1.14.0 (platform-ver=8.1.10; bit=64; os=Windows_NT_10.0; machine=AMD64; crypto-lib-ver=1.1.1q; curl=7.77.0), authorization: Basic QVFPVkFjQ3p2MnREZmxpOTYySDlWazNXZHN0RXJZRS0weGpyWEFNVU5jM2hwbWdKc1owVWkybjVJcU44Z05odFF1NzdPVnMyMy1wWDVad2Y6, accept: */*, content-length: 29, content-type: application/x-www-form-urlencoded, , 
+[05-01-2024 16:09:59] PayPal\Core\PayPalHttpConnection : DEBUG: Request Data		: grant_type=client_credentials
+--------------------------------------------------------------------------------------------------------------------------------
+
+[05-01-2024 16:09:59] PayPal\Core\PayPalHttpConnection : INFO: Response Status 	: 200
+[05-01-2024 16:09:59] PayPal\Core\PayPalHttpConnection : DEBUG: Response Headers	: content-type: application/json, content-length: 537, date: Fri, 05 Jan 2024 16:09:59 GMT, cache-control: max-age=0, no-cache, no-store, must-revalidate, paypal-debug-id: 054d2e0f4b3ee, pragma: no-cache, vary: Accept-Encoding, x-paypal-token-service: IAAS, strict-transport-security: max-age=31536000; includeSubDomains, 
+[05-01-2024 16:09:59] PayPal\Core\PayPalHttpConnection : DEBUG: Response Data 	: {"scope":"https://uri.paypal.com/services/billing-agreements https://api.paypal.com/v1/payments/.* https://uri.paypal.com/services/vault/payment-tokens/read openid Braintree:Vault https://api.paypal.com/v1/vault/credit-card/.* https://uri.paypal.com/services/subscriptions","access_token":"A21AAL1fPisvlPolrv4BQJYrmiLUh0BATDus_scu5UzvWoEPlPSOC57yWhppCU4zQNlR6aYOI9HFt11ADr6Xe6GZDDNaVmPlQ","token_type":"Bearer","app_id":"APP-80W284485P519543T","expires_in":31994,"nonce":"2024-01-05T16:03:13ZC-E9_viGooXvD_Sgr8NfrIDTN0zwsJDK5kj8ABUYFYQ"}
+
+================================================================================================================================
+
+[05-01-2024 16:09:59] PayPal\Core\PayPalHttpConnection : INFO: POST https://api.sandbox.paypal.com/v1/payments/payment
+[05-01-2024 16:10:01] PayPal\Core\PayPalHttpConnection : DEBUG: Request Headers 	: POST /v1/payments/payment HTTP/2, Host: api.sandbox.paypal.com, accept: */*, content-type: application/json, user-agent: PayPalSDK/PayPal-PHP-SDK 1.14.0 (platform-ver=8.1.10; bit=64; os=Windows_NT_10.0; machine=AMD64; crypto-lib-ver=1.1.1q; curl=7.77.0), authorization: Bearer A21AAL1fPisvlPolrv4BQJYrmiLUh0BATDus_scu5UzvWoEPlPSOC57yWhppCU4zQNlR6aYOI9HFt11ADr6Xe6GZDDNaVmPlQ, content-length: 406, , 
+[05-01-2024 16:10:01] PayPal\Core\PayPalHttpConnection : DEBUG: Request Data		: {"intent":"sale","payer":{"payment_method":"paypal"},"redirect_urls":{"return_url":"https://localhost/StadiumStream/home","cancel_url":"https://localhost/StadiumStream/home"},"transactions":[{"amount":{"currency":"USD","total":"50","details":{"shipping":"0","tax":"0","subtotal":"50"}},"item_list":{"items":[{"name":"Game Ticket","currency":"USD","quantity":1,"price":"50"}]},"description":"Game Ticket"}]}
+--------------------------------------------------------------------------------------------------------------------------------
+
+[05-01-2024 16:10:01] PayPal\Core\PayPalHttpConnection : INFO: Response Status 	: 201
+[05-01-2024 16:10:01] PayPal\Core\PayPalHttpConnection : DEBUG: Response Headers	: content-type: application/json;charset=UTF-8, content-length: 826, date: Fri, 05 Jan 2024 16:10:00 GMT, application_id: APP-80W284485P519543T, cache-control: max-age=0, no-cache, no-store, must-revalidate, caller_acct_num: 74X87BC5NFZJW, paypal-debug-id: 1b4f8f1e5be25, vary: Accept-Encoding, strict-transport-security: max-age=31536000; includeSubDomains, 
+[05-01-2024 16:10:01] PayPal\Core\PayPalHttpConnection : DEBUG: Response Data 	: {"id":"PAYID-MWMCTWA8W447527M5060091G","intent":"sale","state":"created","payer":{"payment_method":"paypal"},"transactions":[{"amount":{"total":"50.00","currency":"USD","details":{"subtotal":"50.00","tax":"0.00","shipping":"0.00"}},"description":"Game Ticket","item_list":{"items":[{"name":"Game Ticket","price":"50.00","currency":"USD","quantity":1}]},"related_resources":[]}],"create_time":"2024-01-05T16:10:00Z","links":[{"href":"https://api.sandbox.paypal.com/v1/payments/payment/PAYID-MWMCTWA8W447527M5060091G","rel":"self","method":"GET"},{"href":"https://www.sandbox.paypal.com/cgi-bin/webscr?cmd=_express-checkout&token=EC-58M4206043118861K","rel":"approval_url","method":"REDIRECT"},{"href":"https://api.sandbox.paypal.com/v1/payments/payment/PAYID-MWMCTWA8W447527M5060091G/execute","rel":"execute","method":"POST"}]}
+
+================================================================================================================================
+
