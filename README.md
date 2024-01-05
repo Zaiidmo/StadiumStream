@@ -306,20 +306,6 @@ CREATE TABLE `user` (
   `picture` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
---
--- Dumping data for table `user`
---
-
-INSERT INTO `user` (`id`, `full_name`, `email`, `phone_number`, `password`, `picture`) VALUES
-(1, 'Nadine Sampson', 'toda@mailinator.com', '+1 (353) 815-4815', '$2y$10$l6DOKp9TnS9JINWa16XDyOexRTQiqFGz9exYJShZcNKAavOMeBVdC', NULL),
-(2, 'Amyss Sanchez', 'momabeneqy@mailinator.com', '+1 (143) 417-5476', '$2y$10$gzU5XeKu6P/Am2Bl2Z.AAewXvBnVtZxeSDaJowWoRcUK4uSdGC2CK', NULL),
-(3, 'Vaughan Shannon', 'zinajo@mailinator.com', '+1 (698) 863-8225', '$2y$10$SwIBbScD8vJnN7I7HGPI0.V/TqGY3RiG0xzNIHsKx3jbJ09xbFVh6', NULL),
-(4, 'Loisss Owens', 'detyr@mailinator.com', '+1 (563) 656-7065', '$2y$10$RwPm1NH2AgX.vNCa.gpAh.qriikHQy53qZ7gY.zcDlmRlFjnTmKUW', NULL),
-(5, 'Rahim Nolan', 'moqotas@mailinator.com', '+1 (755) 792-6142', '$2y$10$0mZHxS5tq8sIpAjrrvoPu.gEmatCGIfL5kVtbtV9jo2.kJIVPs3xq', NULL),
-(6, 'Megan Caldwell', 'kelokyseqo@mailinator.com', '+1 (911) 287-9172', '$2y$10$oezOJuwURf6/nTGkZdUiluFB4nr5TcHXqyHum/EQijlwTnuWZ.OSu', NULL),
-(7, 'Karen Padilla', 'lotinyquki@mailinator.com', '+1 (994) 855-9175', '$2y$10$BGwgZvw4kSU4Ub.Cb/lha.WLP6pk9kMhQMqTIo8SatCjUaehzWJLO', NULL),
-(8, 'Zaiid Zeeed', 'Zaiid@admin.com', '0666778899', '$2y$10$ueL6RpCW9i3uktsVOvBwUeLAbf5p8vdOBi.QgUccfBM1EdcrgGaom', NULL);
-
 -- --------------------------------------------------------
 
 --
