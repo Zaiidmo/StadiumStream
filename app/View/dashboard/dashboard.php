@@ -92,14 +92,7 @@
                                 <?php echo $totalMatches ?>
                             </p>
                         </div>
-                        <div>
-                            <p class="mb-2 text-sm font-medium text-gray-600 dark:text-gray-400">
-                                cancel tickets
-                            </p>
-                            <p class="text-lg font-semibold text-gray-700 dark:text-gray-200">
-                                <?php echo $canTicketsCount ?>
-                            </p>
-                        </div>
+
                     </div>
                     <!-- Card -->
                     <div id="tickets" class="flex items-center p-4 bg-white rounded-lg shadow-xs dark:bg-gray-800">

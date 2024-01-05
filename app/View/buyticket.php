@@ -146,6 +146,7 @@
                                         <a class="inline-flex items-center justify-center bg-primary-100 hover:bg-orange text-white h-10 px-5 rounded-lg text-sm font-medium leading-none transition-all duration-200 whitespace-nowrap disabled:opacity-50 disabled:cursor-default hover:bg-blue-4 w-full" href="../../Buyticket/reserveTicket/<?= $id ?>">
                                             <span>Get ticket</span>
                                         </a>
+                                    <?php endif; ?>
                                 </div>
                             </div>
 
@@ -161,5 +162,7 @@
     ?>
 </body>
 <script src="<?= URL_DIR ?>public/assets/js/theme.js"></script>
+<script src="<?= URL_DIR ?>public/assets/js/navbar.js"></script>
+<script src="<?= URL_DIR ?>public/assets/js/home.js"></script>
 
 </html>
