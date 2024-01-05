@@ -41,7 +41,7 @@ class TicketPDF extends FPDF
 
         //Stadium Holder 
         $this->SetFont('Poppins', '', 15);
-        $this->SetXY(120, 63);
+        $this->SetXY(120, 65);
         $this-> SetTextColor(255,255,255);
         $this->Cell(0, 0, $data['stadiumName'], 0, 1, 'G');
 
