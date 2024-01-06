@@ -1,30 +1,41 @@
-<?php 
+<?php
+
 namespace config;
-USE PDO;
-USE PDOException;
+
+use PDO;
+use PDOException;
+use Dotenv;
+
+$dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
+$dotenv->load();
 
 class Connection
 {
     private $dsn;
-    private $conn;
+    private $host;
+    private $db;
+    private $username;
+    private $password;
+    protected PDO $pdo;
 
-    public function __construct($host, $username, $password, $db)
+    public function __construct()
     {
-        $this->dsn = "mysql:host=$host;dbname=$db";
+        $this->host = $_ENV['HOST'];
+        $this->db = $_ENV['DATABASE'];
+        $this->username = $_ENV['USER'];
+        $this->password = $_ENV['PASSWORD'];
+        $this->connect();
+    }
 
+    public function connect()
+    {
         try {
-            $this->conn = new PDO($this->dsn, $username, $password);
-            $this->conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-            // if ($this->conn) {
-            //     echo "Connected to the $db database successfully!";
-            // }
+            $this->dsn = "mysql:host=$this->host;dbname=$this->db";
+            $this->pdo = new PDO($this->dsn, $this->username, $this->password);
+            $this->pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
         } catch (PDOException $e) {
             echo "Error Connection: " . $e->getMessage();
         }
-    }
-
-    public function getConnection()
-    {
-        return $this->conn;
     }
 }
