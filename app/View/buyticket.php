@@ -26,8 +26,6 @@
             <img src="<?= URL_DIR ?>public/assets/images/herobg.svg" class="absolute inset-0 object-cover w-full h-full" alt="" />
             <div class="relative customgradient">
                 <div class="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
-
-
                     <div class="flex flex-col items-center justify-around xl:flex-row">
                         <div class="">
                             <img class="rounded-full w-40 h-40" src="<?= URL_DIR ?>public/assets/uploads/<?= $singlematch['flag1'] ?>" alt="image description">
