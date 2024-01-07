@@ -31,7 +31,7 @@ class ContactController
             $mail->Host = 'smtp.gmail.com';
             $mail->SMTPAuth = true;
             $mail->Username = 'odashimidorida@gmail.com'; // Replace with your email
-            $mail->Password = 'ayyc wbfc cwhy begw'; // Replace with your email password
+            $mail->Password = ''; // Replace with your email password
             $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;
             $mail->Port = 465;
             $mail->setFrom('odashimidorida@gmail.com', 'Ismail Lafhiel'); // Replace with your email and name
@@ -47,7 +47,7 @@ class ContactController
             $confirmation_mail->Host = 'smtp.gmail.com';
             $confirmation_mail->SMTPAuth = true;
             $confirmation_mail->Username = 'odashimidorida@gmail.com'; // Replace with your email
-            $confirmation_mail->Password = 'ayyc wbfc cwhy begw'; // Replace with your email password
+            $confirmation_mail->Password = ''; // Replace with your email password
             $confirmation_mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;
             $confirmation_mail->Port = 465;
             $confirmation_mail->setFrom('odashimidorida@gmail.com', 'Ismail Lafhiel'); // Replace with your email and name
