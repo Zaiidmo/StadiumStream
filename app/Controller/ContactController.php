@@ -30,12 +30,12 @@ class ContactController
             $mail->isSMTP();
             $mail->Host = 'smtp.gmail.com';
             $mail->SMTPAuth = true;
-            $mail->Username = 'odashimidorida@gmail.com'; // Replace with your email
-            $mail->Password = 'ayyc wbfc cwhy begw'; // Replace with your email password
+            $mail->Username = 'your email'; // Replace with your email
+            $mail->Password = 'put your stmp pass'; // Replace with your email password
             $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;
             $mail->Port = 465;
-            $mail->setFrom('odashimidorida@gmail.com', 'Ismail Lafhiel'); // Replace with your email and name
-            $mail->addAddress('odashimidorida@gmail.com', 'Ismail Lafhiel'); // Replace with recipient's email and name
+            $mail->setFrom('your email', 'your name'); // Replace with your email and name
+            $mail->addAddress('your email', 'your name'); // Replace with recipient's email and name
             $mail->isHTML(true);
             $mail->Subject = $subject;
             $mail->Body = "From: $full_name\nEmail: $sender_email\n\n$message";
@@ -46,11 +46,11 @@ class ContactController
             $confirmation_mail->isSMTP();
             $confirmation_mail->Host = 'smtp.gmail.com';
             $confirmation_mail->SMTPAuth = true;
-            $confirmation_mail->Username = 'odashimidorida@gmail.com'; // Replace with your email
-            $confirmation_mail->Password = 'ayyc wbfc cwhy begw'; // Replace with your email password
+            $confirmation_mail->Username = 'your email'; // Replace with your email
+            $confirmation_mail->Password = 'put your stmp pass'; // Replace with your email password
             $confirmation_mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;
             $confirmation_mail->Port = 465;
-            $confirmation_mail->setFrom('odashimidorida@gmail.com', 'Ismail Lafhiel'); // Replace with your email and name
+            $confirmation_mail->setFrom('your email', 'your name'); // Replace with your email and name
             $confirmation_mail->addAddress($sender_email); // Set the sender's email as the recipient
             $confirmation_mail->isHTML(true);
             $confirmation_mail->Subject = 'Confirmation: Your Email has been Received';
